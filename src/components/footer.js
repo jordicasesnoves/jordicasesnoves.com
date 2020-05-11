@@ -2,7 +2,7 @@ import React from "react";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "../icons";
 import { TextLink } from "./Link";
 import { Link } from "gatsby";
-import { NewsletterSection } from "./newsletter";
+import { NewsletterSection } from "../sections/NewsletterSection";
 
 const Footer = () => {
   return (

@@ -11,34 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca18bcd7-02f3-4365-8c63-db66cb9dd58b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Icon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Link.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/newsletter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/layout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/typography.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/AngleRightBIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/CrossIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/GraphqlIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/HamburguerIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/MessageIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/ReactIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/TailwindIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.all-contributorsrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sections/HeroSection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sections/PortfolioSection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sections/TechnologiesSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/newsletter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/NewsletterSection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +55,11 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/sections" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -88,6 +72,7 @@
       <updated>1589041186819</updated>
       <workItem from="1589041188797" duration="3150000" />
       <workItem from="1589098735146" duration="38152000" />
+      <workItem from="1589232105903" duration="902000" />
     </task>
     <servers />
   </component>
@@ -123,6 +108,10 @@
       <screen x="0" y="23" width="1920" height="1002" />
     </state>
     <state x="149" y="163" key="SettingsEditor/0.23.1920.1002@0.23.1920.1002" timestamp="1589043285754" />
+    <state x="100" y="123" width="1720" height="802" key="dock-window-1" timestamp="1589232683114">
+      <screen x="0" y="23" width="1920" height="1002" />
+    </state>
+    <state x="100" y="123" width="1720" height="802" key="dock-window-1/0.23.1920.1002@0.23.1920.1002" timestamp="1589232683114" />
     <state x="1106" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1589114097595">
       <screen x="0" y="23" width="1920" height="1002" />
     </state>
@@ -133,7 +122,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/icons/index.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
