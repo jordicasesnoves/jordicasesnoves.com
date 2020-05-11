@@ -1,31 +1,6 @@
-# Gatsby Starter Tailwind
+# jordicasesnoves.com
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors)
-
-<div align="center">
-  <img src="https://image.ibb.co/cJjPN7/gatsby_tailwind.png" alt="Gatsby and Tailwind CSS logos">
-</div>
-
-<div align="center">
-  <strong>A <a href="https://www.gatsbyjs.org/">Gatsby</a> starter styled using <a href="https://tailwindcss.com/">Tailwind CSS</a>, a utility-first CSS framework.</strong><br />
-  Uses <a href="https://www.purgecss.com/">PurgeCSS</a> to remove unused CSS.<br />
-  Illustrations by <a href="https://undraw.co/">unDraw</a>.
-  <br />
-  <br />
-</div>
-  
-![alt text](https://image.ibb.co/jv6FC7/gatsby_starter_tailwind.png "Screenshot of Gatsby Starter Tailwind homepage")
-  
-<p align="center">View demo <a href="https://gatsby-starter-tailwind.oddstronaut.com/">here</a>.</p>
-
-## What is Tailwind CSS?
-
-> "Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces."
-> –[Tailwind CSS](https://tailwindcss.com)
-
-## What is Gatsby?
-
-> "Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps." -[Gatsby](https://www.gatsbyjs.org/)
+My own website.
 
 ## Get started
 
