@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca18bcd7-02f3-4365-8c63-db66cb9dd58b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Icon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Link.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/newsletter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/typography.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/AngleRightBIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/CrossIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/GraphqlIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/HamburguerIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/MessageIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/ReactIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/TailwindIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.all-contributorsrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1bg634Smu5cy0Vu7j51fOPfFW4Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca18bcd7-02f3-4365-8c63-db66cb9dd58b" name="Default Changelist" comment="" />
+      <created>1589041186819</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589041186819</updated>
+      <workItem from="1589041188797" duration="3150000" />
+      <workItem from="1589098735146" duration="38152000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="369" y="333" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589099549301">
+      <screen x="0" y="23" width="1920" height="1002" />
+    </state>
+    <state x="369" y="333" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1920.1002@0.23.1920.1002" timestamp="1589099549301" />
+    <state x="378" y="311" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1589042812490">
+      <screen x="0" y="23" width="1920" height="1002" />
+    </state>
+    <state x="378" y="311" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.23.1920.1002@0.23.1920.1002" timestamp="1589042812490" />
+    <state x="698" y="277" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589140999169">
+      <screen x="0" y="23" width="1920" height="1002" />
+    </state>
+    <state x="698" y="277" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1002@0.23.1920.1002" timestamp="1589140999169" />
+    <state x="149" y="163" key="SettingsEditor" timestamp="1589043285754">
+      <screen x="0" y="23" width="1920" height="1002" />
+    </state>
+    <state x="149" y="163" key="SettingsEditor/0.23.1920.1002@0.23.1920.1002" timestamp="1589043285754" />
+    <state x="1106" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1589114097595">
+      <screen x="0" y="23" width="1920" height="1002" />
+    </state>
+    <state x="1106" y="244" width="670" height="676" key="search.everywhere.popup/0.23.1920.1002@0.23.1920.1002" timestamp="1589114097595" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/icons/index.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
