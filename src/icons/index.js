@@ -8,6 +8,8 @@ import { TailwindIcon } from "./TailwindIcon";
 import { GraphqlIcon } from "./GraphqlIcon";
 import { AngleRightBIcon } from "./AngleRightBIcon";
 import { MessageIcon } from "./MessageIcon";
+import { ApolloIcon } from "./ApolloIcon";
+import { JwtIcon } from "./JwtIcon";
 
 export {
   AngleRightBIcon,
@@ -20,4 +22,6 @@ export {
   TailwindIcon,
   GraphqlIcon,
   MessageIcon,
+  ApolloIcon,
+  JwtIcon,
 };

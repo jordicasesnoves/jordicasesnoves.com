@@ -6,8 +6,8 @@ import { NewsletterSection } from "../sections/NewsletterSection";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 mt-32">
-      <NewsletterSection />
+    <footer className="relative z-10 mt-32 border-t border-gray-200">
+      {/* <NewsletterSection/>*/}
       <nav className="flex flex-col text-gray-600 justify-center items-center max-w-6xl p-4 mx-auto">
         <div className="my-3">
           <nav

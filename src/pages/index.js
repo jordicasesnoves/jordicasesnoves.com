@@ -26,8 +26,9 @@ function IndexPage() {
         title="Home"
       />
       <HeroSection className="mb-48 mt-16" />
-      <TechnologiesSection className="mb-48" />
-      <PortfolioSection />
+
+      <PortfolioSection className="mb-48" />
+      <TechnologiesSection />
     </Layout>
   );
 }

@@ -1,0 +1,33 @@
+[
+	{
+		"id": 1,
+		"name": "NekoFilm",
+		"type": "fullstack",
+		"title": "Movie & TV Show searcher",
+		"description": "Create an account, search any movie or TV show, read some specific info about it, and even watch the trailer between thousands of media.",
+		"technologies": [
+			"React",
+			"GraphQL (Apollo)",
+			"JWT",
+			"MongoDB",
+			"Express (Node.js)"
+		],
+		"github": "https://github.com/jordicasesnoves/NekoFilm",
+		"demo": "https://nekofilm.now.sh/"
+	},
+	{
+		"id": 2,
+		"name": "iCrypto",
+		"type": "frontend",
+		"title": "Cryptography Data Visualization",
+		"description": "Visualize the 24hr top crypto's charts in real time with real data. I also developed the dashboard UI but real data is only being used on the charts.",
+		"technologies": [
+			"Vue.js",
+			"TailwindCSS",
+			"ApexCharts.js"
+		],
+		"github": "https://github.com/jordicasesnoves/icrypto",
+		"demo": "https://icrypto.netlify.app/"
+	}
+]
+

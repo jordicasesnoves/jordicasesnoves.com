@@ -3,12 +3,14 @@ import * as icons from "../icons/";
 import { Icon } from "./Icon";
 
 const default_classes =
-  "inline-flex shadow hover:shadow-xl rounded-md font-medium focus:outline-none focus:shadow-outline duration-200 ease-in-out transition-all";
+  "relative shadow hover:shadow-xl rounded-md font-medium focus:outline-none focus:shadow-outline duration-200 ease-in-out transition-all";
 
 const colors = {
   primary: "text-white bg-green-600 hover:bg-green-500",
   secondary:
-    "text-green-600 bg-transparent hover:bg-green-600 hover:text-white border border-green-600",
+    "text-green-600 bg-white hover:bg-green-600 hover:text-white border-green-600",
+  white: "text-black bg-white hover:bg-black hover:text-white",
+  black: "text-white bg-black hover:bg-white hover:text-black",
   red: "text-white bg-red-600 hover:bg-red-500",
 };
 
@@ -19,7 +21,6 @@ const sizes = {
 };
 
 const getTextMargin = (icon, iconPos) => {
-  console.log(icon);
   if (icon.length > 0) {
     if (iconPos === "right") {
       return "mr-2";
@@ -96,7 +97,7 @@ export const Button = ({
           </div>
         </div>
       ) : (
-        <div className="flex items-center">
+        <>
           {icon.length > 0 && iconPosition === "left" ? (
             <Icon icon={icon} size={size} />
           ) : (
@@ -106,11 +107,11 @@ export const Button = ({
             {props.children}
           </span>
           {icon.length > 0 && iconPosition === "right" ? (
-            <Icon icon={icon} size={size} />
+            <Icon icon={icon} size="w-5 h-5" />
           ) : (
             ""
           )}
-        </div>
+        </>
       )}
     </a>
   );

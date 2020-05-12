@@ -11,13 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca18bcd7-02f3-4365-8c63-db66cb9dd58b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sections/HeroSection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sections/PortfolioSection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sections/TechnologiesSection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/projects.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/portfolio.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/ApolloIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/JwtIcon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Link.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Link.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/newsletter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/NewsletterSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/GraphqlIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/GraphqlIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/HeroSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/HeroSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/PortfolioSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/PortfolioSection.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +79,8 @@
       <updated>1589041186819</updated>
       <workItem from="1589041188797" duration="3150000" />
       <workItem from="1589098735146" duration="38152000" />
-      <workItem from="1589232105903" duration="902000" />
+      <workItem from="1589232105903" duration="9121000" />
+      <workItem from="1589273417307" duration="4026000" />
     </task>
     <servers />
   </component>
@@ -92,6 +100,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="666" y="202" key="#PortfolioSection.js" timestamp="1589276445643">
+      <screen x="0" y="23" width="1920" height="1002" />
+    </state>
+    <state x="666" y="202" key="#PortfolioSection.js/0.23.1920.1002@0.23.1920.1002" timestamp="1589276445643" />
     <state x="369" y="333" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589099549301">
       <screen x="0" y="23" width="1920" height="1002" />
     </state>
@@ -112,6 +124,10 @@
       <screen x="0" y="23" width="1920" height="1002" />
     </state>
     <state x="100" y="123" width="1720" height="802" key="dock-window-1/0.23.1920.1002@0.23.1920.1002" timestamp="1589232683114" />
+    <state x="625" y="242" key="run.anything.popup" timestamp="1589236623923">
+      <screen x="0" y="23" width="1920" height="1002" />
+    </state>
+    <state x="625" y="242" key="run.anything.popup/0.23.1920.1002@0.23.1920.1002" timestamp="1589236623923" />
     <state x="1106" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1589114097595">
       <screen x="0" y="23" width="1920" height="1002" />
     </state>

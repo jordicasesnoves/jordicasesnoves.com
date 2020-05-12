@@ -17,7 +17,12 @@ export const HeroSection = (props) => {
             solutions.
           </p>
           <div className="flex lg:flex-row flex-col items-center lg:items-start">
-            <Button size="lg" icon="AngleRightBIcon" className="lg:mr-4 mb-3">
+            <Button
+              href="#portfolio"
+              size="lg"
+              icon="AngleRightBIcon"
+              className="lg:mr-4 mb-3"
+            >
               Check My Work
             </Button>
             <Button size="lg" color="secondary" icon="MessageIcon">
