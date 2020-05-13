@@ -13,7 +13,7 @@ import Img from "gatsby-image";
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({ imageName, className }) => {
+const Image = ({ imageName, className, style }) => {
   const data = useStaticQuery(graphql`
     query {
       allImageSharp {
@@ -38,7 +38,7 @@ const Image = ({ imageName, className }) => {
     (image) => image.node.fluid.originalName === imageName
   )[0].node;
 
-  return <Img className={className} fadeIn fluid={image.fluid} />;
+  return <Img style={style} className={className} fadeIn fluid={image.fluid} />;
 };
 
 export default Image;

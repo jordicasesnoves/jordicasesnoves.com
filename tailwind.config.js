@@ -10,6 +10,14 @@ module.exports = {
         "7": "1.75rem",
       },
       colors: {
+        background: "var(--background)",
+        primary: "var(--primary)",
+        "primary-light": "var(--primary-light)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
+        "main-text": "var(--text-main)",
+        "secondary-text": "var(--text-secondary)",
+        "hover-text": "var(--text-hover)",
         gray: {
           "100": "#f5f5f5",
           "200": "#eeeeee",

@@ -10,21 +10,21 @@ export const PortfolioSection = (props) => {
   return (
     <section id="portfolio" {...props}>
       <div className="lg:text-center">
-        <p className="text-base leading-6 text-green-600 font-semibold tracking-wide uppercase">
+        <p className="text-base leading-6 text-secondary font-semibold tracking-wide uppercase">
           PORTFOLIO
         </p>
-        <h3 className=" mt-2 text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+        <h3 className="mt-2 text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
           My Projects
         </h3>
-        <p className="mt-4 max-w-2xl text-xl leading-7 text-gray-600 lg:mx-auto">
+        <p className="mt-4 max-w-2xl text-xl leading-7 text-secondary-text lg:mx-auto">
           Last projects that I am working or have been working on.
         </p>
       </div>
       <div className="mt-10">
-        <ul className="md:grid md:grid-cols-1 md:col-gap-8 md:row-gap-10">
+        <ul className="md:grid md:grid-cols-2 md:col-gap-8 md:row-gap-10">
           {projectsJSON.map((project, index) => {
             return (
-              <li className="mb-3 md:mb-0 ">
+              <li key={`${project}-${index + 1}`} className="mb-3 md:mb-0 ">
                 <div
                   className={`flex flex-col project${
                     index + 1
@@ -32,25 +32,25 @@ export const PortfolioSection = (props) => {
                 >
                   <div className="flex-1 ">
                     <div className="border-b border-gray-200 px-6 py-3">
-                      <div className="text-sm tracking-widest text-gray-600">
+                      <div className="text-sm tracking-widest text-secondary-text">
                         {project.type.toUpperCase()} PROJECT
                       </div>
-                      <div className="text-3xl font-bold mt-0">
+                      <div className="text-3xl font-bold mt-0 text-main-text">
                         {project.title}
                       </div>
                     </div>
-                    <div className="px-6 mt-4">
-                      <p className="text-gray-600">{project.description}</p>
-                      <p className="text-gray-600 italic">
+                    <div className="px-6 mt-4 text-secondary-text">
+                      <p>{project.description}</p>
+                      <p className="italic">
                         Technologies:{" "}
                         {project.technologies.map((tech, index, arr) => {
                           return (
-                            <>
+                            <span key={`${project.title}-${tech}`}>
                               <TextLink className="cursor-pointer">
                                 {tech}
                               </TextLink>
                               {index + 1 !== arr.length ? ", " : "."}
-                            </>
+                            </span>
                           );
                         })}
                       </p>

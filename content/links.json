@@ -1,0 +1,17 @@
+[
+	{
+		"name": "Github",
+		"href": "https://www.github.com/jordicasesnoves",
+		"icon": "GithubIcon"
+	},
+	{
+		"name": "Twitter",
+		"href": "https://www.twitter.com/jordicasesnoves",
+		"icon": "TwitterIcon"
+	},
+	{
+		"name": "Linkedin",
+		"href": "https://www.linkedin.com/jordicasesnoves",
+		"icon": "LinkedinIcon"
+	}
+]

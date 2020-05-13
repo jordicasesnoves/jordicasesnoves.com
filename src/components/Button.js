@@ -1,14 +1,12 @@
 import React from "react";
-import * as icons from "../icons/";
 import { Icon } from "./Icon";
 
 const default_classes =
-  "relative shadow hover:shadow-xl rounded-md font-medium focus:outline-none focus:shadow-outline duration-200 ease-in-out transition-all";
+  "inline-flex items-center relative shadow hover:shadow-xl rounded-md font-medium focus:outline-none focus:shadow-outline duration-200 ease-in-out transition-all";
 
 const colors = {
-  primary: "text-white bg-green-600 hover:bg-green-500",
-  secondary:
-    "text-green-600 bg-white hover:bg-green-600 hover:text-white border-green-600",
+  primary: "text-white bg-primary hover:bg-primary-light",
+  secondary: "text-primary bg-background hover:bg-primary hover:text-white",
   white: "text-black bg-white hover:bg-black hover:text-white",
   black: "text-white bg-black hover:bg-white hover:text-black",
   red: "text-white bg-red-600 hover:bg-red-500",

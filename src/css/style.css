@@ -3,3 +3,16 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+.theme-light {
+    --background: #ffffff;
+    --primary: #49BA78;
+    --primary-light: #68d391;
+    --secondary: #38a169;
+    --accent: #5F5BBA;
+    --text-main: #0E1411;
+    --text-secondary: #767676;
+    --text-hover: #212121;
+}
+
+

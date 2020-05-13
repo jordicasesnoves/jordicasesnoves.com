@@ -8,13 +8,13 @@ export const HeroSection = (props) => {
       <div className="relative text-center flex lg:flex-row flex-col-reverse justify-between items-center z-10">
         <div className="lg:text-left lg:mr-24 w-full mx-auto">
           <h2 className="mb-1 mt-4 lg:mt-0 lg:text-6xl text-4xl font-bold ">
-            Jordi <br /> Casesnoves.
+            Hola.
           </h2>
 
-          <p className="text-gray-600 fadeIn leading-loose lg:text-xl text-md lg:mb-10 mb-5">
-            Hi, my name is Jordi. I'm a <strong>front-end developer</strong>{" "}
-            based in Valencia (Spain). My goal is to provide user-centered web
-            solutions.
+          <p className="fadeIn leading-loose text-xl text-md lg:mb-10 mb-5">
+            My name is Jordi. I'm a <strong>front-end developer</strong> based
+            in Valencia (Spain). My goal is to provide{" "}
+            <strong>user-centered web solutions</strong>.
           </p>
           <div className="flex lg:flex-row flex-col items-center lg:items-start">
             <Button
