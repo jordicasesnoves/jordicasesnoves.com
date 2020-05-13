@@ -3,6 +3,8 @@ import { GithubIcon, LinkedinIcon, TwitterIcon } from "../icons";
 import { TextLink } from "./Link";
 import { Link } from "gatsby";
 import { NewsletterSection } from "../sections/NewsletterSection";
+import { Icon } from "./Icon";
+import * as links from "../../content/links.json";
 
 const Footer = () => {
   return (
@@ -39,23 +41,7 @@ const Footer = () => {
           </nav>
         </div>
         <div className="my-3">
-          {[
-            {
-              href: `https://www.twitter.com`,
-              name: `Twitter`,
-              icon: <TwitterIcon className="w-6 h-6" />,
-            },
-            {
-              href: `https://www.github.com`,
-              name: `GitHub`,
-              icon: <GithubIcon className="w-6 h-6" />,
-            },
-            {
-              href: `https://www.linkedin.com`,
-              name: `Linkedin`,
-              icon: <LinkedinIcon className="w-6 h-6" />,
-            },
-          ].map((link, index, array) => (
+          {links.map((link, index, array) => (
             <a
               className={
                 `text-gray-600 hover:text-gray-900 block mt-4 no-underline inline-flex md:inline-block md:mt-0 ` +
@@ -64,7 +50,7 @@ const Footer = () => {
               key={link.name}
               href={link.href}
             >
-              {link.icon}
+              <Icon icon={link.icon} className="w-6 h-6" />
             </a>
           ))}
         </div>
