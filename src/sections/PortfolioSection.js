@@ -5,6 +5,7 @@ import { GraphqlIcon, ReactIcon, TailwindIcon } from "../icons";
 import { Icon } from "../components/Icon";
 import projectsJSON from "../../content/projects.json";
 import { TextLink } from "../components/Link";
+import getExternalLink from "../utils/getExternalLink";
 
 export const PortfolioSection = (props) => {
   return (
@@ -46,7 +47,10 @@ export const PortfolioSection = (props) => {
                         {project.technologies.map((tech, index, arr) => {
                           return (
                             <span key={`${project.title}-${tech}`}>
-                              <TextLink className="cursor-pointer">
+                              <TextLink
+                                href={getExternalLink(tech)}
+                                className="cursor-pointer"
+                              >
                                 {tech}
                               </TextLink>
                               {index + 1 !== arr.length ? ", " : "."}

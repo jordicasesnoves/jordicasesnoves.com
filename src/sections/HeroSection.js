@@ -25,7 +25,12 @@ export const HeroSection = (props) => {
             >
               Check My Work
             </Button>
-            <Button size="lg" color="secondary" icon="MessageIcon">
+            <Button
+              href={"mailto:jordicasesnoves@gmail.com"}
+              size="lg"
+              color="secondary"
+              icon="MessageIcon"
+            >
               <span>Contact Me</span>
             </Button>
           </div>

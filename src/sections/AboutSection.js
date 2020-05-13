@@ -1,11 +1,8 @@
 import React from "react";
 import { Button } from "../components/Button";
-import { GithubIcon, GraphqlIcon, ReactIcon, TailwindIcon } from "../icons";
-//import "../css/portfolio.css";
-import { Icon } from "../components/Icon";
-import projectsJSON from "../../content/projects.json";
 import { TextLink } from "../components/Link";
 import Image from "../components/Image";
+import getExternalLink from "../utils/getExternalLink";
 
 export const AboutSection = (props) => {
   return (
@@ -31,9 +28,12 @@ export const AboutSection = (props) => {
                   {" "}
                   I am front-end developer based in Valencia (Spain). I've
                   always been a self-taught learning person; that's how I learnt
-                  front-end. Currently working at{" "}
-                  <TextLink href="https://dedalusgs.com">Dedalus</TextLink>, a
-                  healthcare-tech company.
+                  front-end.
+                </p>
+                <p className="mt-4">
+                  Currently working at{" "}
+                  <TextLink href={getExternalLink("Dedalus")}>Dedalus</TextLink>
+                  , a healthcare-tech company.
                 </p>
                 <p className="mt-4">
                   Interested in the logical part of the web, and also its visual
@@ -47,8 +47,12 @@ export const AboutSection = (props) => {
                 </p>
               </div>
             </div>
-            <GithubIcon className="w-8 text-secondary" />
-            <Button className="mt-8 " size="lg" icon="MessageIcon">
+            <Button
+              href={"mailto:jordicasesnoves@gmail.com"}
+              className="mt-8 "
+              size="lg"
+              icon="MessageIcon"
+            >
               <span>Contact Me</span>
             </Button>
           </div>

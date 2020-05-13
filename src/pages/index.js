@@ -23,9 +23,9 @@ function IndexPage() {
       <HeroSection className="pb-16 pt-8" />
 
       <PortfolioSection className="my-32 py-8" />
-      <TechnologiesSection className="my-48 py-8" />
+      <TechnologiesSection className="my-32 py-8" />
 
-      <AboutSection />
+      <AboutSection className="py-8" />
     </Layout>
   );
 }

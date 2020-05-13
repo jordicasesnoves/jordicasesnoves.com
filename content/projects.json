@@ -6,11 +6,11 @@
 		"title": "Movie & TV Show searcher",
 		"description": "Create an account, search any movie or TV show, read some specific info about it, and even watch the trailer between thousands of media.",
 		"technologies": [
-			"React",
-			"GraphQL (Apollo)",
+			"React.js",
+			"Apollo GraphQL",
 			"JWT",
 			"MongoDB",
-			"Express (Node.js)"
+			"Node.js"
 		],
 		"github": "https://github.com/jordicasesnoves/NekoFilm",
 		"demo": "https://nekofilm.now.sh/"

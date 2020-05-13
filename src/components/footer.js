@@ -1,10 +1,10 @@
 import React from "react";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "../icons";
 import { TextLink } from "./Link";
 import { Link } from "gatsby";
 import { NewsletterSection } from "../sections/NewsletterSection";
 import { Icon } from "./Icon";
-import * as links from "../../content/links.json";
+import * as socialMediaLinks from "../../content/socialmedialinks.json";
+import getExternalLink from "../utils/getExternalLink";
 
 const Footer = () => {
   return (
@@ -18,16 +18,12 @@ const Footer = () => {
           >
             {[
               {
-                route: `/about`,
+                route: `#portfolio`,
+                title: `Portfolio`,
+              },
+              {
+                route: `#about`,
                 title: `About`,
-              },
-              {
-                route: `/contact`,
-                title: `Contact`,
-              },
-              {
-                route: `/blog`,
-                title: `Blog`,
               },
             ].map((link) => (
               <Link
@@ -41,7 +37,7 @@ const Footer = () => {
           </nav>
         </div>
         <div className="my-3">
-          {links.map((link, index, array) => (
+          {socialMediaLinks.map((link, index, array) => (
             <a
               className={
                 `text-gray-600 hover:text-gray-900 block mt-4 no-underline inline-flex md:inline-block md:mt-0 ` +
@@ -57,8 +53,8 @@ const Footer = () => {
         <div className="my-3 text-center">
           © {new Date().getFullYear()} — Web designed & coded by Jordi
           Casesnoves using{" "}
-          <TextLink href="https://reactjs.org">React.js</TextLink> +{" "}
-          <TextLink href="https://gatsbyjs.org">Gatsby.js</TextLink>
+          <TextLink href={getExternalLink("react.js")}>React.js</TextLink> +{" "}
+          <TextLink href={getExternalLink("gatsby.js")}>Gatsby.js</TextLink>
         </div>
       </nav>
     </footer>

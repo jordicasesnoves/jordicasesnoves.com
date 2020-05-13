@@ -12,10 +12,7 @@ export const Icon = ({
     <>
       <NewComponent
         className={
-          "relative inline-flex items-center self-center " +
-          size +
-          " " +
-          className
+          "relative inline-flex items-center " + size + " " + className
         }
       >
         {props.tooltip && (

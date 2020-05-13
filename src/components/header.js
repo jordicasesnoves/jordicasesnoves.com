@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
-import links from "../../content/links.json";
+import links from "../../content/socialmedialinks.json";
 import * as icons from "../icons";
 
 import { HamburguerIcon, CrossIcon } from "../icons";
@@ -42,16 +42,12 @@ function Header() {
         >
           {[
             {
-              route: `/about`,
+              route: `#portfolio`,
+              title: `Portfolio`,
+            },
+            {
+              route: `#about`,
               title: `About`,
-            },
-            {
-              route: `/contact`,
-              title: `Contact`,
-            },
-            {
-              route: `/contact`,
-              title: `Blog`,
             },
           ].map((link) => (
             <Link
