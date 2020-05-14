@@ -15,3 +15,5 @@ yarn-error.log
 
 # deployment-specific configs
 now.json
+
+.vercel

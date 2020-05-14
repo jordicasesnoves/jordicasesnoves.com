@@ -52,65 +52,67 @@ export const Button = ({
   ].join(" ");
 
   return (
-    <a href={href} {...props} className={className} type={type}>
-      {loading ? (
-        <div className="items-center flex">
-          <div className="flex-1">
-            <svg
-              className={"w-6 h-4 mx-auto "}
-              version="1.1"
-              id="L4"
-              x="0px"
-              y="0px"
-              viewBox="0 0 50 100"
-            >
-              <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
-                <animate
-                  attributeName="opacity"
-                  dur="1s"
-                  values="0;1;0"
-                  repeatCount="indefinite"
-                  begin="0.1"
-                />
-              </circle>
-              <circle fill="#fff" stroke="none" cx="26" cy="50" r="6">
-                <animate
-                  attributeName="opacity"
-                  dur="1s"
-                  values="0;1;0"
-                  repeatCount="indefinite"
-                  begin="0.2"
-                />
-              </circle>
-              <circle fill="#fff" stroke="none" cx="46" cy="50" r="6">
-                <animate
-                  attributeName="opacity"
-                  dur="1s"
-                  values="0;1;0"
-                  repeatCount="indefinite"
-                  begin="0.3"
-                />
-              </circle>
-            </svg>
+    <button type={type}>
+      <a href={href} {...props} className={className}>
+        {loading ? (
+          <div className="items-center flex">
+            <div className="flex-1">
+              <svg
+                className={"w-6 h-4 mx-auto "}
+                version="1.1"
+                id="L4"
+                x="0px"
+                y="0px"
+                viewBox="0 0 50 100"
+              >
+                <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
+                  <animate
+                    attributeName="opacity"
+                    dur="1s"
+                    values="0;1;0"
+                    repeatCount="indefinite"
+                    begin="0.1"
+                  />
+                </circle>
+                <circle fill="#fff" stroke="none" cx="26" cy="50" r="6">
+                  <animate
+                    attributeName="opacity"
+                    dur="1s"
+                    values="0;1;0"
+                    repeatCount="indefinite"
+                    begin="0.2"
+                  />
+                </circle>
+                <circle fill="#fff" stroke="none" cx="46" cy="50" r="6">
+                  <animate
+                    attributeName="opacity"
+                    dur="1s"
+                    values="0;1;0"
+                    repeatCount="indefinite"
+                    begin="0.3"
+                  />
+                </circle>
+              </svg>
+            </div>
           </div>
-        </div>
-      ) : (
-        <>
-          {icon.length > 0 && iconPosition === "left" ? (
-            <Icon icon={icon} size={size} />
-          ) : (
-            ""
-          )}
-          <span className={getTextMargin(icon, iconPosition)}>
-            {props.children}
-          </span>
-          {icon.length > 0 && iconPosition === "right" ? (
-            <Icon icon={icon} size="w-5 h-5" />
-          ) : (
-            ""
-          )}
-        </>
-      )}
-    </a>
+        ) : (
+          <>
+            {icon.length > 0 && iconPosition === "left" ? (
+              <Icon icon={icon} size={size} />
+            ) : (
+              ""
+            )}
+            <span className={getTextMargin(icon, iconPosition)}>
+              {props.children}
+            </span>
+            {icon.length > 0 && iconPosition === "right" ? (
+              <Icon icon={icon} size="w-5 h-5" />
+            ) : (
+              ""
+            )}
+          </>
+        )}
+      </a>
+    </button>
   );
 };

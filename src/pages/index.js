@@ -17,6 +17,8 @@ function IndexPage() {
           `front-end developer`,
           `front-end`,
           `frontend`,
+          `react.js`,
+          `gatsby.js`,
         ]}
         title="Home"
       />
