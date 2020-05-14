@@ -10,5 +10,8 @@ yarn-error.log
 # macOS
 .DS_Store
 
+# WebStorm
+.idea
+
 # deployment-specific configs
 now.json

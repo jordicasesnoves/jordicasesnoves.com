@@ -1,4 +1,4 @@
-import * as externalLinks from "../../content/externallinks.json";
+import externalLinks from "../../content/externallinks.json";
 export default function getExternalLink(keyword) {
   var href = "";
   href = externalLinks.filter(

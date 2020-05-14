@@ -3,7 +3,7 @@ import { TextLink } from "./Link";
 import { Link } from "gatsby";
 import { NewsletterSection } from "../sections/NewsletterSection";
 import { Icon } from "./Icon";
-import * as socialMediaLinks from "../../content/socialmedialinks.json";
+import socialMediaLinks from "../../content/socialmedialinks.json";
 import getExternalLink from "../utils/getExternalLink";
 
 const Footer = () => {
@@ -52,9 +52,8 @@ const Footer = () => {
         </div>
         <div className="my-3 text-center">
           © {new Date().getFullYear()} — Web designed & coded by Jordi
-          Casesnoves using{" "}
-          <TextLink href={getExternalLink("react.js")}>React.js</TextLink> +{" "}
-          <TextLink href={getExternalLink("gatsby.js")}>Gatsby.js</TextLink>
+          Casesnoves using <TextLink href="#">React.js</TextLink> +{" "}
+          <TextLink href="#">Gatsby.js</TextLink>
         </div>
       </nav>
     </footer>

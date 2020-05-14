@@ -11,20 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca18bcd7-02f3-4365-8c63-db66cb9dd58b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/content/externallinks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/getExternalLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/links.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/socialmedialinks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/projects.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/AboutSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/AboutSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/HeroSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/HeroSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/PortfolioSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/PortfolioSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getExternalLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getExternalLink.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +71,7 @@
       <workItem from="1589098735146" duration="38152000" />
       <workItem from="1589232105903" duration="9121000" />
       <workItem from="1589273417307" duration="5319000" />
-      <workItem from="1589358014425" duration="11752000" />
+      <workItem from="1589358014425" duration="13195000" />
     </task>
     <servers />
   </component>
