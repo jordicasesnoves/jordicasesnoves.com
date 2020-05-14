@@ -52,8 +52,8 @@ export const Button = ({
   ].join(" ");
 
   return (
-    <button type={type}>
-      <a href={href} {...props} className={className}>
+    <button {...props} type={type} className={className}>
+      <a href={href}>
         {loading ? (
           <div className="items-center flex">
             <div className="flex-1">
