@@ -37,9 +37,10 @@ export const AboutSection = (props) => {
                 </p>
                 <p className="mt-4">
                   Interested in the logical part of the web, and also its visual
-                  side. My main focus is to provide user-centered solutions,
-                  always meeting the client needs, and allowing their apps to
-                  scale.
+                  side. Although I mainly do front-end, I love UX/UI and that's
+                  why I've studied the basics. My main focus is to provide
+                  user-centered solutions, always meeting the client needs, and
+                  allowing their apps to scale.
                 </p>
                 <p className="mt-4">
                   Aside from tech, some of my hobbies are travelling around the
