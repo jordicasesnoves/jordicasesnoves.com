@@ -11,10 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca18bcd7-02f3-4365-8c63-db66cb9dd58b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/getExternalLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getExternalLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/projects.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/layout.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,9 @@
       <workItem from="1589098735146" duration="38152000" />
       <workItem from="1589232105903" duration="9121000" />
       <workItem from="1589273417307" duration="5319000" />
-      <workItem from="1589358014425" duration="13195000" />
+      <workItem from="1589358014425" duration="13552000" />
+      <workItem from="1589447617591" duration="1002000" />
+      <workItem from="1589448978211" duration="399000" />
     </task>
     <servers />
   </component>
@@ -138,7 +139,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/sections/PortfolioSection.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
