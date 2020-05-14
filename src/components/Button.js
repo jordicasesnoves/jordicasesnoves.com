@@ -2,7 +2,7 @@ import React from "react";
 import { Icon } from "./Icon";
 
 const default_classes =
-  "inline-flex items-center relative shadow hover:shadow-xl rounded-md font-medium focus:outline-none focus:shadow-outline duration-200 ease-in-out transition-all";
+  "relative shadow hover:shadow-xl rounded-md font-medium focus:outline-none focus:shadow-outline duration-200 ease-in-out transition-all";
 
 const colors = {
   primary: "text-white bg-primary hover:bg-primary-light",
@@ -42,10 +42,10 @@ export const Button = ({
   iconPosition = "right",
   ...props
 }) => {
+  const anchorSize = sizes[size];
   // Dynamic TailwindCSS classes
   className = [
     default_classes,
-
     colors[color],
     fullWidth ? "w-full" : "",
     className,
@@ -53,7 +53,10 @@ export const Button = ({
 
   return (
     <button {...props} type={type} className={className}>
-      <a href={href} className={sizes[size]}>
+      <a
+        href={href}
+        className={`${anchorSize} w-full inline-flex justify-center items-center`}
+      >
         {loading ? (
           <div className="items-center flex">
             <div className="flex-1">
