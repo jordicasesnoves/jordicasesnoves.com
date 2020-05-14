@@ -45,7 +45,7 @@ export const Button = ({
   // Dynamic TailwindCSS classes
   className = [
     default_classes,
-    sizes[size],
+
     colors[color],
     fullWidth ? "w-full" : "",
     className,
@@ -53,7 +53,7 @@ export const Button = ({
 
   return (
     <button {...props} type={type} className={className}>
-      <a href={href}>
+      <a href={href} className={sizes[size]}>
         {loading ? (
           <div className="items-center flex">
             <div className="flex-1">

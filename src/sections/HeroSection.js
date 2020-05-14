@@ -6,7 +6,7 @@ export const HeroSection = (props) => {
   return (
     <section {...props}>
       <div className="relative text-center flex lg:flex-row flex-col-reverse justify-between items-center z-10">
-        <div className="lg:text-left lg:mr-24 w-full mx-auto">
+        <div className="text-left lg:mr-24 w-full mx-auto">
           <h2 className="mb-1 mt-4 lg:mt-0 lg:text-6xl text-4xl font-bold ">
             Hola.
           </h2>
@@ -21,7 +21,7 @@ export const HeroSection = (props) => {
               href="#portfolio"
               size="lg"
               icon="AngleRightBIcon"
-              className="lg:mr-4 mb-3"
+              className="lg:mr-4 mb-3 justify-center inline-flex w-full lg:w-auto"
             >
               Check My Work
             </Button>
@@ -30,6 +30,7 @@ export const HeroSection = (props) => {
               size="lg"
               color="secondary"
               icon="MessageIcon"
+              className="justify-center inline-flex w-full lg:w-auto"
             >
               <span>Contact Me</span>
             </Button>

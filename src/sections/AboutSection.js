@@ -50,7 +50,7 @@ export const AboutSection = (props) => {
             </div>
             <Button
               href={"mailto:jordicasesnoves@gmail.com"}
-              className="mt-8 "
+              className="mt-8 justify-center inline-flex w-full md:w-auto"
               size="lg"
               icon="MessageIcon"
             >
