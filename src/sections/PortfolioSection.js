@@ -1,8 +1,5 @@
 import React from "react";
 import { Button } from "../components/Button";
-import { GraphqlIcon, ReactIcon, TailwindIcon } from "../icons";
-//import "../css/portfolio.css";
-import { Icon } from "../components/Icon";
 import projectsJSON from "../../content/projects.json";
 import { TextLink } from "../components/Link";
 import getExternalLink from "../utils/getExternalLink";

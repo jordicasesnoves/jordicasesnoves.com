@@ -22,12 +22,16 @@ const Footer = () => {
                 title: `Portfolio`,
               },
               {
+                route: `#specialized`,
+                title: `Specialized In`,
+              },
+              {
                 route: `#about`,
-                title: `About`,
+                title: `About Me`,
               },
             ].map((link) => (
               <a
-                className="transition-all duration-200 text-gray-600 hover:text-gray-900 block mx-3 no-underline"
+                className="transition-all duration-200 text-gray-600 hover:text-gray-900 block mx-8 no-underline"
                 key={link.title}
                 href={link.route}
               >
@@ -52,8 +56,9 @@ const Footer = () => {
         </div>
         <div className="my-3 text-center">
           © {new Date().getFullYear()} — Web designed & coded by Jordi
-          Casesnoves using <TextLink href="#">React.js</TextLink> +{" "}
-          <TextLink href="#">Gatsby.js</TextLink>
+          Casesnoves using{" "}
+          <TextLink href={getExternalLink("React.js")}>React.js</TextLink> +{" "}
+          <TextLink href={getExternalLink("Gatsby.js")}>Gatsby.js</TextLink>
         </div>
       </nav>
     </footer>

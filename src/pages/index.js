@@ -22,12 +22,10 @@ function IndexPage() {
         ]}
         title="Home"
       />
-      <HeroSection className="pb-16 pt-8" />
-
-      <PortfolioSection className="my-32 py-8" />
-      <TechnologiesSection className="my-32 py-8" />
-
-      <AboutSection className="py-8" />
+      <HeroSection className="py-16" />
+      <PortfolioSection className="my-8 py-32" />
+      <TechnologiesSection className="my-8 py-32" />
+      <AboutSection className="my-8 py-32" />
     </Layout>
   );
 }

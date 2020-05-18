@@ -1,9 +1,6 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState, useEffect, useRef } from "react";
 import links from "../../content/socialmedialinks.json";
-import * as icons from "../icons";
-
-import { HamburguerIcon, CrossIcon } from "../icons";
 import { Icon } from "./Icon";
 
 function Header() {
@@ -26,7 +23,8 @@ function Header() {
   };
 
   const handleScroll = (e) => {
-    if (headerEl.current.offsetTop > 0) {
+    const initialOffsetTop = "16";
+    if (headerEl.current.offsetTop > initialOffsetTop) {
       setShowShadow(true);
     } else {
       setShowShadow(false);
@@ -44,13 +42,13 @@ function Header() {
     <header
       ref={headerEl}
       className={
-        "sticky top-0 bg-background z-50 transition-all duration-200 " +
+        "sticky mt-4 top-0 bg-background z-50 transition-all duration-200 " +
         (isExpanded ? " " : " ") +
         (showShadow ? " shadow-xl " : " ")
       }
     >
       <div
-        className={`flex flex-wrap relative justify-start items-center max-w-6xl px-4 py-6 mx-auto md:px-8`}
+        className={`flex flex-wrap relative justify-start items-center max-w-6xl px-4 py-5 mx-auto md:px-8`}
       >
         <div className="flex flex-1 items-center ">
           <nav
@@ -70,8 +68,12 @@ function Header() {
                   title: `Portfolio`,
                 },
                 {
+                  route: `#specialized`,
+                  title: `Specialized In`,
+                },
+                {
                   route: `#about`,
-                  title: `About`,
+                  title: `About Me`,
                 },
               ].map((link) => (
                 <a
