@@ -26,13 +26,13 @@ const Footer = () => {
                 title: `About`,
               },
             ].map((link) => (
-              <Link
-                className="text-gray-600 hover:text-gray-900 block mx-3 no-underline"
+              <a
+                className="transition-all duration-200 text-gray-600 hover:text-gray-900 block mx-3 no-underline"
                 key={link.title}
-                to={link.route}
+                href={link.route}
               >
                 {link.title}
-              </Link>
+              </a>
             ))}
           </nav>
         </div>
@@ -40,7 +40,7 @@ const Footer = () => {
           {socialMediaLinks.map((link, index, array) => (
             <a
               className={
-                `text-gray-600 hover:text-gray-900 block mt-4 no-underline inline-flex md:inline-block md:mt-0 ` +
+                `transition-all duration-200 text-gray-600 hover:text-gray-900 block mt-4 no-underline inline-flex md:inline-block md:mt-0 ` +
                 (index + 1 < array.length ? `mr-6` : "")
               }
               key={link.name}
