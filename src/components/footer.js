@@ -11,10 +11,10 @@ const Footer = () => {
     <footer className="relative z-10 mt-32 border-t border-gray-200">
       {/* <NewsletterSection/>*/}
       <nav className="flex flex-col text-gray-600 justify-center items-center max-w-6xl p-4 mx-auto">
-        <div className="my-3">
+        <div className="my-1 md:my-3">
           <nav
             className={`
-             flex flex-wrap md:flex-no-wrap flex-1 font-medium items-center w-full `}
+             flex flex-col md:flex-row  flex-wrap md:flex-no-wrap flex-1 font-medium items-center w-full `}
           >
             {[
               {
@@ -31,7 +31,7 @@ const Footer = () => {
               },
             ].map((link) => (
               <a
-                className="transition-all duration-200 text-gray-600 hover:text-gray-900 text-center mx-auto px-8 no-underline"
+                className="transition-all duration-200 text-gray-600 hover:text-gray-900 text-center mx-auto px-8 py-1 no-underline"
                 key={link.title}
                 href={link.route}
               >
@@ -40,7 +40,7 @@ const Footer = () => {
             ))}
           </nav>
         </div>
-        <div className="my-3">
+        <div className="my-1 md:my-3">
           {socialMediaLinks.map((link, index, array) => (
             <a
               className={
