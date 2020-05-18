@@ -23,9 +23,9 @@ function IndexPage() {
         title="Home"
       />
       <HeroSection className="py-16" />
-      <PortfolioSection className="my-8 py-32" />
-      <TechnologiesSection className="my-8 py-32" />
-      <AboutSection className="my-8 py-32" />
+      <PortfolioSection className="py-16" />
+      <TechnologiesSection className="my-8 py-16" />
+      <AboutSection className="my-8 py-16" />
     </Layout>
   );
 }

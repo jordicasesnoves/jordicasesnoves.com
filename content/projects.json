@@ -7,7 +7,8 @@
 		"description": "Create an account, search any movie or TV show, read some specific info about it, and even watch the trailer between thousands of media.",
 		"technologies": [
 			"React.js",
-			"Apollo GraphQL"
+			"Apollo GraphQL",
+			"TailwindCSS"
 		],
 		"github": "https://github.com/jordicasesnoves/NekoFilm",
 		"demo": "https://nekofilm.now.sh/"
@@ -35,8 +36,8 @@
 		"description": "Visualize the 24hr top crypto's charts in real time with real data. Also developed the dashboard UI, but the real data is only used on the charts.",
 		"technologies": [
 			"Vue.js",
-			"TailwindCSS",
-			"ApexCharts.js"
+			"ApexCharts.js",
+			"TailwindCSS"
 		],
 		"github": "https://github.com/jordicasesnoves/icrypto",
 		"demo": "https://icrypto.netlify.app/"
