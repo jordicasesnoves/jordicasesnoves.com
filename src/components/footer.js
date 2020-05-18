@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="my-3">
           <nav
             className={`
-             flex flex-1 font-medium items-center w-full `}
+             flex flex-wrap md:flex-no-wrap flex-1 font-medium items-center w-full `}
           >
             {[
               {
@@ -31,7 +31,7 @@ const Footer = () => {
               },
             ].map((link) => (
               <a
-                className="transition-all duration-200 text-gray-600 hover:text-gray-900 block mx-8 no-underline truncate"
+                className="transition-all duration-200 text-gray-600 hover:text-gray-900 text-center mx-auto px-8 no-underline"
                 key={link.title}
                 href={link.route}
               >
