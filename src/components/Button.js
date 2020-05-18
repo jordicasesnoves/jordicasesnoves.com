@@ -5,8 +5,10 @@ const default_classes =
   "relative shadow hover:shadow-xl rounded-md font-medium focus:outline-none focus:shadow-outline duration-200 ease-in-out transition-all";
 
 const colors = {
-  primary: "text-white bg-primary hover:bg-primary-light",
-  secondary: "text-primary bg-background hover:bg-primary hover:text-white",
+  primary:
+    "text-white bg-primary hover:bg-white hover:text-primary border border-primary",
+  secondary:
+    "text-primary bg-background hover:bg-primary hover:text-white border-primary border",
   white: "text-black bg-white hover:bg-black hover:text-white",
   black: "text-white bg-black hover:bg-white hover:text-black",
   red: "text-white bg-red-600 hover:bg-red-500",

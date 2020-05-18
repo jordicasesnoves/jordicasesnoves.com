@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import links from "../../content/socialmedialinks.json";
 import * as icons from "../icons";
 
@@ -7,6 +7,8 @@ import { HamburguerIcon, CrossIcon } from "../icons";
 import { Icon } from "./Icon";
 
 function Header() {
+  const headerEl = useRef(null);
+  const [showShadow, setShowShadow] = useState(false);
   const [isExpanded, toggleExpansion] = useState(false);
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -18,10 +20,28 @@ function Header() {
     }
   `);
 
+  const handleScroll = (e) => {
+    if (headerEl.current.offsetTop > 0) {
+      setShowShadow(true);
+    } else {
+      setShowShadow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
+      ref={headerEl}
       className={
-        " top-0 bg-background relative z-1000" + (isExpanded ? "border-b " : "")
+        "sticky top-0 bg-background z-50 transition-all duration-200" +
+        (isExpanded ? "border-b " : " ") +
+        (showShadow ? "shadow-xl" : " ")
       }
     >
       <div
