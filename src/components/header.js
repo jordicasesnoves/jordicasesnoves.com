@@ -44,7 +44,7 @@ function Header() {
       className={
         "sticky mt-4 top-0 bg-background z-50 transition-all duration-200 " +
         (isExpanded ? " " : " ") +
-        (showShadow ? " shadow-xl " : " ")
+        (showShadow ? " shadow-lg " : " ")
       }
     >
       <div
@@ -56,7 +56,7 @@ function Header() {
           >
             <Link to="/" className="mr-8">
               <h1 className="flex items-center no-underline">
-                <span className="text-xl font-medium tracking-tight">
+                <span className="text-xl font-medium tracking-tight truncate">
                   Jordi Casesnoves
                 </span>
               </h1>
@@ -77,7 +77,7 @@ function Header() {
                 },
               ].map((link) => (
                 <a
-                  className="transition-all duration-200 text-secondary-text hover:text-hover-text block mt-4 no-underline md:inline-block md:mt-0 mx-8"
+                  className="transition-all duration-200 text-secondary-text hover:text-hover-text block mt-4 no-underline md:inline-block md:mt-0 mx-8 truncate"
                   key={link.title}
                   href={link.route}
                 >
@@ -119,7 +119,7 @@ function Header() {
           className={
             (showShadow ? "shadow-xl " : " ") +
             (isExpanded
-              ? "border-b absolute overlay mt-16 pb-6 h-auto items-center left-0 top-0 w-full bg-white "
+              ? "border-b absolute overlay mt-16 pb-6 h-auto items-center left-0 top-0 w-full bg-background "
               : " hidden ")
           }
         >

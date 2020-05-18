@@ -31,7 +31,7 @@ const Footer = () => {
               },
             ].map((link) => (
               <a
-                className="transition-all duration-200 text-gray-600 hover:text-gray-900 block mx-8 no-underline"
+                className="transition-all duration-200 text-gray-600 hover:text-gray-900 block mx-8 no-underline truncate"
                 key={link.title}
                 href={link.route}
               >
@@ -44,7 +44,7 @@ const Footer = () => {
           {socialMediaLinks.map((link, index, array) => (
             <a
               className={
-                `transition-all duration-200 text-gray-600 hover:text-gray-900 block mt-4 no-underline inline-flex md:inline-block md:mt-0 ` +
+                `transition-all duration-200 text-gray-600 hover:text-gray-900 block mt-4 no-underline inline-flex md:inline-block md:mt-0 truncate ` +
                 (index + 1 < array.length ? `mr-6` : "")
               }
               key={link.name}
