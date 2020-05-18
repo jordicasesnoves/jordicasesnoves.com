@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca18bcd7-02f3-4365-8c63-db66cb9dd58b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/seo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/seo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
       <workItem from="1589358014425" duration="13552000" />
       <workItem from="1589447617591" duration="1002000" />
       <workItem from="1589448978211" duration="2537000" />
-      <workItem from="1589479499823" duration="1573000" />
+      <workItem from="1589479499823" duration="2648000" />
     </task>
     <servers />
   </component>
@@ -105,10 +105,10 @@
       <screen x="0" y="23" width="1920" height="1002" />
     </state>
     <state x="378" y="311" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.23.1920.1002@0.23.1920.1002" timestamp="1589042812490" />
-    <state x="698" y="277" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589413109779">
+    <state x="698" y="277" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589481946239">
       <screen x="0" y="23" width="1920" height="1002" />
     </state>
-    <state x="698" y="277" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1440.81.1440.877/0.23.1920.1002@0.23.1920.1002" timestamp="1589413109779" />
+    <state x="698" y="277" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1440.81.1440.877/0.23.1920.1002@0.23.1920.1002" timestamp="1589481946239" />
     <state x="698" y="277" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1002@0.23.1920.1002" timestamp="1589140999169" />
     <state x="149" y="163" key="SettingsEditor" timestamp="1589358064422">
       <screen x="0" y="23" width="1920" height="1002" />
