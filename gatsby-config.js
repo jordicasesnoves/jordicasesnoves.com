@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 const resolveConfig = require("tailwindcss/resolveConfig");
 const tailwindConfig = require("./tailwind.config.js");
 
@@ -10,6 +14,16 @@ module.exports = {
     author: `@jordicasesnoves`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-segment-js`,
+      options: {
+        prodKey: process.env.GATSBY_SEGMENT_PROD_KEY,
+        devKey: process.env.GATSBY_SEGMENT_DEV_KEY,
+        trackPage: true,
+        delayLoad: true,
+        delayLoadTime: 1000,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
