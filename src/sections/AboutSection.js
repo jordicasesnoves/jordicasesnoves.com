@@ -6,6 +6,10 @@ import getExternalLink from "../utils/getExternalLink";
 import { Container } from "../components/Container";
 
 export const AboutSection = (props) => {
+  const handleClick = (event, buttonName) => {
+    event.stopPropagation();
+    window.analytics.track(`${buttonName} button clicked`);
+  };
   return (
     <section id="about" {...props}>
       <Container>
@@ -53,6 +57,7 @@ export const AboutSection = (props) => {
                 </div>
               </div>
               <Button
+                onClick={(e) => handleClick(e, "Contact Me")}
                 href={"mailto:jordicasesnoves@gmail.com"}
                 className="mt-8 justify-center inline-flex w-full md:w-auto"
                 size="lg"

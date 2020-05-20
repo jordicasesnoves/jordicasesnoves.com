@@ -6,6 +6,10 @@ import getExternalLink from "../utils/getExternalLink";
 import { Container } from "../components/Container";
 
 export const PortfolioSection = (props) => {
+  const handleClick = (event, buttonName) => {
+    event.stopPropagation();
+    window.analytics.track(`${buttonName} button clicked`);
+  };
   return (
     <section id="portfolio" {...props}>
       <Container>
@@ -63,6 +67,8 @@ export const PortfolioSection = (props) => {
                     <div className="w-full justify-end flex flex-wrap md:flex-no-wrap mt-6 md:px-0 px-6">
                       {project.github && (
                         <Button
+                          onClick={(e) => handleClick(e, "View Code")}
+                          target="_blank"
                           href={project.github}
                           color="secondary"
                           icon="GithubIcon"
@@ -74,6 +80,8 @@ export const PortfolioSection = (props) => {
 
                       {project.demo && (
                         <Button
+                          target="_blank"
+                          onClick={(e) => handleClick(e, "Live Demo")}
                           href={project.demo}
                           icon="AngleRightBIcon"
                           className="md:mr-3 mb-3 md:mb-0 justify-center inline-flex w-full md:w-auto"

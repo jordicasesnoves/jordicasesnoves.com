@@ -4,6 +4,10 @@ import Image from "../components/Image";
 import { Container } from "../components/Container";
 
 export const HeroSection = (props) => {
+  const handleClick = (event, buttonName) => {
+    event.stopPropagation();
+    window.analytics.track(`${buttonName} button clicked`);
+  };
   return (
     <section {...props}>
       <Container>
@@ -20,6 +24,7 @@ export const HeroSection = (props) => {
             </p>
             <div className="flex lg:flex-row flex-col items-center lg:items-start">
               <Button
+                onClick={(e) => handleClick(e, "Check My Work")}
                 href="#portfolio"
                 size="lg"
                 icon="AngleRightBIcon"
@@ -28,6 +33,7 @@ export const HeroSection = (props) => {
                 Check My Work
               </Button>
               <Button
+                onClick={(e) => handleClick(e, "Contact Me")}
                 href={"mailto:jordicasesnoves@gmail.com"}
                 size="lg"
                 color="secondary"

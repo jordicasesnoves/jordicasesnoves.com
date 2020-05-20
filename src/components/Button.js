@@ -56,6 +56,7 @@ export const Button = ({
   return (
     <button {...props} type={type} className={className}>
       <a
+        target={props.target === "_blank" ? "_blank" : ""}
         href={href}
         className={`${anchorSize} w-full inline-flex justify-center items-center`}
       >
