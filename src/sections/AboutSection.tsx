@@ -1,24 +1,24 @@
-import React from "react";
-import { Button } from "../components/Button";
-import { TextLink } from "../components/Link";
-import Image from "../components/Image";
-import getExternalLink from "../utils/getExternalLink";
-import { Container } from "../components/Container";
+import React from 'react'
+import { Button } from '../components/Button'
+import { TextLink } from '../components/Link'
+import getExternalLink from '../utils/getExternalLink'
+import { Container } from '../components/Container'
 
-export const AboutSection = (props) => {
-  const handleClick = (event, buttonName) => {
-    event.stopPropagation();
-    window.analytics.track(`${buttonName} button clicked`);
-  };
+export const AboutSection = (props: any): JSX.Element => {
+  const handleClick = (event, buttonName): void => {
+    event
+      .stopPropagation()(window as any)
+      .analytics.track(`${buttonName} button clicked`)
+  }
   return (
     <section id="about" {...props}>
       <Container>
         <div className="mt-10">
           <div className="md:flex">
-            <Image
-              style={{ maxHeight: "600px" }}
+            <img
+              style={{ maxHeight: '600px' }}
               className="rounded-md shadow-xl flex-1 w-full h-64 md:h-full"
-              imageName="me.jpg"
+              src="/me.jpg"
             />
 
             <div className="mt-4 flex-1 flex-col flex items-start justify-between md:ml-8 md:mt-0 lg:mt-0">
@@ -31,17 +31,16 @@ export const AboutSection = (props) => {
                 </h3>
                 <div className="mt-4 max-w-2xl text-lg leading-8 text-secondary-text lg:mx-auto">
                   <p>
-                    {" "}
-                    I am front-end developer based in Valencia (Spain). I've
-                    always been a self-taught learning person; that's how I
+                    I am front-end developer based in Valencia (Spain). I have
+                    always been a self-taught learning person; that is how I
                     learnt front-end.
                   </p>
                   <p className="mt-4">
-                    Currently working at{" "}
-                    <TextLink href={getExternalLink("Dedalus")}>
-                      Dedalus
+                    Currently working at{' '}
+                    <TextLink href={getExternalLink('Capgemini')}>
+                      Capgemini
                     </TextLink>
-                    , a healthcare-tech company.
+                    .
                   </p>
                   <p className="mt-4">
                     Interested in the logical part of the web, and also its
@@ -57,8 +56,8 @@ export const AboutSection = (props) => {
                 </div>
               </div>
               <Button
-                onClick={(e) => handleClick(e, "Contact Me")}
-                href={"mailto:jordicasesnoves@gmail.com"}
+                onClick={(e): void => handleClick(e, 'Contact Me')}
+                href={'mailto:jordicasesnoves@gmail.com'}
                 className="mt-8 justify-center inline-flex w-full md:w-auto"
                 size="lg"
                 icon="MessageIcon"
@@ -70,5 +69,5 @@ export const AboutSection = (props) => {
         </div>
       </Container>
     </section>
-  );
-};
+  )
+}

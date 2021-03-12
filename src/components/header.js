@@ -1,50 +1,40 @@
-import { graphql, useStaticQuery, Link } from "gatsby";
-import React, { useState, useEffect, useRef } from "react";
-import links from "../../content/socialmedialinks.json";
-import { Icon } from "./Icon";
+import React, { useState, useEffect, useRef } from 'react'
+import links from '../../content/socialmedialinks.json'
+import { Icon } from './Icon'
+import Link from 'next/link'
 
 function Header() {
-  const headerEl = useRef(null);
-  const [showShadow, setShowShadow] = useState(false);
-  const [isExpanded, toggleExpansion] = useState(false);
-
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+  const headerEl = useRef(null)
+  const [showShadow, setShowShadow] = useState(false)
+  const [isExpanded, toggleExpansion] = useState(false)
 
   const handleResponsiveLink = (e) => {
-    toggleExpansion(false);
-  };
+    toggleExpansion(false)
+  }
 
   const handleScroll = (e) => {
-    const initialOffsetTop = "16";
+    const initialOffsetTop = '16'
     if (headerEl.current.offsetTop > initialOffsetTop) {
-      setShowShadow(true);
+      setShowShadow(true)
     } else {
-      setShowShadow(false);
+      setShowShadow(false)
     }
-  };
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
     <header
       ref={headerEl}
       className={
-        "sticky mt-4 top-0 bg-background z-50 transition-all duration-200 " +
-        (isExpanded ? " " : " ") +
-        (showShadow ? " shadow-lg " : " ")
+        'sticky mt-4 top-0 bg-background z-50 transition-all duration-200 ' +
+        (isExpanded ? ' ' : ' ') +
+        (showShadow ? ' shadow-lg ' : ' ')
       }
     >
       <div
@@ -54,7 +44,7 @@ function Header() {
           <nav
             className={`flex-1 inline-flex justify-between font-medium   md:items-center w-full `}
           >
-            <Link to="/" className="mr-8">
+            <Link href="/" className="mr-8">
               <h1 className="flex items-center no-underline">
                 <span className="text-xl font-medium tracking-tight truncate">
                   Jordi Casesnoves
@@ -65,16 +55,16 @@ function Header() {
               {[
                 {
                   route: `#portfolio`,
-                  title: `Portfolio`,
+                  title: `Portfolio`
                 },
                 {
                   route: `#specialized`,
-                  title: `Specialized In`,
+                  title: `Specialized In`
                 },
                 {
                   route: `#about`,
-                  title: `About Me`,
-                },
+                  title: `About Me`
+                }
               ].map((link) => (
                 <a
                   className="transition-all duration-200 text-secondary-text hover:text-hover-text block mt-4 no-underline md:inline-block md:mt-0 mx-8 truncate"
@@ -90,7 +80,7 @@ function Header() {
                 <a
                   className={
                     `transition-all duration-200 text-secondary-text hover:text-hover-text block mt-4 no-underline inline-flex md:inline-block md:mt-0 ` +
-                    (index + 1 < array.length ? `mr-6` : "")
+                    (index + 1 < array.length ? `mr-6` : '')
                   }
                   key={link.name}
                   href={link.href}
@@ -117,22 +107,22 @@ function Header() {
         </div>
         <div
           className={
-            (showShadow ? "shadow-xl " : " ") +
+            (showShadow ? 'shadow-xl ' : ' ') +
             (isExpanded
-              ? "border-b absolute overlay mt-16 pb-6 h-auto items-center left-0 top-0 w-full bg-background "
-              : " hidden ")
+              ? 'border-b absolute overlay mt-16 pb-6 h-auto items-center left-0 top-0 w-full bg-background '
+              : ' hidden ')
           }
         >
           <div className="flex flex-col font-medium">
             {[
               {
                 route: `#portfolio`,
-                title: `Portfolio`,
+                title: `Portfolio`
               },
               {
                 route: `#about`,
-                title: `About`,
-              },
+                title: `About`
+              }
             ].map((link) => (
               <a
                 className="transition-all duration-200 text-secondary-text hover:text-hover-text block mt-4 no-underline md:inline-block md:mt-0 mx-4"
@@ -148,7 +138,7 @@ function Header() {
                 <a
                   className={
                     `transition-all duration-200  text-secondary-text hover:text-hover-text block mt-4 no-underline inline-block md:mt-0 ` +
-                    (index + 1 !== array.length ? `mr-6` : "")
+                    (index + 1 !== array.length ? `mr-6` : '')
                   }
                   key={link.name}
                   href={link.href}
@@ -162,7 +152,7 @@ function Header() {
         </div>
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header

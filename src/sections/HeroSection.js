@@ -1,13 +1,12 @@
-import React from "react";
-import { Button } from "../components/Button";
-import Image from "../components/Image";
-import { Container } from "../components/Container";
+import React from 'react'
+import { Button } from '../components/Button'
+import { Container } from '../components/Container'
 
 export const HeroSection = (props) => {
   const handleClick = (event, buttonName) => {
-    event.stopPropagation();
-    window.analytics.track(`${buttonName} button clicked`);
-  };
+    event.stopPropagation()
+    window.analytics.track(`${buttonName} button clicked`)
+  }
   return (
     <section {...props}>
       <Container>
@@ -19,12 +18,12 @@ export const HeroSection = (props) => {
 
             <p className="fadeIn leading-loose text-xl text-md lg:mb-10 mb-5">
               My name is Jordi. I'm a <strong>front-end developer</strong> based
-              in Valencia (Spain). My goal is to provide{" "}
+              in Valencia (Spain). My goal is to provide{' '}
               <strong>user-centered web solutions</strong>.
             </p>
             <div className="flex lg:flex-row flex-col items-center lg:items-start">
               <Button
-                onClick={(e) => handleClick(e, "Check My Work")}
+                onClick={(e) => handleClick(e, 'Check My Work')}
                 href="#portfolio"
                 size="lg"
                 icon="AngleRightBIcon"
@@ -33,8 +32,8 @@ export const HeroSection = (props) => {
                 Check My Work
               </Button>
               <Button
-                onClick={(e) => handleClick(e, "Contact Me")}
-                href={"mailto:jordicasesnoves@gmail.com"}
+                onClick={(e) => handleClick(e, 'Contact Me')}
+                href={'mailto:jordicasesnoves@gmail.com'}
                 size="lg"
                 color="secondary"
                 icon="MessageIcon"
@@ -45,10 +44,10 @@ export const HeroSection = (props) => {
             </div>
           </div>
           <div className="mx-auto w-64 lg:w-full max-w-sm">
-            <Image className="rounded-full shadow-xl" imageName="jordi.png" />
+            <img className="rounded-full shadow-xl" src="/jordi.png" />
           </div>
         </div>
       </Container>
     </section>
-  );
-};
+  )
+}

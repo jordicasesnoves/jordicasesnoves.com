@@ -1,10 +1,8 @@
-import React from "react";
-import { TextLink } from "./Link";
-import { Link } from "gatsby";
-import { NewsletterSection } from "../sections/NewsletterSection";
-import { Icon } from "./Icon";
-import socialMediaLinks from "../../content/socialmedialinks.json";
-import getExternalLink from "../utils/getExternalLink";
+import React from 'react'
+import { TextLink } from './Link'
+import { Icon } from './Icon'
+import socialMediaLinks from '../../content/socialmedialinks.json'
+import getExternalLink from '../utils/getExternalLink'
 
 const Footer = () => {
   return (
@@ -19,16 +17,16 @@ const Footer = () => {
             {[
               {
                 route: `#portfolio`,
-                title: `Portfolio`,
+                title: `Portfolio`
               },
               {
                 route: `#specialized`,
-                title: `Specialized In`,
+                title: `Specialized In`
               },
               {
                 route: `#about`,
-                title: `About Me`,
-              },
+                title: `About Me`
+              }
             ].map((link) => (
               <a
                 className="transition-all duration-200 text-gray-600 hover:text-gray-900 text-center mx-auto px-8 py-1 no-underline"
@@ -45,7 +43,7 @@ const Footer = () => {
             <a
               className={
                 `transition-all duration-200 text-gray-600 hover:text-gray-900 block mt-4 no-underline inline-flex md:inline-block md:mt-0 truncate ` +
-                (index + 1 < array.length ? `mr-6` : "")
+                (index + 1 < array.length ? `mr-6` : '')
               }
               key={link.name}
               href={link.href}
@@ -56,13 +54,13 @@ const Footer = () => {
         </div>
         <div className="my-3 text-center">
           © {new Date().getFullYear()} — Web designed & coded by Jordi
-          Casesnoves using{" "}
-          <TextLink href={getExternalLink("React.js")}>React.js</TextLink> +{" "}
-          <TextLink href={getExternalLink("Gatsby.js")}>Gatsby.js</TextLink>
+          Casesnoves using{' '}
+          <TextLink href={getExternalLink('React.js')}>React.js</TextLink> +{' '}
+          <TextLink href={getExternalLink('Gatsby.js')}>Gatsby.js</TextLink>
         </div>
       </nav>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -1,14 +1,13 @@
-import React from "react";
+import React from 'react'
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import abductionIllustration from "../images/abduction-illustration.svg";
-import { Container } from "../components/Container";
+import Layout from '../components/Layout'
+
+import abductionIllustration from '../../public/abduction-illustration.svg'
+import { Container } from '../components/Container'
 
 function NotFoundPage() {
   return (
     <Layout>
-      <SEO title="404: Not found" />
       <Container>
         <img
           alt="Ghost getting abducted by aliens"
@@ -20,7 +19,7 @@ function NotFoundPage() {
         </h2>
       </Container>
     </Layout>
-  );
+  )
 }
 
-export default NotFoundPage;
+export default NotFoundPage
