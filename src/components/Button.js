@@ -1,62 +1,62 @@
-import React from "react";
-import { Icon } from "./Icon";
+import React from 'react'
+import { Icon } from './Icon'
 
 const default_classes =
-  "relative shadow hover:shadow-xl rounded-md font-medium focus:outline-none focus:shadow-outline duration-200 ease-in-out transition-all";
+  'relative shadow hover:shadow-xl rounded-md font-medium focus:outline-none focus:shadow-outline duration-200 ease-in-out transition-all'
 
 const colors = {
   primary:
-    "text-white bg-primary hover:bg-white hover:text-primary border border-primary",
+    'text-white bg-green-500 hover:bg-white hover:text-green-500 border border-green-500',
   secondary:
-    "text-primary bg-background hover:bg-primary hover:text-white border-primary border",
-  white: "text-black bg-white hover:bg-black hover:text-white",
-  black: "text-white bg-black hover:bg-white hover:text-black",
-  red: "text-white bg-red-600 hover:bg-red-500",
-};
+    'text-green-500 bg-white hover:bg-green-500 hover:text-white border-primary border',
+  white: 'text-black bg-white hover:bg-black hover:text-white',
+  black: 'text-white bg-black hover:bg-white hover:text-black',
+  red: 'text-white bg-red-600 hover:bg-red-500'
+}
 
 const sizes = {
-  sm: "px-5 py-2",
-  md: "px-6 py-3",
-  lg: "px-8 py-4",
-};
+  sm: 'px-5 py-2',
+  md: 'px-6 py-3',
+  lg: 'px-8 py-4'
+}
 
 const getTextMargin = (icon, iconPos) => {
   if (icon.length > 0) {
-    if (iconPos === "right") {
-      return "mr-2";
+    if (iconPos === 'right') {
+      return 'mr-2'
     } else {
-      return "ml-2";
+      return 'ml-2'
     }
   } else {
-    return "";
+    return ''
   }
-};
+}
 
 export const Button = ({
-  href = "#",
-  size = "md", // default button size
+  href = '#',
+  size = 'md', // default button size
   loading = false,
-  type = "button", // button, submit...
+  type = 'button', // button, submit...
   fullWidth = false,
   className,
-  color = "primary",
-  icon = "",
-  iconPosition = "right",
+  color = 'primary',
+  icon = '',
+  iconPosition = 'right',
   ...props
 }) => {
-  const anchorSize = sizes[size];
+  const anchorSize = sizes[size]
   // Dynamic TailwindCSS classes
   className = [
     default_classes,
     colors[color],
-    fullWidth ? "w-full" : "",
-    className,
-  ].join(" ");
+    fullWidth ? 'w-full' : '',
+    className
+  ].join(' ')
 
   return (
     <button {...props} type={type} className={className}>
       <a
-        target={props.target === "_blank" ? "_blank" : ""}
+        target={props.target === '_blank' ? '_blank' : ''}
         href={href}
         className={`${anchorSize} w-full inline-flex justify-center items-center`}
       >
@@ -64,7 +64,7 @@ export const Button = ({
           <div className="items-center flex">
             <div className="flex-1">
               <svg
-                className={"w-6 h-4 mx-auto "}
+                className={'w-6 h-4 mx-auto '}
                 version="1.1"
                 id="L4"
                 x="0px"
@@ -103,22 +103,22 @@ export const Button = ({
           </div>
         ) : (
           <>
-            {icon.length > 0 && iconPosition === "left" ? (
+            {icon.length > 0 && iconPosition === 'left' ? (
               <Icon icon={icon} size={size} />
             ) : (
-              ""
+              ''
             )}
             <span className={getTextMargin(icon, iconPosition)}>
               {props.children}
             </span>
-            {icon.length > 0 && iconPosition === "right" ? (
+            {icon.length > 0 && iconPosition === 'right' ? (
               <Icon icon={icon} size="w-5 h-5" />
             ) : (
-              ""
+              ''
             )}
           </>
         )}
       </a>
     </button>
-  );
-};
+  )
+}

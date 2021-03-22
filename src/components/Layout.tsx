@@ -1,9 +1,12 @@
 import React from 'react'
-
-import Header from './header'
+import Header from './Header/Header'
 import Footer from './footer'
 
-const Layout = ({ children }): JSX.Element => {
+interface LayoutProps {
+  children: React.ReactNode
+}
+
+const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <div className="relative flex flex-col min-h-screen font-sans theme-light bg-background text-main-text">
       <Header />

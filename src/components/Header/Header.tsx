@@ -1,18 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react'
-import links from '../../content/socialmedialinks.json'
-import { Icon } from './Icon'
+import links from '../../../content/socialmedialinks.json'
+import { Icon } from '../Icon'
 import Link from 'next/link'
 
-function Header() {
+import { HeaderIcon, HeaderLink } from './Header.styled'
+
+function Header(): JSX.Element {
   const headerEl = useRef(null)
   const [showShadow, setShowShadow] = useState(false)
   const [isExpanded, toggleExpansion] = useState(false)
 
-  const handleResponsiveLink = (e) => {
+  const handleResponsiveLink = (): void => {
     toggleExpansion(false)
   }
 
-  const handleScroll = (e) => {
+  const handleScroll = (): void => {
     const initialOffsetTop = '16'
     if (headerEl.current.offsetTop > initialOffsetTop) {
       setShowShadow(true)
@@ -23,7 +25,7 @@ function Header() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
-    return () => {
+    return (): void => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
@@ -32,7 +34,7 @@ function Header() {
     <header
       ref={headerEl}
       className={
-        'sticky mt-4 top-0 bg-background z-50 transition-all duration-200 ' +
+        'sticky mt-4 top-0 bg-white z-50 transition-all duration-200 ' +
         (isExpanded ? ' ' : ' ') +
         (showShadow ? ' shadow-lg ' : ' ')
       }
@@ -51,7 +53,7 @@ function Header() {
                 </span>
               </h1>
             </Link>
-            <div className="hidden md:block md:flex">
+            <div className="hidden md:flex">
               {[
                 {
                   route: `#portfolio`,
@@ -66,34 +68,23 @@ function Header() {
                   title: `About Me`
                 }
               ].map((link) => (
-                <a
-                  className="transition-all duration-200 text-secondary-text hover:text-hover-text block mt-4 no-underline md:inline-block md:mt-0 mx-8 truncate"
-                  key={link.title}
-                  href={link.route}
-                >
-                  {link.title}
-                </a>
+                <Link key={link.title} href={link.route} passHref>
+                  <HeaderLink>{link.title}</HeaderLink>
+                </Link>
               ))}
             </div>
-            <div className="hidden md:block md:flex">
+            <div className="hidden md:flex space-x-6">
               {links.map((link, index, array) => (
-                <a
-                  className={
-                    `transition-all duration-200 text-secondary-text hover:text-hover-text block mt-4 no-underline inline-flex md:inline-block md:mt-0 ` +
-                    (index + 1 < array.length ? `mr-6` : '')
-                  }
-                  key={link.name}
-                  href={link.href}
-                >
+                <HeaderIcon key={link.name} href={link.href}>
                   <Icon icon={link.icon} className="w-6 h-6" />
-                </a>
+                </HeaderIcon>
               ))}
             </div>
           </nav>
 
           <button
             className="absolute right-0 flex items-center block px-4 py-2 rounded md:hidden"
-            onClick={() => toggleExpansion(!isExpanded)}
+            onClick={(): void => toggleExpansion(!isExpanded)}
           >
             <svg className="w-6 h-6 fill-current" viewBox="0 0 20 20">
               <title>Menu</title>

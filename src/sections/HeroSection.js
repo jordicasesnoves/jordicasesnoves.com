@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '../components/Button'
 import { Container } from '../components/Container'
+import { WavingHandIcon } from '../icons'
 
 export const HeroSection = (props) => {
   const handleClick = (event, buttonName) => {
@@ -11,12 +12,15 @@ export const HeroSection = (props) => {
     <section {...props}>
       <Container>
         <div className="relative text-center flex lg:flex-row flex-col-reverse justify-between items-center z-10">
-          <div className="text-left lg:mr-24 w-full mx-auto">
-            <h2 className="mb-1 mt-4 lg:mt-0 lg:text-6xl text-4xl font-bold ">
-              Hola.
-            </h2>
+          <div className="text-left lg:mr-24 w-full mx-auto flex flex-col space-y-6">
+            <div className="flex items-center justify-start">
+              <WavingHandIcon className="w-24 h-24 mr-4 -ml-4" />
+              <h2 className="mt-4 lg:mt-0 lg:text-7xl text-6xl font-bold ">
+                Hola!
+              </h2>
+            </div>
 
-            <p className="fadeIn leading-loose text-xl text-md lg:mb-10 mb-5">
+            <p className="fadeIn leading-loose text-xl text-md">
               My name is Jordi. I'm a <strong>front-end developer</strong> based
               in Valencia (Spain). My goal is to provide{' '}
               <strong>user-centered web solutions</strong>.

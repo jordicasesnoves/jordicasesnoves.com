@@ -4,32 +4,32 @@
 
 @layer base {
   @font-face {
-    font-family: 'Gilroy';
-    src: url('../../public/fonts/Gilroy-Light.ttf');
+    font-family: 'Work Sans';
+    src: url('../../public/fonts/WorkSans-Light.ttf');
     font-weight: 300;
   }
 
   @font-face {
-    font-family: 'Gilroy';
-    src: url('../../public/fonts/Gilroy-Regular.ttf');
+    font-family: 'Work Sans';
+    src: url('../../public/fonts/WorkSans-Regular.ttf');
     font-weight: 400;
   }
 
   @font-face {
-    font-family: 'Gilroy';
-    src: url('../../public/fonts/Gilroy-Medium.ttf');
+    font-family: 'Work Sans';
+    src: url('../../public/fonts/WorkSans-Medium.ttf');
     font-weight: 500;
   }
 
   @font-face {
-    font-family: 'Gilroy';
-    src: url('../../public/fonts/Gilroy-Semibold.ttf');
+    font-family: 'Work Sans';
+    src: url('../../public/fonts/WorkSans-Semibold.ttf');
     font-weight: 600;
   }
 
   @font-face {
-    font-family: 'Gilroy';
-    src: url('../../public/fonts/Gilroy-Bold.ttf');
+    font-family: 'Work Sans';
+    src: url('../../public/fonts/WorkSans-Bold.ttf');
     font-weight: 700;
   }
 }

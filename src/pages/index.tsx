@@ -6,10 +6,10 @@ import { TechnologiesSection } from '../sections/TechnologiesSection'
 import { HeroSection } from '../sections/HeroSection'
 import { AboutSection } from '../sections/AboutSection'
 
-function IndexPage() {
+function IndexPage(): JSX.Element {
   return (
     <Layout>
-      <HeroSection className="py-16" />
+      <HeroSection />
       <PortfolioSection className="py-16" />
       <TechnologiesSection className="my-8 py-16" />
       <AboutSection className="my-8 py-16" />
