@@ -1,8 +1,9 @@
 import React from 'react'
-import { Button } from '../components/Button'
-import { TextLink } from '../components/Link'
-import getExternalLink from '../utils/getExternalLink'
-import { Container } from '../components/Container'
+import Button from '../Button/Button'
+import TextLink from '../Link/Link'
+import getExternalLink from '../../utils/getExternalLink'
+import Container from '../Container/Container'
+import { MessageIcon } from '../../icons'
 
 export const AboutSection = (props: any): JSX.Element => {
   const handleClick = (event, buttonName): void => {
@@ -60,7 +61,6 @@ export const AboutSection = (props: any): JSX.Element => {
                 href={'mailto:jordicasesnoves@gmail.com'}
                 className="mt-8 justify-center inline-flex w-full md:w-auto"
                 size="lg"
-                icon="MessageIcon"
               >
                 <span>Contact Me</span>
               </Button>

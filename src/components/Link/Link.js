@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-export const TextLink = (props) => {
+const TextLink = (props) => {
   return (
     <a
       target="_blank"
@@ -9,5 +9,7 @@ export const TextLink = (props) => {
     >
       {props.children}
     </a>
-  );
-};
+  )
+}
+
+export default TextLink

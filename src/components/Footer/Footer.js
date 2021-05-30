@@ -1,8 +1,7 @@
 import React from 'react'
-import { TextLink } from './Link'
-import { Icon } from './Icon'
-import socialMediaLinks from '../../content/socialmedialinks.json'
-import getExternalLink from '../utils/getExternalLink'
+import { Link, Icon } from '../index'
+import socialMediaLinks from '../../../content/socialmedialinks.json'
+import getExternalLink from '../../utils/getExternalLink'
 
 const Footer = () => {
   return (
@@ -55,8 +54,8 @@ const Footer = () => {
         <div className="my-3 text-center">
           © {new Date().getFullYear()} — Web designed & coded by Jordi
           Casesnoves using{' '}
-          <TextLink href={getExternalLink('React.js')}>React.js</TextLink> +{' '}
-          <TextLink href={getExternalLink('Gatsby.js')}>Gatsby.js</TextLink>
+          <Link href={getExternalLink('React.js')}>React.js</Link> +{' '}
+          <Link href={getExternalLink('Gatsby.js')}>Gatsby.js</Link>
         </div>
       </nav>
     </footer>

@@ -1,5 +1,6 @@
-import GlobalStylesComponent from '../components/GlobalStyles'
+import GlobalStylesComponent from '../components/GlobalStyles/GlobalStyles'
 import '../styles/index.css'
+import { Layout } from '../components'
 
 interface AppProps {
   Component: any
@@ -9,7 +10,9 @@ interface AppProps {
 const App = ({ Component, pageProps }: AppProps): JSX.Element => (
   <div>
     <GlobalStylesComponent />
-    <Component {...pageProps} />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   </div>
 )
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button } from '../components/Button'
-import { Container } from '../components/Container'
-import { WavingHandIcon } from '../icons'
+import Button from '../Button/Button'
+import Container from '../Container/Container'
+import { AngleRightBIcon, MessageIcon, WavingHandIcon } from '../../icons'
 
 export const HeroSection = (props) => {
   const handleClick = (event, buttonName) => {
@@ -30,7 +30,7 @@ export const HeroSection = (props) => {
                 onClick={(e) => handleClick(e, 'Check My Work')}
                 href="#portfolio"
                 size="lg"
-                icon="AngleRightBIcon"
+                icon={AngleRightBIcon}
                 className="lg:mr-4 mb-3 justify-center inline-flex w-full lg:w-auto"
               >
                 Check My Work
@@ -40,7 +40,7 @@ export const HeroSection = (props) => {
                 href={'mailto:jordicasesnoves@gmail.com'}
                 size="lg"
                 color="secondary"
-                icon="MessageIcon"
+                icon={MessageIcon}
                 className="justify-center inline-flex w-full lg:w-auto"
               >
                 <span>Contact Me</span>

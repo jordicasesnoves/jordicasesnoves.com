@@ -1,8 +1,8 @@
-import { GraphqlIcon, ReactIcon, TailwindIcon } from "../icons";
-import React from "react";
-import { TextLink } from "../components/Link";
-import getExternalLink from "../utils/getExternalLink";
-import { Container } from "../components/Container";
+import { GraphqlIcon, ReactIcon, TailwindIcon } from '../../icons'
+import React from 'react'
+import TextLink from '../Link/Link'
+import getExternalLink from '../../utils/getExternalLink'
+import Container from '../Container/Container'
 
 export const TechnologiesSection = (props) => {
   return (
@@ -36,10 +36,10 @@ export const TechnologiesSection = (props) => {
                     first learned Vue.js.
                   </p>
                   <p className="mt-2 text-base leading-6 text-secondary-text">
-                    Rocking with{" "}
-                    <TextLink href={getExternalLink("React Hooks")}>
+                    Rocking with{' '}
+                    <TextLink href={getExternalLink('React Hooks')}>
                       React Hooks
-                    </TextLink>{" "}
+                    </TextLink>{' '}
                     in all my React projects.
                   </p>
                 </div>
@@ -55,13 +55,13 @@ export const TechnologiesSection = (props) => {
                 <div className="ml-4">
                   <h5 className="text-lg leading-6 font-medium">GraphQL</h5>
                   <p className="mt-2 text-base leading-6 text-secondary-text">
-                    I use the Apollo's GraphQL implementations:{" "}
-                    <TextLink href={getExternalLink("Apollo GraphQL")}>
+                    I use the Apollo's GraphQL implementations:{' '}
+                    <TextLink href={getExternalLink('Apollo GraphQL')}>
                       Apollo Client
-                    </TextLink>{" "}
-                    for React and{" "}
-                    <TextLink href={getExternalLink("Apollo GraphQL")}>
-                      Apollo Server{" "}
+                    </TextLink>{' '}
+                    for React and{' '}
+                    <TextLink href={getExternalLink('Apollo GraphQL')}>
+                      Apollo Server{' '}
                     </TextLink>
                     for Node.js.
                   </p>
@@ -86,10 +86,10 @@ export const TechnologiesSection = (props) => {
                     clear and responsive interfaces for the web.
                   </p>
                   <p className="mt-2 text-base leading-6 text-secondary-text">
-                    I always use it as a{" "}
-                    <TextLink href={getExternalLink("PostCSS")}>
+                    I always use it as a{' '}
+                    <TextLink href={getExternalLink('PostCSS')}>
                       PostCSS
-                    </TextLink>{" "}
+                    </TextLink>{' '}
                     plugin, so I can reduce a lot the CSS bundle size.
                   </p>
                 </div>
@@ -99,5 +99,5 @@ export const TechnologiesSection = (props) => {
         </div>
       </Container>
     </section>
-  );
-};
+  )
+}

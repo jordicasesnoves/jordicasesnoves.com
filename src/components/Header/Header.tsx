@@ -1,9 +1,33 @@
 import React, { useState, useEffect, useRef } from 'react'
-import links from '../../../content/socialmedialinks.json'
-import { Icon } from '../Icon'
+import { Icon } from '../index'
 import Link from 'next/link'
 
 import { HeaderIcon, HeaderLink } from './Header.styled'
+import {
+  CrossIcon,
+  GithubIcon,
+  HamburguerIcon,
+  LinkedinIcon,
+  TwitterIcon
+} from '../../icons'
+
+const links = [
+  {
+    name: 'Github',
+    href: 'https://www.github.com/jordicasesnoves',
+    icon: GithubIcon
+  },
+  {
+    name: 'Twitter',
+    href: 'https://www.twitter.com/jordicasesnoves',
+    icon: TwitterIcon
+  },
+  {
+    name: 'Linkedin',
+    href: 'https://www.linkedin.com/in/jordicasesnoves/',
+    icon: LinkedinIcon
+  }
+]
 
 function Header(): JSX.Element {
   const headerEl = useRef(null)
@@ -46,12 +70,14 @@ function Header(): JSX.Element {
           <nav
             className={`flex-1 inline-flex justify-between font-medium   md:items-center w-full `}
           >
-            <Link href="/" className="mr-8">
-              <h1 className="flex items-center no-underline">
-                <span className="text-xl font-medium tracking-tight truncate">
-                  Jordi Casesnoves
-                </span>
-              </h1>
+            <Link href="/">
+              <a className="mr-8">
+                <h1 className="flex items-center no-underline">
+                  <span className="text-xl font-medium tracking-tight truncate">
+                    Jordi Casesnoves
+                  </span>
+                </h1>
+              </a>
             </Link>
             <div className="hidden md:flex">
               {[
@@ -74,33 +100,30 @@ function Header(): JSX.Element {
               ))}
             </div>
             <div className="hidden md:flex space-x-6">
-              {links.map((link, index, array) => (
+              {links.map((link) => (
                 <HeaderIcon key={link.name} href={link.href}>
-                  <Icon icon={link.icon} className="w-6 h-6" />
+                  <Icon icon={link.icon} />
                 </HeaderIcon>
               ))}
             </div>
           </nav>
 
           <button
-            className="absolute right-0 flex items-center block px-4 py-2 rounded md:hidden"
+            className="absolute right-0 flex items-center px-4 py-2 rounded md:hidden"
             onClick={(): void => toggleExpansion(!isExpanded)}
           >
-            <svg className="w-6 h-6 fill-current" viewBox="0 0 20 20">
-              <title>Menu</title>
-              {isExpanded ? (
-                <Icon icon="CrossIcon" className="w-6 h-6" />
-              ) : (
-                <Icon icon="HamburguerIcon" className="w-6 h-6" />
-              )}
-            </svg>
+            {isExpanded ? (
+              <Icon icon={CrossIcon} />
+            ) : (
+              <Icon icon={HamburguerIcon} />
+            )}
           </button>
         </div>
         <div
           className={
             (showShadow ? 'shadow-xl ' : ' ') +
             (isExpanded
-              ? 'border-b absolute overlay mt-16 pb-6 h-auto items-center left-0 top-0 w-full bg-background '
+              ? 'border-b absolute overlay mt-16 pb-6 h-auto items-center left-0 top-0 w-full bg-white '
               : ' hidden ')
           }
         >
@@ -128,14 +151,14 @@ function Header(): JSX.Element {
               {links.map((link, index, array) => (
                 <a
                   className={
-                    `transition-all duration-200  text-secondary-text hover:text-hover-text block mt-4 no-underline inline-block md:mt-0 ` +
+                    `transition-all duration-200  text-secondary-text hover:text-hover-text mt-4 no-underline inline-block md:mt-0 ` +
                     (index + 1 !== array.length ? `mr-6` : '')
                   }
                   key={link.name}
                   href={link.href}
                   onClick={handleResponsiveLink}
                 >
-                  <Icon icon={link.icon} className="w-6 h-6" />
+                  <Icon icon={link.icon} />
                 </a>
               ))}
             </div>

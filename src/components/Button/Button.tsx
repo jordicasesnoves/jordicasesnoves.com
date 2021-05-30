@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from './Icon'
+import { Icon } from '../index'
 
 const default_classes =
   'relative shadow hover:shadow-xl rounded-md font-medium focus:outline-none focus:shadow-outline duration-200 ease-in-out transition-all'
@@ -21,7 +21,7 @@ const sizes = {
 }
 
 const getTextMargin = (icon, iconPos) => {
-  if (icon.length > 0) {
+  if (icon) {
     if (iconPos === 'right') {
       return 'mr-2'
     } else {
@@ -32,7 +32,7 @@ const getTextMargin = (icon, iconPos) => {
   }
 }
 
-export const Button = ({
+const Button = ({
   href = '#',
   size = 'md', // default button size
   loading = false,
@@ -40,10 +40,10 @@ export const Button = ({
   fullWidth = false,
   className,
   color = 'primary',
-  icon = '',
+  icon,
   iconPosition = 'right',
   ...props
-}) => {
+}: any): JSX.Element => {
   const anchorSize = sizes[size]
   // Dynamic TailwindCSS classes
   className = [
@@ -103,16 +103,16 @@ export const Button = ({
           </div>
         ) : (
           <>
-            {icon.length > 0 && iconPosition === 'left' ? (
-              <Icon icon={icon} size={size} />
+            {icon && iconPosition === 'left' ? (
+              <Icon icon={icon} size="small" />
             ) : (
               ''
             )}
             <span className={getTextMargin(icon, iconPosition)}>
               {props.children}
             </span>
-            {icon.length > 0 && iconPosition === 'right' ? (
-              <Icon icon={icon} size="w-5 h-5" />
+            {icon && iconPosition === 'right' ? (
+              <Icon icon={icon} size="small" />
             ) : (
               ''
             )}
@@ -122,3 +122,5 @@ export const Button = ({
     </button>
   )
 }
+
+export default Button

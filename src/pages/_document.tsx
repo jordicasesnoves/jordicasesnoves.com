@@ -41,7 +41,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Jordi Casesnoves</title>
           <link
             rel="shortcut icon"
             type="image/png"
