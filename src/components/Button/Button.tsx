@@ -8,7 +8,7 @@ const colors = {
   primary:
     'text-white bg-green-500 hover:bg-white hover:text-green-500 border border-green-500',
   secondary:
-    'text-green-500 bg-white hover:bg-green-500 hover:text-white border-primary border',
+    'text-green-500 bg-white hover:bg-green-500 hover:text-white border border-green-500',
   white: 'text-black bg-white hover:bg-black hover:text-white',
   black: 'text-white bg-black hover:bg-white hover:text-black',
   red: 'text-white bg-red-600 hover:bg-red-500'

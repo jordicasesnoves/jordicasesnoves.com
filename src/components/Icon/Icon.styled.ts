@@ -1,3 +1,4 @@
+import React from 'react'
 import tw, { styled, TwStyle } from 'twin.macro'
 
 export interface IconWrapperProps {

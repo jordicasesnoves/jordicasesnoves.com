@@ -3,7 +3,7 @@ import Button from '../Button/Button'
 import TextLink from '../Link/Link'
 import getExternalLink from '../../utils/getExternalLink'
 import Container from '../Container/Container'
-import { MessageIcon } from '../../icons'
+import { AngleRightBIcon, MessageIcon } from '../../icons'
 
 export const AboutSection = (props: any): JSX.Element => {
   const handleClick = (event, buttonName): void => {
@@ -18,19 +18,20 @@ export const AboutSection = (props: any): JSX.Element => {
           <div className="md:flex">
             <img
               style={{ maxHeight: '600px' }}
-              className="rounded-md shadow-xl flex-1 w-full h-64 md:h-full"
+              className="rounded-md shadow-xl object-cover flex-1 w-full h-64 md:h-full"
+              alt="about-me"
               src="/me.jpg"
             />
 
             <div className="mt-4 flex-1 flex-col flex items-start justify-between md:ml-8 md:mt-0 lg:mt-0">
               <div>
-                <p className="text-base leading-6 text-secondary font-semibold tracking-wide uppercase">
+                <p className="text-base leading-6 text-gray-500 font-semibold tracking-wide uppercase">
                   ABOUT ME
                 </p>
                 <h3 className="mt-2 text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
                   Who I am
                 </h3>
-                <div className="mt-4 max-w-2xl text-lg leading-8 text-secondary-text lg:mx-auto">
+                <div className="mt-4 max-w-2xl text-lg leading-8 text-gray-500 lg:mx-auto">
                   <p>
                     I am front-end developer based in Valencia (Spain). I have
                     always been a self-taught learning person; that is how I
@@ -61,6 +62,7 @@ export const AboutSection = (props: any): JSX.Element => {
                 href={'mailto:jordicasesnoves@gmail.com'}
                 className="mt-8 justify-center inline-flex w-full md:w-auto"
                 size="lg"
+                icon={MessageIcon}
               >
                 <span>Contact Me</span>
               </Button>

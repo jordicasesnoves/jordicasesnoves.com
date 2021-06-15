@@ -1,10 +1,11 @@
 import React from 'react'
 import Button from '../Button/Button'
-import projectsJSON from '../../../content/projects.json'
+import { Projects } from '../../../content/Projects'
 import TextLink from '../Link/Link'
 import getExternalLink from '../../utils/getExternalLink'
 import SectionWrapper from './SectionWrapper'
-import { AngleRightBIcon, GithubIcon } from '../../icons'
+import { AngleRightBIcon, GithubIcon, WavingHandIcon } from '../../icons'
+import SectionHeader from './components/SectionHeader'
 
 const PortfolioSection = (props: any): JSX.Element => {
   const handleClick = (event, buttonName): void => {
@@ -12,14 +13,11 @@ const PortfolioSection = (props: any): JSX.Element => {
     window.analytics.track(`${buttonName} button clicked`)
   }
   return (
-    <SectionWrapper
-      title="My Projects"
-      subtitle="Portfolio"
-      description="Last projects that I am working or have been working on."
-    >
+    <SectionWrapper title="My Projects">
       <div className="mt-10">
+        <SectionHeader>My Projects</SectionHeader>
         <ul className="md:grid md:grid-cols-2 md:gap-8">
-          {projectsJSON.map((project, index) => {
+          {Projects.map((project, index) => {
             return (
               <li key={`${project}-${index + 1}`} className="mb-3 md:mb-0 ">
                 <div

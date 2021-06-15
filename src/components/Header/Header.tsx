@@ -1,33 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Icon } from '../index'
 import Link from 'next/link'
-
 import { HeaderIcon, HeaderLink } from './Header.styled'
-import {
-  CrossIcon,
-  GithubIcon,
-  HamburguerIcon,
-  LinkedinIcon,
-  TwitterIcon
-} from '../../icons'
-
-const links = [
-  {
-    name: 'Github',
-    href: 'https://www.github.com/jordicasesnoves',
-    icon: GithubIcon
-  },
-  {
-    name: 'Twitter',
-    href: 'https://www.twitter.com/jordicasesnoves',
-    icon: TwitterIcon
-  },
-  {
-    name: 'Linkedin',
-    href: 'https://www.linkedin.com/in/jordicasesnoves/',
-    icon: LinkedinIcon
-  }
-]
+import { CrossIcon, HamburguerIcon } from '../../icons'
+import { SocialMediaLinks } from '../../../content/Links'
 
 function Header(): JSX.Element {
   const headerEl = useRef(null)
@@ -100,7 +76,7 @@ function Header(): JSX.Element {
               ))}
             </div>
             <div className="hidden md:flex space-x-6">
-              {links.map((link) => (
+              {SocialMediaLinks.map((link) => (
                 <HeaderIcon key={link.name} href={link.href}>
                   <Icon icon={link.icon} />
                 </HeaderIcon>
@@ -148,7 +124,7 @@ function Header(): JSX.Element {
               </a>
             ))}
             <div className="ml-4">
-              {links.map((link, index, array) => (
+              {SocialMediaLinks.map((link, index, array) => (
                 <a
                   className={
                     `transition-all duration-200  text-secondary-text hover:text-hover-text mt-4 no-underline inline-block md:mt-0 ` +

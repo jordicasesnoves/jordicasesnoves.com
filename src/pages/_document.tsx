@@ -10,6 +10,13 @@ import Document, {
   DocumentContext
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import * as snippet from '@segment/snippet'
+
+const {
+  // This write key is associated with https://segment.com/nextjs-example/sources/nextjs.
+  ANALYTICS_WRITE_KEY = 'ZQaxiYXR6rHRM8nnNA7gbl3MpxR3PFJL',
+  NODE_ENV = 'development'
+} = process.env
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<any> {
@@ -37,6 +44,21 @@ export default class MyDocument extends Document {
     }
   }
 
+  renderSnippet(): any {
+    const opts = {
+      apiKey: ANALYTICS_WRITE_KEY,
+      // note: the page option only covers SSR tracking.
+      // Page.js is used to track other events using `window.analytics.page()`
+      page: true
+    }
+
+    if (NODE_ENV === 'development') {
+      return snippet.max(opts)
+    }
+
+    return snippet.min(opts)
+  }
+
   render(): JSX.Element {
     return (
       <Html lang="en">
@@ -47,7 +69,9 @@ export default class MyDocument extends Document {
             href={`/favicon.png`}
             sizes="64x64"
           />
+          <script dangerouslySetInnerHTML={{ __html: this.renderSnippet() }} />
         </Head>
+
         <body>
           <Main />
           <NextScript />

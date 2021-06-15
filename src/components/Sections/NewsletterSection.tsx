@@ -1,7 +1,7 @@
-import React from "react";
-import { Button } from "../components/Button";
+import React from 'react'
+import { Button } from '../index'
 
-export const NewsletterSection = (props) => {
+export const NewsletterSection = (): JSX.Element => {
   return (
     <section className="w-full bg-gray-100">
       <div className="max-w-screen-xl mx-auto py-6 px-4 sm:px-6 lg:py-12 lg:px-8 lg:flex lg:items-center lg:justify-between">
@@ -32,5 +32,5 @@ export const NewsletterSection = (props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

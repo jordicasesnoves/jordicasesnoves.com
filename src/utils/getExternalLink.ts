@@ -1,7 +1,7 @@
-import externalLinks from '../../content/externallinks.json'
-export default function getExternalLink(keyword) {
-  var href = ''
-  href = externalLinks.filter(
+import { ExternalLinks } from '../../content/Links'
+export default function getExternalLink(keyword: string): string {
+  let href = ''
+  href = ExternalLinks.filter(
     (link) => link.name.toLowerCase() === keyword.toLowerCase()
   )[0].href
   return href.length > 0 ? href : ''
