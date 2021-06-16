@@ -1,7 +1,6 @@
 import React from 'react'
 
 import PortfolioSection from '../components/Sections/PortfolioSection'
-import { TechnologiesSection } from '../components/Sections/TechnologiesSection'
 import { HeroSection } from '../components/Sections/HeroSection'
 import { AboutSection } from '../components/Sections/AboutSection'
 import Head from 'next/head'

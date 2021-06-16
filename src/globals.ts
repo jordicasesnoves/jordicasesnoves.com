@@ -5,3 +5,5 @@ declare global {
 }
 
 window.analytics = window.analytics || {}
+
+export {}

@@ -5,10 +5,11 @@ export const Projects: Project[] = [
     id: 1,
     name: "Marmeus's Website",
     type: 'frontend',
-    title: 'Next.js Static Generated Blog',
-    description: "Friend of mine's website done with Next.js and SSG.",
+    title: 'Next.js Blog',
+    description:
+      "Friend of mine's website done with Next.js and SSR-SSG combined.",
     technologies: ['React.js', 'Next.js', 'TailwindCSS'],
-    demo: 'https://marmeus.tech'
+    demo: 'https://marmeus.com'
   },
   {
     id: 2,

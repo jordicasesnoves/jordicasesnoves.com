@@ -60,24 +60,4 @@ export const StyledButton = styled.button<ButtonProps>`
     !disabled &&
     tw`text-white bg-darkblue hover:bg-light-blue-tint-1 hover:text-darkblue  
     active:bg-light-blue active:text-darkblue active:shadow-xl`}
-
-  /* Tertiary variant common styles */
-  ${({ variant }): TwStyle =>
-    variant.includes('tertiary') && tw`text-m hover:underline`}
-
-  /* Tertiary variant default state */
-  ${({ variant, disabled }): TwStyle =>
-    variant.includes('tertiary') && !disabled && tw`text-darkblue`}
-
-  /* Tertiary variant disabled state */
-  ${({ variant, disabled }): TwStyle =>
-    variant.includes('tertiary') && disabled && tw`text-grey-40`}
-
-  /* Tertiary settings and link */
-  ${({ variant }): TwStyle =>
-    (variant === 'tertiary-link' || variant === 'tertiary-settings') &&
-    tw`flex items-center justify-center space-x-1`} 
-    
-  /* Tertiary link */
-  ${({ variant }): TwStyle => variant === 'tertiary-link' && tw`font-bold`}
 `

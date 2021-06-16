@@ -10,10 +10,7 @@
 			"dom.iterable",
 			"esnext"
 		],
-		"types": [
-			"jest",
-			"cypress"
-		],
+		"types": [],
 		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": false,

@@ -4,7 +4,7 @@ import { Projects } from '../../../content/Projects'
 import TextLink from '../Link/Link'
 import getExternalLink from '../../utils/getExternalLink'
 import SectionWrapper from './SectionWrapper'
-import { AngleRightBIcon, GithubIcon, WavingHandIcon } from '../../icons'
+import { AngleRightBIcon, GithubIcon } from '../../icons'
 import SectionHeader from './components/SectionHeader'
 
 const PortfolioSection = (props: any): JSX.Element => {
@@ -23,10 +23,10 @@ const PortfolioSection = (props: any): JSX.Element => {
                 <div
                   className={`flex flex-col project${
                     index + 1
-                  } py-3 justify-between border rounded-lg border-gray-200 shadow-xl  items-start`}
+                  } py-3 justify-between border rounded-lg border-gray-200 shadow-xl space-y-4 items-start`}
                 >
-                  <div className="flex-1 ">
-                    <div className="border-b border-gray-200 px-6 py-3">
+                  <div className="flex-1 space-y-4 py-2">
+                    <div className=" border-gray-200 px-6">
                       <div className="text-sm tracking-widest text-gray-400">
                         {project.type.toUpperCase()} PROJECT
                       </div>
@@ -34,7 +34,7 @@ const PortfolioSection = (props: any): JSX.Element => {
                         {project.title}
                       </div>
                     </div>
-                    <div className="px-6 mt-4 text-secondary-text">
+                    <div className="px-6 text-secondary-text">
                       <p>{project.description}</p>
                       <p className="italic">
                         Technologies:{' '}
@@ -55,7 +55,7 @@ const PortfolioSection = (props: any): JSX.Element => {
                     </div>
                   </div>
 
-                  <div className="w-full justify-end flex flex-wrap md:flex-no-wrap mt-6 md:px-0 px-6">
+                  <div className="w-full justify-end flex flex-wrap md:flex-no-wrap md:px-0 px-6">
                     {project.github && (
                       <Button
                         onClick={(e): void => handleClick(e, 'View Code')}

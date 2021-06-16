@@ -7,7 +7,7 @@ import { NewsletterSection } from '../Sections/NewsletterSection'
 const Footer = (): JSX.Element => {
   return (
     <footer className="relative z-10 mt-32 border-t border-gray-200">
-      <NewsletterSection />
+      {/* <NewsletterSection /> */}
       <nav className="flex flex-col text-gray-400 justify-center items-center max-w-6xl p-4 mx-auto ">
         <div className="my-1 md:my-3 ">
           <nav
@@ -48,7 +48,7 @@ const Footer = (): JSX.Element => {
               key={link.name}
               href={link.href}
             >
-              <Icon icon={link.icon} className="w-6 h-6" />
+              <Icon icon={link.icon} />
             </a>
           ))}
         </div>
