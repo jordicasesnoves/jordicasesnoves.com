@@ -5,6 +5,17 @@ import { HeaderIcon, HeaderLink } from './Header.styled'
 import { CrossIcon, HamburguerIcon } from '../../icons'
 import { SocialMediaLinks } from '../../../content/Links'
 
+const links = [
+  {
+    route: `#portfolio`,
+    title: `Portfolio`
+  },
+  {
+    route: `#about`,
+    title: `About`
+  }
+]
+
 function Header(): JSX.Element {
   const headerEl = useRef(null)
   const [showShadow, setShowShadow] = useState(false)
@@ -56,20 +67,7 @@ function Header(): JSX.Element {
               </a>
             </Link>
             <div className="hidden md:flex">
-              {[
-                {
-                  route: `#portfolio`,
-                  title: `Portfolio`
-                },
-                {
-                  route: `#specialized`,
-                  title: `Specialized In`
-                },
-                {
-                  route: `#about`,
-                  title: `About Me`
-                }
-              ].map((link) => (
+              {links.map((link) => (
                 <Link key={link.title} href={link.route} passHref>
                   <HeaderLink>{link.title}</HeaderLink>
                 </Link>
@@ -104,16 +102,7 @@ function Header(): JSX.Element {
           }
         >
           <div className="flex flex-col font-medium">
-            {[
-              {
-                route: `#portfolio`,
-                title: `Portfolio`
-              },
-              {
-                route: `#about`,
-                title: `About`
-              }
-            ].map((link) => (
+            {links.map((link) => (
               <a
                 className="transition-all duration-200 text-secondary-text hover:text-hover-text block mt-4 no-underline md:inline-block md:mt-0 mx-4"
                 key={link.title}

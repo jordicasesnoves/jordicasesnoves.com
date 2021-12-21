@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, Icon } from '../index'
 import { SocialMediaLinks } from '../../../content/Links'
 import getExternalLink from '../../utils/getExternalLink'
-import { NewsletterSection } from '../Sections/NewsletterSection'
 
 const Footer = (): JSX.Element => {
   return (

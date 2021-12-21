@@ -5,5 +5,21 @@ import Header from './Header/Header'
 import Icon from './Icon/Icon'
 import Layout from './Layout/Layout'
 import Link from './Link/Link'
+import PostCard from './PostCard/PostCard'
+import PostsList from './PostsList/PostsList'
+import Text from './Text/Text'
+import BlockRenderer from './BlockRenderer/BlockRenderer'
 
-export { Button, Container, Footer, Header, Icon, Layout, Link }
+export {
+  Button,
+  Container,
+  Footer,
+  Header,
+  Icon,
+  Layout,
+  Link,
+  PostCard,
+  PostsList,
+  Text,
+  BlockRenderer
+}

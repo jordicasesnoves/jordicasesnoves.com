@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../Button/Button'
 import { AngleRightBIcon, MessageIcon, WavingHandIcon } from '../../icons'
-import SectionWrapper from './SectionWrapper'
+import SectionWrapper from './components/SectionWrapper'
 import SectionHeader from './components/SectionHeader'
 
 export const HeroSection = (
@@ -16,7 +16,7 @@ export const HeroSection = (
     <SectionWrapper title="Hola!" {...props}>
       <div className="flex items-center space-x-24">
         <div>
-          <SectionHeader>Hola!</SectionHeader>
+          <SectionHeader icon={WavingHandIcon}>Hola!</SectionHeader>
           <h2 className="text-left text-lg leading-loose text-gray-600 mb-6">
             My name is Jordi. I'm a <strong>front-end developer</strong> based
             in Valencia (Spain). My goal is to provide{' '}

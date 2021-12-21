@@ -1,4 +1,4 @@
-import Container from '../Container/Container'
+import Container from '../../Container/Container'
 
 interface SectionWrapperProps extends React.HTMLAttributes<HTMLElement> {
   title?: string

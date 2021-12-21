@@ -108,8 +108,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="55.8565"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.00132565" stop-color="#FFCB4B" />
-          <stop offset="1" stop-color="#FFD748" />
+          <stop offset="0.00132565" stopColor="#FFCB4B" />
+          <stop offset="1" stopColor="#FFD748" />
         </linearGradient>
         <linearGradient
           id="paint1_linear"
@@ -119,8 +119,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="42.1276"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.00132565" stop-color="#FFCB4B" />
-          <stop offset="1" stop-color="#FFD748" />
+          <stop offset="0.00132565" stopColor="#FFCB4B" />
+          <stop offset="1" stopColor="#FFD748" />
         </linearGradient>
         <linearGradient
           id="paint2_linear"
@@ -130,8 +130,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="55.5328"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.00132565" stop-color="#FFCB4B" />
-          <stop offset="1" stop-color="#FFD748" />
+          <stop offset="0.00132565" stopColor="#FFCB4B" />
+          <stop offset="1" stopColor="#FFD748" />
         </linearGradient>
         <linearGradient
           id="paint3_linear"
@@ -141,8 +141,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="47.4775"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.00132565" stop-color="#FFCB4B" />
-          <stop offset="1" stop-color="#FFD748" />
+          <stop offset="0.00132565" stopColor="#FFCB4B" />
+          <stop offset="1" stopColor="#FFD748" />
         </linearGradient>
         <linearGradient
           id="paint4_linear"
@@ -152,8 +152,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="45.5848"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FFA754" />
+          <stop stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FFA754" />
         </linearGradient>
         <linearGradient
           id="paint5_linear"
@@ -163,8 +163,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="37.0154"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.00132565" stop-color="#FFCB4B" />
-          <stop offset="1" stop-color="#FFD748" />
+          <stop offset="0.00132565" stopColor="#FFCB4B" />
+          <stop offset="1" stopColor="#FFD748" />
         </linearGradient>
         <linearGradient
           id="paint6_linear"
@@ -174,8 +174,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="42.0672"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.00132565" stop-color="#FFCB4B" />
-          <stop offset="1" stop-color="#FFD748" />
+          <stop offset="0.00132565" stopColor="#FFCB4B" />
+          <stop offset="1" stopColor="#FFD748" />
         </linearGradient>
         <linearGradient
           id="paint7_linear"
@@ -185,8 +185,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="33.9688"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FFA754" />
+          <stop stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FFA754" />
         </linearGradient>
         <linearGradient
           id="paint8_linear"
@@ -196,8 +196,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="40.1427"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FFA754" />
+          <stop stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FFA754" />
         </linearGradient>
         <linearGradient
           id="paint9_linear"
@@ -207,8 +207,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="51.7442"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FFA754" />
+          <stop stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FFA754" />
         </linearGradient>
         <radialGradient
           id="paint10_radial"
@@ -218,8 +218,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(59.5133 29.9083) scale(13.6681)"
         >
-          <stop stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FFA754" />
+          <stop stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FFA754" />
         </radialGradient>
         <linearGradient
           id="paint11_linear"
@@ -229,8 +229,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="31.5809"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.3118" stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FF8900" />
+          <stop offset="0.3118" stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FF8900" />
         </linearGradient>
         <linearGradient
           id="paint12_linear"
@@ -240,8 +240,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="36.9739"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.3118" stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FF8900" />
+          <stop offset="0.3118" stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FF8900" />
         </linearGradient>
         <linearGradient
           id="paint13_linear"
@@ -251,8 +251,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="47.3189"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.3118" stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FF8900" />
+          <stop offset="0.3118" stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FF8900" />
         </linearGradient>
         <linearGradient
           id="paint14_linear"
@@ -262,8 +262,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="55.5441"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FFBC47" />
+          <stop stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FFBC47" />
         </linearGradient>
         <linearGradient
           id="paint15_linear"
@@ -273,8 +273,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="47.0762"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FFBC47" />
+          <stop stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FFBC47" />
         </linearGradient>
         <linearGradient
           id="paint16_linear"
@@ -284,8 +284,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="30.0972"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FFA754" />
+          <stop stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FFA754" />
         </linearGradient>
         <linearGradient
           id="paint17_linear"
@@ -295,8 +295,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="22.5692"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FFBC47" />
+          <stop stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FFBC47" />
         </linearGradient>
         <linearGradient
           id="paint18_linear"
@@ -306,8 +306,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           y2="64.4703"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.3118" stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FF8900" />
+          <stop offset="0.3118" stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FF8900" />
         </linearGradient>
         <radialGradient
           id="paint19_radial"
@@ -317,8 +317,8 @@ export const WavingHandIcon = (props: any): JSX.Element => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(44.2763 41.2639) rotate(48.1401) scale(39.6178 35.9605)"
         >
-          <stop offset="0.6134" stop-color="#FFBC47" stop-opacity="0" />
-          <stop offset="1" stop-color="#FF8900" />
+          <stop offset="0.6134" stopColor="#FFBC47" stopOpacity="0" />
+          <stop offset="1" stopColor="#FF8900" />
         </radialGradient>
       </defs>
     </svg>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.1.5",
+    "@notionhq/client": "^0.4.4",
     "@segment/snippet": "^4.13.2",
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
@@ -20,6 +21,7 @@
     "postcss": "^8.2.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "slugify": "^1.6.4",
     "styled-components": "^5.2.1",
     "tailwind-plugin-line-clamp": "^1.1.2",
     "tailwindcss": "^2.0.2",
