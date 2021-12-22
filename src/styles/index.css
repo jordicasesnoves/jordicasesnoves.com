@@ -3,33 +3,129 @@
 @tailwind utilities;
 
 @layer base {
+  /* Apercu font */
+
   @font-face {
-    font-family: 'Work Sans';
-    src: url('../../public/fonts/WorkSans-Light.ttf');
+    font-family: 'Apercu';
+    src: url('../../public/fonts/Apercu/Apercu-Light.otf');
     font-weight: 300;
+  }
+  @font-face {
+    font-family: 'Apercu';
+    src: url('../../public/fonts/Apercu/Apercu-Light-Italic.otf');
+    font-weight: 300;
+    font-style: italic;
   }
 
   @font-face {
-    font-family: 'Work Sans';
-    src: url('../../public/fonts/WorkSans-Regular.ttf');
+    font-family: 'Apercu';
+    src: url('../../public/fonts/Apercu/Apercu-Regular.otf');
     font-weight: 400;
   }
 
   @font-face {
-    font-family: 'Work Sans';
-    src: url('../../public/fonts/WorkSans-Medium.ttf');
+    font-family: 'Apercu';
+    src: url('../../public/fonts/Apercu/Apercu-Medium.otf');
     font-weight: 500;
   }
 
   @font-face {
-    font-family: 'Work Sans';
-    src: url('../../public/fonts/WorkSans-SemiBold.ttf');
-    font-weight: 600;
+    font-family: 'Apercu';
+    src: url('../../public/fonts/Apercu/Apercu-Medium-Italic.otf');
+    font-weight: 500;
+    font-style: italic;
   }
 
   @font-face {
-    font-family: 'Work Sans';
-    src: url('../../public/fonts/WorkSans-Bold.ttf');
+    font-family: 'Apercu';
+    src: url('../../public/fonts/Apercu/Apercu-Bold.otf');
     font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Apercu';
+    src: url('../../public/fonts/Apercu/Apercu-Bold-Italic.otf');
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  /* Canela font */
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-Thin.ttf');
+    font-weight: 100;
+  }
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-ThinItalic.ttf');
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-Light.ttf');
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-Regular.ttf');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-RegularItalic.ttf');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-Medium.ttf');
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-MediumItalic.ttf');
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-Bold.ttf');
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-BoldItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-Black.ttf');
+    font-weight: 900;
+  }
+
+  @font-face {
+    font-family: 'Canela';
+    src: url('../../public/fonts/Canela/Canela-BlackItalic.ttf');
+    font-weight: 900;
+    font-style: italic;
   }
 }
