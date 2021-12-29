@@ -8,12 +8,12 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
-    <div className="relative flex flex-col min-h-screen font-sans theme-light bg-background text-main-text">
+    <div className="relative bg-primary-light  flex flex-col min-h-screen font-sans theme-light bg-background text-main-text">
       <Header />
 
       <main className="flex-1 w-full">{children}</main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

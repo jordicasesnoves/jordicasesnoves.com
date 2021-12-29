@@ -11,6 +11,11 @@ export type NotionPage = {
       id?: string
       type?: PropertyValues
       title?: RichTextType
+      multi_select?: {
+        id?: string
+        name?: string
+        color?: string
+      }[]
     }
   }
   parent?: {
@@ -55,8 +60,13 @@ type EmojiType = {
 
 type FileType = {
   type?: string
-  url?: string
   expiry_time?: string
+  internal?: {
+    url?: string
+  }
+  external?: {
+    url?: string
+  }
 }
 
 export enum BlocksEnum {
@@ -145,7 +155,8 @@ enum PageTypes {
 }
 
 enum CustomPropertyValues {
-  'name'
+  'name',
+  'categories'
 }
 
 enum DatabaseTypes {

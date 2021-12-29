@@ -2,7 +2,7 @@ import { PostCard } from '..'
 
 const PostsList = ({ posts }: any): JSX.Element => {
   return (
-    <ol>
+    <ol className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 mt-12">
       {posts?.map((post) => (
         <PostCard key={post.id} {...post} />
       ))}
