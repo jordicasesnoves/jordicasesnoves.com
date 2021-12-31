@@ -9,6 +9,7 @@ import PostCard from './PostCard/PostCard'
 import PostsList from './PostsList/PostsList'
 import Text from './Text/Text'
 import BlockRenderer from './BlockRenderer/BlockRenderer'
+import Typography from './Typography/Typography'
 
 export {
   Button,
@@ -21,5 +22,6 @@ export {
   PostCard,
   PostsList,
   Text,
-  BlockRenderer
+  BlockRenderer,
+  Typography
 }

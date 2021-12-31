@@ -1,13 +1,12 @@
-import { PostsList } from '..'
-import SectionHeader from './components/SectionHeader'
+import { PostsList, Typography } from '..'
 import SectionWrapper from './components/SectionWrapper'
 
 const PostsSection = ({ posts }): JSX.Element => {
   return (
-    <SectionWrapper title="portfolio" className="bg-secondary-light py-24">
-      <SectionHeader className="mb-4 font-serif">
+    <SectionWrapper title="blog" className="bg-secondary-light">
+      <Typography variant="h2" serif className="text-primary-dark mb-12">
         Latest publications
-      </SectionHeader>
+      </Typography>
       <PostsList posts={posts} />
     </SectionWrapper>
   )

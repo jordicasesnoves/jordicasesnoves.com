@@ -1,0 +1,91 @@
+import React, { ReactNode } from 'react'
+
+enum TypographyTypes {
+  'h1' = 'h1',
+  'h2' = 'h2',
+  'h3' = 'h3',
+  'h4' = 'h4',
+  'medium-body' = 'medium-body',
+  'small-body' = 'small-body'
+}
+
+interface TypographyProps {
+  className?: string
+  children: ReactNode
+  variant?: keyof typeof TypographyTypes
+  bold?: boolean
+  italic?: boolean
+  underline?: boolean
+  uppercase?: boolean
+  serif?: boolean
+}
+
+const Typography = ({
+  children,
+  variant,
+  className,
+  bold,
+  italic,
+  underline,
+  uppercase,
+  serif,
+  ...props
+}: TypographyProps): JSX.Element => {
+  const TypographyComponents: { [key in TypographyTypes]: JSX.Element } = {
+    h1: (
+      <h1
+        className={`font-medium text-5xl md:text-6xl ${
+          serif && 'font-serif'
+        } ${className}`}
+      >
+        {children}
+      </h1>
+    ),
+    h2: (
+      <h2
+        className={`font-medium text-4xl md:text-5xl ${
+          serif && 'font-serif'
+        } ${className}`}
+      >
+        {children}
+      </h2>
+    ),
+    h3: (
+      <h3
+        className={`font-medium text-3xl md:text-4xl ${
+          serif && 'font-serif'
+        } ${className}`}
+      >
+        {children}
+      </h3>
+    ),
+    h4: (
+      <h4
+        className={`font-medium text-2xl md:text-3xl ${
+          serif && 'font-serif'
+        } ${className}`}
+      >
+        {children}
+      </h4>
+    ),
+    'medium-body': (
+      <span
+        className={
+          `text-lg md:text-xl 
+          ${serif && 'font-serif'}
+          ${uppercase && 'uppercase'}
+          ` + className
+        }
+      >
+        {children}
+      </span>
+    ),
+    'small-body': (
+      <span className={`text-base md:text-lg ` + className}>{children}</span>
+    )
+  }
+
+  return TypographyComponents[variant] || TypographyComponents['medium-body']
+}
+
+export default Typography

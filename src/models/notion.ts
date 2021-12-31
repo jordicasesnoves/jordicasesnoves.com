@@ -16,6 +16,7 @@ export type NotionPage = {
         name?: string
         color?: string
       }[]
+      number?: number
     }
   }
   parent?: {
@@ -156,7 +157,8 @@ enum PageTypes {
 
 enum CustomPropertyValues {
   'name',
-  'categories'
+  'categories',
+  'read_time'
 }
 
 enum DatabaseTypes {

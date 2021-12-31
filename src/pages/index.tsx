@@ -15,7 +15,7 @@ function IndexPage({ posts }: any): JSX.Element {
       <Head>
         <title>Jordi Casesnoves</title>
       </Head>
-      <div className="my-2 md:my-16 space-y-24">
+      <div className="">
         <HeroSection />
         <PostsSection posts={posts} />
         {/* <PortfolioSection className="" /> */}
