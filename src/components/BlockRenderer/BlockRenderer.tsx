@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Text } from '..'
+import { Text, Typography } from '..'
 import { BlocksEnum, NotionBlock } from '../../models/notion'
 
 const BlockRenderer = (block: NotionBlock): JSX.Element => {
@@ -12,7 +12,11 @@ const BlockRenderer = (block: NotionBlock): JSX.Element => {
     return (
       <figure>
         <img src={src} alt={caption} />
-        {caption && <figcaption>{caption}</figcaption>}
+        {caption && (
+          <figcaption className="text-primary-medium mt-1 italic font-normal">
+            {caption}
+          </figcaption>
+        )}
       </figure>
     )
   }
@@ -22,23 +26,25 @@ const BlockRenderer = (block: NotionBlock): JSX.Element => {
   } = {
     [BlocksEnum.paragraph]: (
       <p key={id}>
-        <Text text={value.text} />
+        <Typography serif variant="post-body">
+          <Text text={value.text} />
+        </Typography>
       </p>
     ),
     [BlocksEnum.heading_1]: (
-      <h1 className="font-bold text-4xl" key={id}>
+      <Typography variant="h1" key={id}>
         <Text text={value.text} />
-      </h1>
+      </Typography>
     ),
     [BlocksEnum.heading_2]: (
-      <h2 className="font-bold text-2xl" key={id}>
+      <Typography serif variant="h2" key={id}>
         <Text text={value.text} />
-      </h2>
+      </Typography>
     ),
     [BlocksEnum.heading_3]: (
-      <h3 key={id}>
+      <Typography serif variant="h3" key={id}>
         <Text text={value.text} />
-      </h3>
+      </Typography>
     ),
     [BlocksEnum.bulleted_list_item]: (
       <li key={id}>

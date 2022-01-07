@@ -7,13 +7,20 @@ const PostCard = ({ properties, cover }: NotionPage): JSX.Element => {
   const postTitle = properties.name.title[0].plain_text
   const coverUrl = cover?.external?.url
   const categories = Object.values(properties.categories.multi_select)
+  const publicationDate = properties.publication_date?.date?.start
   const readTime = properties?.read_time.number
+
+  const formattedDate = new Date(publicationDate).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
 
   return (
     <li className="group">
       <Link href={`/blog/${slugify(postTitle).toLowerCase()}`}>
         <a>
-          <div className="h-64 lg:h-96 mb-6 overflow-hidden">
+          <div className="h-64 sm:h-96 mb-6 overflow-hidden">
             <img
               src={coverUrl}
               alt="post cover"
@@ -46,7 +53,7 @@ const PostCard = ({ properties, cover }: NotionPage): JSX.Element => {
             </Typography>
             <p>
               <Typography variant="small-body" className="text-primary-medium">
-                {readTime} min read
+                {formattedDate} · {readTime} min read
               </Typography>
             </p>
           </div>

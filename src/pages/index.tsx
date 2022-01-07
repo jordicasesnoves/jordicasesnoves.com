@@ -8,6 +8,7 @@ import {
 import Head from 'next/head'
 import { databaseId, getDatabase } from '../lib/notion'
 import { GetStaticProps } from 'next'
+import { PageContainer } from '../components'
 
 function IndexPage({ posts }: any): JSX.Element {
   return (
@@ -15,13 +16,13 @@ function IndexPage({ posts }: any): JSX.Element {
       <Head>
         <title>Jordi Casesnoves</title>
       </Head>
-      <div className="">
+      <PageContainer>
         <HeroSection />
         <PostsSection posts={posts} />
         {/* <PortfolioSection className="" /> */}
         {/* <TechnologiesSection className="my-8 py-16" /> */}
-        {/* <AboutSection className="" /> */}
-      </div>
+        <AboutSection className="" />
+      </PageContainer>
     </>
   )
 }

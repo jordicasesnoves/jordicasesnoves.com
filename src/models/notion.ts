@@ -17,6 +17,11 @@ export type NotionPage = {
         color?: string
       }[]
       number?: number
+      date?: {
+        end?: string
+        start?: string
+        time_zone?: string
+      }
     }
   }
   parent?: {

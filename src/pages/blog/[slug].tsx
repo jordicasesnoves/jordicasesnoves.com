@@ -1,5 +1,11 @@
 import { Fragment } from 'react'
-import { BlockRenderer, Container, Text } from '../../components'
+import {
+  BlockRenderer,
+  Container,
+  PageContainer,
+  Text,
+  Typography
+} from '../../components'
 import { databaseId, getBlocks, getDatabase } from '../../lib/notion'
 import { NotionPage, NotionBlock } from '../../models/notion'
 import slugify from 'slugify'
@@ -15,26 +21,64 @@ const Post = ({ page, blocks }: PostProps): JSX.Element => {
   if (!page || !blocks) {
     return <Container>Post not found!</Container>
   }
+  const postTitle = page.properties.name.title[0].plain_text
+  const postCover = page.cover?.external?.url
+  const publicationDate = page.properties.publication_date?.date?.start
+  const readTime = page.properties?.read_time.number
+  const categories = Object.values(page.properties.categories.multi_select)
+  const formattedDate = new Date(publicationDate).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
   return (
     <>
       <Head>
-        <title>
-          {page.properties.name.title[0].plain_text} - Jordi Casesnoves
-        </title>
+        <title>{postTitle} - Jordi Casesnoves</title>
       </Head>
       <article>
-        <Container>
-          <h1 className="text-5xl font-bold">
-            <Text text={page.properties.name.title} />
-          </h1>
-          <section className="space-y-8">
-            {blocks.map((block) => (
-              <Fragment key={block.id}>
-                <BlockRenderer {...block} />
-              </Fragment>
-            ))}
-          </section>
-        </Container>
+        <PageContainer>
+          <Container>
+            <div className="text-center space-y-3 mb-12">
+              <ul className="flex text-center items-center justify-center">
+                {categories.map((category, index) => (
+                  <li style={{ letterSpacing: '0.2rem' }} key={category.id}>
+                    <Typography uppercase variant="medium-body">
+                      {category.name}
+                    </Typography>
+                    {/* add a coma */}
+                    {index !== categories.length - 1 && (
+                      <span className="text-primary-dark pr-2">,</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+              <Typography variant="h1" serif>
+                {postTitle}
+              </Typography>
+              <div>
+                <Typography
+                  variant="medium-body"
+                  className="text-primary-medium"
+                >
+                  {formattedDate} · {readTime} min read
+                </Typography>
+              </div>
+            </div>
+            <img
+              alt="post cover"
+              className=" max-h-[460px] w-full object-cover mb-24"
+              src={postCover}
+            />
+            <section className="space-y-8 lg:space-y-12 max-w-3xl mx-auto">
+              {blocks.map((block) => (
+                <Fragment key={block.id}>
+                  <BlockRenderer {...block} />
+                </Fragment>
+              ))}
+            </section>
+          </Container>
+        </PageContainer>
       </article>
     </>
   )

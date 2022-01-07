@@ -6,6 +6,7 @@ enum TypographyTypes {
   'h3' = 'h3',
   'h4' = 'h4',
   'medium-body' = 'medium-body',
+  'post-body' = 'post-body',
   'small-body' = 'small-body'
 }
 
@@ -72,6 +73,18 @@ const Typography = ({
       <span
         className={
           `text-lg md:text-xl 
+          ${serif && 'font-serif'}
+          ${uppercase && 'uppercase'}
+          ` + className
+        }
+      >
+        {children}
+      </span>
+    ),
+    'post-body': (
+      <span
+        className={
+          `leading-normal lg:leading-relaxed text-xl lg:text-2xl
           ${serif && 'font-serif'}
           ${uppercase && 'uppercase'}
           ` + className

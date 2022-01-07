@@ -10,6 +10,7 @@ import PostsList from './PostsList/PostsList'
 import Text from './Text/Text'
 import BlockRenderer from './BlockRenderer/BlockRenderer'
 import Typography from './Typography/Typography'
+import PageContainer from './PageContainer'
 
 export {
   Button,
@@ -23,5 +24,6 @@ export {
   PostsList,
   Text,
   BlockRenderer,
-  Typography
+  Typography,
+  PageContainer
 }
