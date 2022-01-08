@@ -6,7 +6,7 @@ const TextLink = (props: React.HTMLProps<HTMLAnchorElement>): JSX.Element => {
       target="_blank"
       rel="noreferrer"
       href={props.href}
-      className="cursor-pointer text-green-500 hover:text-green-900 transition-all duration-200 font-medium"
+      className="cursor-pointer underline underline-offset-4 text-accent font-medium"
     >
       {props.children}
     </a>

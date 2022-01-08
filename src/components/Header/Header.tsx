@@ -1,29 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Container, Icon } from '../index'
+import { Icon } from '../index'
 import Link from 'next/link'
-import { HeaderIcon, HeaderLink } from './Header.styled'
 import { CrossIcon, HamburguerIcon } from '../../icons'
-import { SocialMediaLinks } from '../../../content/Links'
-
-const links = [
-  {
-    route: `#portfolio`,
-    title: `Portfolio`
-  },
-  {
-    route: `#about`,
-    title: `About`
-  }
-]
+import HeaderLink from './components/HeaderLink'
 
 function Header(): JSX.Element {
   const headerEl = useRef(null)
   const [showShadow, setShowShadow] = useState(false)
   const [isExpanded, toggleExpansion] = useState(false)
-
-  const handleResponsiveLink = (): void => {
-    toggleExpansion(false)
-  }
 
   const handleScroll = (): void => {
     const initialOffsetTop = '16'
@@ -33,9 +17,6 @@ function Header(): JSX.Element {
       setShowShadow(false)
     }
   }
-
-  const linkClasses = `uppercase tracking-widest font-medium 
-  text-primary-dark hover:text-accent transition-colors duration-200 ease-in-out`
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -55,14 +36,10 @@ function Header(): JSX.Element {
           <div className="h-full w-full flex items-center justify-between ">
             <ul className="flex-1 hidden md:flex items-center gap-x-12">
               <li>
-                <Link href="/blog">
-                  <a className={linkClasses}>Blog</a>
-                </Link>
+                <HeaderLink href="/blog">Blog</HeaderLink>
               </li>
               <li>
-                <Link href="/">
-                  <a className={linkClasses}>About</a>
-                </Link>
+                <HeaderLink href="/#about">About</HeaderLink>
               </li>
             </ul>
             <div className="whitespace-nowrap">

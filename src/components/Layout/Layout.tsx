@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
 
       <main className="flex-1 w-full">{children}</main>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

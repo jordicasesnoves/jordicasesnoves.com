@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../Button/Button'
 import { Projects } from '../../../content/Projects'
-import TextLink from '../Link/Link'
+import TextLink from '../TextLink/TextLink'
 import getExternalLink from '../../utils/getExternalLink'
 import SectionWrapper from './components/SectionWrapper'
 import { AngleRightBIcon, GithubIcon } from '../../icons'

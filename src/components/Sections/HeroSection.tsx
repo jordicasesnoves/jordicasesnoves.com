@@ -17,7 +17,7 @@ export const HeroSection = (
           <div className="block lg:absolute top-0 bottom-0 right-0 w-full max-w-[240px] lg:max-w-none lg:w-3/6">
             <div className="relative">
               <img
-                className="rounded w-full h-full relative z-10"
+                className="rounded-lg w-full h-full relative z-10"
                 src="/jordi.png"
                 alt="Jordi Casesnoves"
               />
