@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Icon } from '../index'
+import { Button, Icon } from '../index'
 import Link from 'next/link'
 import { CrossIcon, HamburguerIcon } from '../../icons'
 import HeaderLink from './components/HeaderLink'
@@ -55,13 +55,13 @@ function Header(): JSX.Element {
             </div>
             <ul className="flex-1 hidden md:flex justify-end gap-x-12">
               <li>
-                <button
-                  className=" 
-          bg-primary-dark hover:bg-white font-medium transition-all duration-200 hover:text-primary-dark text-primary-light 
-          rounded-full tracking-wide px-6 py-3"
+                <Button
+                  href="mailto:jordicasesnoves@gmail.com"
+                  as="a"
+                  size="small"
                 >
                   Contact Me
-                </button>
+                </Button>
               </li>
             </ul>
             <div className="flex-1 flex md:hidden justify-end">

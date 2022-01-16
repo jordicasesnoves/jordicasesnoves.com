@@ -61,7 +61,6 @@ const PortfolioSection = (props: any): JSX.Element => {
                       target="_blank"
                       href={project.github}
                       color="secondary"
-                      icon={GithubIcon}
                       className="md:mr-3 mb-3 md:mb-0 justify-center inline-flex w-full md:w-auto"
                     >
                       View Code
@@ -73,7 +72,6 @@ const PortfolioSection = (props: any): JSX.Element => {
                       target="_blank"
                       onClick={(e): void => handleClick(e, 'Live Demo')}
                       href={project.demo}
-                      icon={AngleRightBIcon}
                       className="md:mr-3 mb-3 md:mb-0 justify-center inline-flex w-full md:w-auto"
                     >
                       Live Demo

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PostsList, Typography } from '..'
+import { Button, PostsList, Typography } from '..'
 import SectionWrapper from './components/SectionWrapper'
 
 const PostsSection = ({ posts }): JSX.Element => {
@@ -19,13 +19,7 @@ const PostsSection = ({ posts }): JSX.Element => {
         </div>
         <div>
           <Link href="/blog" passHref>
-            <a
-              className="h-20
-          bg-primary-dark hover:bg-white font-medium transition-all duration-200 hover:text-primary-dark text-primary-light 
-          rounded-full tracking-wide px-12 py-5"
-            >
-              Browse all articles
-            </a>
+            <Button as="a">Browse all articles</Button>
           </Link>
         </div>
       </div>

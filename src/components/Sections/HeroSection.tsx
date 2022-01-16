@@ -1,6 +1,5 @@
 import React from 'react'
-import { Container, Typography } from '..'
-import SectionWrapper from './components/SectionWrapper'
+import { Button, Container, Typography } from '..'
 
 export const HeroSection = (
   props: React.HTMLProps<HTMLElement>
@@ -38,13 +37,11 @@ export const HeroSection = (
                 my latest thoughts and also you can get in touch with me.
               </Typography>
             </p>
-            <button
-              className="mt-8 lg:mt-12 
-          bg-primary-dark hover:bg-white font-medium transition-all duration-200 hover:text-primary-dark text-primary-light 
-          rounded-full tracking-wide px-12 py-5"
-            >
-              Contact Me
-            </button>
+            <div className="mt-8 lg:mt-12">
+              <Button as="a" href="mailto:jordicasesnoves@gmail.com">
+                Contact Me
+              </Button>
+            </div>
           </div>
         </div>
       </Container>
