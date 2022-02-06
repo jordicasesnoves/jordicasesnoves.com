@@ -3,7 +3,8 @@ import {
   PortfolioSection,
   HeroSection,
   PostsSection,
-  AboutSection
+  AboutSection,
+  MusicSection
 } from '../components/Sections'
 import Head from 'next/head'
 import { databaseId, getDatabase } from '../lib/notion'
@@ -21,6 +22,7 @@ function IndexPage({ posts }: any): JSX.Element {
         {/* <PortfolioSection className="" /> */}
         {/* <TechnologiesSection className="my-8 py-16" /> */}
         <AboutSection className="" />
+        <MusicSection />
       </div>
     </>
   )

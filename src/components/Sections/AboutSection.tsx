@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionWrapper from './components/SectionWrapper'
-import { Container, Typography } from '..'
+import { Typography } from '..'
 
 export const AboutSection = (props: any): JSX.Element => {
   const handleClick = (event, buttonName): void => {

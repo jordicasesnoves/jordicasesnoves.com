@@ -31,16 +31,16 @@ module.exports = {
     },
     extend: {
       colors: {
-        'primary-light': '#F0F9ED',
+        'primary-light': '#F9F7EF',
         primary: '#728D72',
         'primary-medium': '#1B7171',
         'primary-dark': '#1B331C',
-        'secondary-light': '#E7F7FF',
-        secondary: '#DCECFF',
-        'secondary-dark': '#A4B4D5',
+        'secondary-light': '#BCD0C7',
+        secondary: '#C4E0E4',
+        'secondary-dark': '#F2E2A9',
         accent: '#97711B'
       }
     }
   },
-  plugins: []
+  plugins: [require('@tailwindcss/line-clamp')]
 }
