@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Text, Typography } from '..'
+import { Callout, EmbeddedVideo, Text, Typography } from '..'
 import { BlocksEnum, NotionBlock } from '../../models/notion'
 
 const BlockRenderer = (block: NotionBlock): JSX.Element => {
@@ -8,10 +8,10 @@ const BlockRenderer = (block: NotionBlock): JSX.Element => {
 
   const ImageComponent = (): JSX.Element => {
     const src = value.type === 'external' ? value.external.url : value.file.url
-    const caption = value.caption ? value.caption[0].plain_text : ''
+    const caption = value.caption ? value.caption[0]?.plain_text : ''
     return (
       <figure>
-        <img src={src} alt={caption} />
+        <img src={src} alt={caption && caption} />
         {caption && (
           <figcaption className="text-primary-medium mt-1 italic font-normal">
             {caption}
@@ -75,7 +75,14 @@ const BlockRenderer = (block: NotionBlock): JSX.Element => {
       </details>
     ),
     [BlocksEnum.child_page]: <p>{value.title}</p>,
-    [BlocksEnum.image]: <ImageComponent />
+    [BlocksEnum.image]: <ImageComponent />,
+    [BlocksEnum.callout]: <Callout text={value.text} emoji={value.icon} />,
+    [BlocksEnum.video]: <EmbeddedVideo url={value.external?.url} />,
+    [BlocksEnum.embed]: (
+      <div>
+        <iframe className="w-full" src={value.url} title="embeded frame" />
+      </div>
+    )
   }
 
   const unsupportedBlock = (

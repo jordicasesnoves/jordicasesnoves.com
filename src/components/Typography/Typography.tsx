@@ -94,7 +94,14 @@ const Typography = ({
       </span>
     ),
     'small-body': (
-      <span className={`text-base md:text-lg ` + className}>{children}</span>
+      <span
+        className={
+          `text-base md:text-lg ${serif && 'font-serif'}
+      ${uppercase && 'uppercase'} ` + className
+        }
+      >
+        {children}
+      </span>
     )
   }
 

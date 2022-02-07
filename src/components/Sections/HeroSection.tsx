@@ -10,7 +10,7 @@ export const HeroSection = (
   }
 
   return (
-    <div className="pb-6 lg:pb-40 mt-6 lg:mt-12">
+    <div className="pb-6 lg:pb-48 mt-2 lg:mt-8">
       <Container>
         <div className="flex flex-col lg:flex-row items-center relative">
           <div className="block lg:absolute top-0 bottom-0 right-0 w-full max-w-[240px] lg:max-w-none lg:w-3/6">

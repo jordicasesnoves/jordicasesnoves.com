@@ -11,6 +11,8 @@ import Text from './Text/Text'
 import BlockRenderer from './BlockRenderer/BlockRenderer'
 import Typography from './Typography/Typography'
 import PageContainer from './PageContainer'
+import Callout from './Callout/Callout'
+import EmbeddedVideo from './EmbeddedVideo/EmbeddedVideo'
 
 export {
   Button,
@@ -25,5 +27,7 @@ export {
   Text,
   BlockRenderer,
   Typography,
-  PageContainer
+  PageContainer,
+  Callout,
+  EmbeddedVideo
 }
