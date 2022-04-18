@@ -35,6 +35,11 @@ const Post = ({ page, blocks }: PostProps): JSX.Element => {
     <>
       <Head>
         <title>{postTitle} - Jordi Casesnoves</title>
+        <meta property="og:title" content={postTitle} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@jordicasesnoves" />
+        <meta name="twitter:title" content={postTitle} />
       </Head>
       <article>
         <PageContainer>

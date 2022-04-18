@@ -66,7 +66,7 @@ export default class MyDocument extends Document {
           <link
             rel="shortcut icon"
             type="image/png"
-            href={`/favicon.png`}
+            href={`/jordi.png`}
             sizes="64x64"
           />
           <script dangerouslySetInnerHTML={{ __html: this.renderSnippet() }} />

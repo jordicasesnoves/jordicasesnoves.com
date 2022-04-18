@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import {
   Container,
   PageContainer,
@@ -9,14 +10,24 @@ import { databaseId, getDatabase } from '../../lib/notion'
 
 const BlogPage = ({ posts }: any): JSX.Element => {
   return (
-    <PageContainer>
-      <Container>
-        <Typography serif variant="h2" className="mb-12">
-          My thoughts
-        </Typography>
-        <PostsList posts={posts} />
-      </Container>
-    </PageContainer>
+    <>
+      <Head>
+        <title>Blog - Jordi Casesnoves</title>
+        <meta property="og:title" content={'Blog'} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@jordicasesnoves" />
+        <meta name="twitter:title" content={'Blog'} />
+      </Head>
+      <PageContainer>
+        <Container>
+          <Typography serif variant="h2" className="mb-12">
+            My thoughts
+          </Typography>
+          <PostsList posts={posts} />
+        </Container>
+      </PageContainer>
+    </>
   )
 }
 

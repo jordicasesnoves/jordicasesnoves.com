@@ -14,14 +14,35 @@ function IndexPage({ posts }: any): JSX.Element {
   return (
     <>
       <Head>
-        <title>Jordi Casesnoves</title>
+        <title>Jordi Casesnoves - Front-end lover and design enthusiast</title>
+        <meta
+          name="description"
+          content="Front-end lover and design enthusiast from Valencia, Spain."
+        />
+        <meta property="og:title" content="Home" />
+        <meta
+          property="og:description"
+          content="Front-end lover and design enthusiast from Valencia, Spain."
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@jordicasesnoves" />
+        <meta name="twitter:title" content="Home" />
+        <meta
+          name="twitter:description"
+          content="Front-end lover based in Valencia (Spain)"
+        />
+        <meta
+          name="keywords"
+          content="jordicasesnoves, jordi casesnoves, front-end developer, front-end, frontend, react.js, next.js, vercel, tailwindcss"
+        />
       </Head>
       <div className="pt-10 lg:pt-12">
         <HeroSection />
         <PostsSection posts={posts} />
         {/* <PortfolioSection className="" /> */}
         {/* <TechnologiesSection className="my-8 py-16" /> */}
-        <AboutSection className="" />
+        <AboutSection />
         <MusicSection />
       </div>
     </>
