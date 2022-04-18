@@ -16,9 +16,11 @@ const PostCard = ({ properties, cover }: NotionPage): JSX.Element => {
     day: 'numeric'
   })
 
+  const slug = slugify(postTitle).toLowerCase()
+
   return (
     <li className="group">
-      <Link href={`/blog/${slugify(postTitle).toLowerCase()}`}>
+      <Link href={`/blog/${slug}`}>
         <a>
           <div className="h-64 sm:h-96 mb-6 overflow-hidden">
             <img

@@ -19,12 +19,20 @@ function IndexPage({ posts }: any): JSX.Element {
           name="description"
           content="Front-end lover and design enthusiast from Valencia, Spain."
         />
-        <meta property="og:title" content="Home" />
+        <meta
+          property="og:title"
+          content="Jordi Casesnoves - Front-end lover and design enthusiast"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://jordicasesnoves.com`} />
         <meta
           property="og:description"
           content="Front-end lover and design enthusiast from Valencia, Spain."
         />
-        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content={'https://jordicasesnoves.com/jordi.png'}
+        />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@jordicasesnoves" />
         <meta
@@ -35,7 +43,10 @@ function IndexPage({ posts }: any): JSX.Element {
           name="twitter:description"
           content="Front-end lover based in Valencia (Spain)"
         />
-        <meta name="twitter:image" content={'/jordi.png'} />
+        <meta
+          name="twitter:image"
+          content={'https://jordicasesnoves.com/jordi.png'}
+        />
         <meta
           name="keywords"
           content="jordicasesnoves, jordi casesnoves, front-end developer, front-end, frontend, react.js, next.js, vercel, tailwindcss"

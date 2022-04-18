@@ -32,12 +32,19 @@ const Post = ({ page, blocks }: PostProps): JSX.Element => {
     day: 'numeric'
   })
 
+  const slug = slugify(postTitle).toLowerCase()
+
   return (
     <>
       <Head>
         <title>{postTitle} - Jordi Casesnoves</title>
         <meta property="og:title" content={postTitle} />
         <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={`https://jordicasesnoves.com/blog/${slug}`}
+        />
+        <meta property="og:image" content={postCover} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@jordicasesnoves" />
         <meta name="twitter:title" content={postTitle} />
