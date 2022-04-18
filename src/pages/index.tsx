@@ -27,11 +27,15 @@ function IndexPage({ posts }: any): JSX.Element {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@jordicasesnoves" />
-        <meta name="twitter:title" content="Home" />
+        <meta
+          name="twitter:title"
+          content="Jordi Casesnoves - Front-end lover and design enthusiast"
+        />
         <meta
           name="twitter:description"
           content="Front-end lover based in Valencia (Spain)"
         />
+        <meta name="twitter:image" content={'/jordi.png'} />
         <meta
           name="keywords"
           content="jordicasesnoves, jordi casesnoves, front-end developer, front-end, frontend, react.js, next.js, vercel, tailwindcss"

@@ -31,6 +31,7 @@ const Post = ({ page, blocks }: PostProps): JSX.Element => {
     month: 'long',
     day: 'numeric'
   })
+
   return (
     <>
       <Head>
@@ -40,6 +41,7 @@ const Post = ({ page, blocks }: PostProps): JSX.Element => {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@jordicasesnoves" />
         <meta name="twitter:title" content={postTitle} />
+        <meta name="twitter:image" content={postCover} />
       </Head>
       <article>
         <PageContainer>

@@ -17,7 +17,7 @@ const BlogPage = ({ posts }: any): JSX.Element => {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@jordicasesnoves" />
-        <meta name="twitter:title" content={'Blog'} />
+        <meta name="twitter:title" content={'Blog - Jordi Casesnoves'} />
       </Head>
       <PageContainer>
         <Container>
