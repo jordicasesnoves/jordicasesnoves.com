@@ -1,6 +1,7 @@
 import React from 'react'
 import SectionWrapper from './components/SectionWrapper'
-import { Typography } from '..'
+import { Button, Typography } from '..'
+import Link from 'next/link'
 
 export const AboutSection = (props: any): JSX.Element => {
   const handleClick = (event, buttonName): void => {
@@ -14,7 +15,7 @@ export const AboutSection = (props: any): JSX.Element => {
         <Typography variant="h2" serif className="text-primary-dark mb-12">
           About myself
         </Typography>
-        <div className="flex">
+        <div className="flex flex-col">
           <div className="space-y-4 text-primary-dark">
             <p>
               <Typography variant="small-body">
@@ -38,6 +39,13 @@ export const AboutSection = (props: any): JSX.Element => {
                 world, dancing, reading and meditating.
               </Typography>
             </p>
+          </div>
+          <div className="mt-8">
+            <Link passHref href="https://www.linkedin.com/in/jordicasesnoves/">
+              <Button target="_blank" as="a">
+                Check out my CV
+              </Button>
+            </Link>
           </div>
         </div>
       </SectionWrapper>
