@@ -4,7 +4,8 @@ const PostsList = ({ posts }: any): JSX.Element => {
   const publishedPosts = posts.filter(
     (post: any) => post.properties.published.checkbox
   )
-  if (publishedPosts.length < 1) return <Typography>No posts found</Typography>
+  if (publishedPosts.length < 1)
+    return <Typography>No posts for now. Stay tuned!</Typography>
 
   return (
     <ol className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-12">
