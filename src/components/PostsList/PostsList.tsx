@@ -1,7 +1,7 @@
 import { PostCard, Typography } from '..'
 
 const PostsList = ({ posts }: any): JSX.Element => {
-  const publishedPosts = posts.filter(
+  const publishedPosts = posts?.filter(
     (post: any) => post.properties.published.checkbox
   )
   if (publishedPosts.length < 1)

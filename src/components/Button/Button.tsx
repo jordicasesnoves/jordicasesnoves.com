@@ -19,7 +19,7 @@ const Button = ({
       variant={variant}
       size={size}
       {...props}
-      className={' ' + className}
+      className={'text-center w-full md:w-auto block md:inline ' + className}
     >
       {children}
     </StyledButton>
