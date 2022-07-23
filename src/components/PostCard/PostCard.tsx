@@ -5,7 +5,8 @@ import { NotionPage } from '../../models/notion'
 
 const PostCard = ({ properties, cover }: NotionPage): JSX.Element => {
   const postTitle = properties.name.title[0].plain_text
-  const coverUrl = cover?.external?.url
+  const coverUrl =
+    cover.type === 'external' ? cover?.external?.url : cover?.file?.url
   const categories = Object.values(properties.categories.multi_select)
   const publicationDate = properties.publication_date?.date?.start
   const readTime = properties?.read_time.number

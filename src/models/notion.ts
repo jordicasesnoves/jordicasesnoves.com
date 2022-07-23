@@ -67,7 +67,7 @@ type EmojiType = {
 type FileType = {
   type?: string
   expiry_time?: string
-  internal?: {
+  file?: {
     url?: string
   }
   external?: {

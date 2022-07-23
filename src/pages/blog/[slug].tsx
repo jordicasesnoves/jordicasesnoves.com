@@ -23,7 +23,10 @@ const Post = ({ page, blocks }: PostProps): JSX.Element => {
     return <Container>Post not found!</Container>
   }
   const postTitle = page.properties.name.title[0].plain_text
-  const postCover = page.cover?.external?.url
+  const postCover =
+    page.cover.type === 'external'
+      ? page.cover?.external.url
+      : page.cover?.file.url
   const publicationDate = page.properties.publication_date?.date?.start
   const readTime = page.properties?.read_time.number
   const categories = Object.values(page.properties.categories.multi_select)
