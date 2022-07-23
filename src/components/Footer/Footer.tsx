@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Icon, Typography } from '../index'
+import { Link, Icon } from '../index'
 import { SocialMediaLinks } from '../../../content/Links'
 import getExternalLink from '../../utils/getExternalLink'
 
@@ -11,7 +11,7 @@ const Footer = (): JSX.Element => {
         <div className="my-1 md:my-3 ">
           <nav
             className={`
-             flex flex-col md:flex-row flex-wrap  md:flex-no-wrap flex-1
+             flex flex-col md:flex-row flex-wrap md:flex-no-wrap flex-1
               items-center w-full `}
           >
             {[
@@ -21,11 +21,11 @@ const Footer = (): JSX.Element => {
               },
               {
                 route: `/#about`,
-                title: `About Me`
+                title: `About`
               }
             ].map((link) => (
               <a
-                className="transition-all duration-200 hover:text-accent text-center mx-auto px-8 py-1 no-underline"
+                className="transition-all uppercase tracking-widest duration-200 hover:text-accent text-center mx-auto px-8 py-1 no-underline"
                 key={link.title}
                 href={link.route}
               >

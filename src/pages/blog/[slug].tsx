@@ -11,6 +11,7 @@ import { NotionPage, NotionBlock } from '../../models/notion'
 import slugify from 'slugify'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import SectionWrapper from '../../components/Sections/components/SectionWrapper'
 
 type PostProps = {
   page: NotionPage
@@ -93,6 +94,26 @@ const Post = ({ page, blocks }: PostProps): JSX.Element => {
             </section>
           </Container>
         </PageContainer>
+        {/* End of article section */}
+        <SectionWrapper className="bg-white">
+          <div className="text-center">
+            <Typography serif variant="h2" className="mb-3">
+              Was it good? Found any typing error?
+            </Typography>
+            <Typography variant="medium-body">
+              Send me a message on Twitter{' '}
+              <a
+                className="text-accent font-medium underline underline-offset-4"
+                href="https://twitter.com/jordicasesnoves"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @jordicasesnoves
+              </a>{' '}
+              for letting me know.
+            </Typography>
+          </div>
+        </SectionWrapper>
       </article>
     </>
   )
