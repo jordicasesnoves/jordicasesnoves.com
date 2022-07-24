@@ -4,11 +4,15 @@ import Link from 'next/link'
 import { CrossIcon, HamburguerIcon } from '../../icons'
 import HeaderLink from './components/HeaderLink'
 
-function Header(): JSX.Element {
+type Props = {
+  isExpanded: any
+  toggleExpansion: any
+}
+
+function Header({ isExpanded, toggleExpansion }: Props): JSX.Element {
   const headerEl = useRef(null)
   const [isMobile, setIsMobile] = useState<boolean>(false)
   const [showShadow, setShowShadow] = useState<boolean>(false)
-  const [isExpanded, toggleExpansion] = useState<boolean>(false)
 
   const handleScroll = (): void => {
     if (isMobile) return
@@ -72,7 +76,7 @@ function Header(): JSX.Element {
           showShadow ? 'bg-white' : 'bg-transparent'
         } transition-colors ease-in-out duration-500`}
       >
-        <div className="max-w-7xl h-16 md:h-20 px-4 mx-auto md:px-8">
+        <div className="relative max-w-7xl h-16 md:h-20 px-4 mx-auto md:px-8">
           <div className="h-full w-full flex items-center justify-between ">
             <ul className="flex-1 hidden md:flex items-center gap-x-12">
               {HeaderItems}
@@ -111,13 +115,14 @@ function Header(): JSX.Element {
             </div>
           </div>
         </div>
-        {isExpanded && (
-          <div
-            className={`transition-colors ease-in-out duration-500 bg-white px-4 pb-4`}
-          >
-            <ul className="space-y-4 flex flex-col">{HeaderItems}</ul>
-          </div>
-        )}
+
+        <div
+          className={`absolute w-full transition-all ease-in-out duration-300 bg-white px-4 pb-4 ${
+            isExpanded ? 'visible h-24 opacity-100' : 'invisible h-0 opacity-0'
+          }`}
+        >
+          <ul className="space-y-4 flex flex-col">{HeaderItems}</ul>
+        </div>
       </div>
     </header>
   )
