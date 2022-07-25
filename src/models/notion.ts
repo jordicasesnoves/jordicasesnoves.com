@@ -11,6 +11,7 @@ export type NotionPage = {
       id?: string
       type?: PropertyValues
       title?: RichTextType
+      rich_text?: RichTextType
       multi_select?: {
         id?: string
         name?: string
@@ -162,6 +163,7 @@ enum PageTypes {
 
 enum CustomPropertyValues {
   'name',
+  'description',
   'categories',
   'read_time'
 }

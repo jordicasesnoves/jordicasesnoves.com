@@ -23,6 +23,8 @@ const Post = ({ page, blocks }: PostProps): JSX.Element => {
     return <Container>Post not found!</Container>
   }
   const postTitle = page.properties.name.title[0].plain_text
+  const postDescription = page.properties.description?.rich_text[0]?.plain_text
+
   const postCover =
     page.cover.type === 'external'
       ? page.cover?.external.url
@@ -43,12 +45,17 @@ const Post = ({ page, blocks }: PostProps): JSX.Element => {
       <Head>
         <title>{postTitle} - Jordi Casesnoves</title>
         <meta property="og:title" content={postTitle} />
+        <meta
+          property="og:description"
+          content={postDescription && postDescription}
+        />
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
           content={`https://jordicasesnoves.com/blog/${slug}`}
         />
         <meta property="og:image" content={postCover} />
+        <meta property="article:author" content="Jordi Casesnoves" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@jordicasesnoves" />
         <meta name="twitter:title" content={postTitle} />

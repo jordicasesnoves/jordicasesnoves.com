@@ -35,9 +35,13 @@ export default BlogPage
 
 export const getStaticProps: GetStaticProps = async () => {
   const database = await getDatabase(databaseId)
+  /* Filter published posts */
+  const filteredDB = database.filter(
+    (post: any) => post.properties.published.checkbox
+  )
   return {
     props: {
-      posts: database
+      posts: filteredDB
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
