@@ -38,7 +38,7 @@ const Footer = (): JSX.Element => {
           {SocialMediaLinks.map((link, index, array) => (
             <a
               className={
-                `transition-all duration-200 hover:text-accent block mt-4 no-underline inline-flex md:inline-block md:mt-0 truncate ` +
+                `transition-all  duration-200 hover:text-accent mt-4 no-underline inline-flex md:inline-block md:mt-0 truncate ` +
                 (index + 1 < array.length ? `mr-6` : '')
               }
               key={link.name}
