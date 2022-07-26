@@ -72,7 +72,7 @@ const Typography = ({
     'medium-body': (
       <span
         className={
-          `text-lg md:text-xl 
+          `leading-normal lg:leading-8 text-lg md:text-xl 
           ${serif && 'font-serif'}
           ${uppercase && 'uppercase'}
           ` + className

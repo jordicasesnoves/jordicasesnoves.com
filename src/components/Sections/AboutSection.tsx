@@ -18,25 +18,17 @@ export const AboutSection = (props: any): JSX.Element => {
         <div className="flex flex-col mb-16">
           <div className="space-y-4 text-primary-dark">
             <p>
-              <Typography variant="small-body">
-                Currently working at Capgemini as a <i> front-end</i> developer.
-                Based in Valencia (Spain). I've always been a self-taught
-                learning person; that's how I learnt front-end.
-              </Typography>
-            </p>
-            <p>
-              <Typography variant="small-body">
-                Interested in the logical part of the web, and also its visual
-                side. Although I mainly do front-end, I love UX/UI and that's
-                why I've studied the basics. My main focus is to provide
-                user-centered solutions, always meeting the client needs, and
-                allowing their apps to scale.
-              </Typography>
-            </p>
-            <p>
-              <Typography variant="small-body">
-                Aside from tech, some of my hobbies are travelling around the
-                world, dancing, reading and meditating.
+              <Typography variant="medium-body">
+                In the last 3 years, I've been developing myself as a{' '}
+                <b>software engineer</b> with basic UX/UI knowledge. I
+                specialize in <b>front-end</b>. Currently working for Capgemini
+                Spain. Interested in the web's logical part and its visual side.
+                Although I mainly do front-end, I love UX/UI, so I've studied
+                the basics. I love collaborating with the design teams:
+                Integrating Figma screens, coding UI components from scratch,
+                and discussing different solutions. Born and raised in Spain.
+                Aside from tech, some of my hobbies are traveling around the
+                world, dancing, reading, and meditating.
               </Typography>
             </p>
           </div>
