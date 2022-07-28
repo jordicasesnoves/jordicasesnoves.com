@@ -1,10 +1,26 @@
 import { Fragment } from 'react'
 import { Callout, EmbeddedVideo, Text, Typography } from '..'
 import { BlocksEnum, NotionBlock } from '../../models/notion'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 const BlockRenderer = (block: NotionBlock): JSX.Element => {
   const { type, id } = block
   const value = block[type]
+
+  const pre = <pre className="p-8"></pre>
+  const CodeComponent = (): JSX.Element => {
+    const codeString = value.text[0].plain_text
+    return (
+      <SyntaxHighlighter
+        language={value.language}
+        style={atomOneDark}
+        customStyle={{ padding: '16px', borderRadius: '4px' }}
+      >
+        {codeString}
+      </SyntaxHighlighter>
+    )
+  }
 
   const ImageComponent = (): JSX.Element => {
     const src = value.type === 'external' ? value.external.url : value.file.url
@@ -82,7 +98,8 @@ const BlockRenderer = (block: NotionBlock): JSX.Element => {
       <div>
         <iframe className="w-full" src={value.url} title="embeded frame" />
       </div>
-    )
+    ),
+    [BlocksEnum.code]: <CodeComponent />
   }
 
   const unsupportedBlock = (

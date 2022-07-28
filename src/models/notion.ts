@@ -104,6 +104,7 @@ export enum BlocksEnum {
   synced_block = 'synced_block',
   template = 'template',
   link_to_page = 'link_to_page',
+  code = 'code',
   unsupported = 'unsupported'
 }
 
