@@ -6,9 +6,13 @@ import {
   PostsList,
   Typography
 } from '../../components'
-import { databaseId, getDatabase } from '../../lib/notion'
+import { getPosts } from '../../lib/notion'
 
-const BlogPage = ({ posts }: any): JSX.Element => {
+type Props = {
+  posts: any
+}
+
+const BlogPage = ({ posts }: Props): JSX.Element => {
   return (
     <>
       <Head>
@@ -34,14 +38,10 @@ const BlogPage = ({ posts }: any): JSX.Element => {
 export default BlogPage
 
 export const getStaticProps: GetStaticProps = async () => {
-  const database = await getDatabase(databaseId)
-  /* Filter published posts */
-  const filteredDB = database.filter(
-    (post: any) => post.properties.published.checkbox
-  )
+  const database = await getPosts()
   return {
     props: {
-      posts: filteredDB
+      posts: database
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in

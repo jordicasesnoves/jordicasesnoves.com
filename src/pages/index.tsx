@@ -7,10 +7,14 @@ import {
   MusicSection
 } from '../components/Sections'
 import Head from 'next/head'
-import { databaseId, getDatabase } from '../lib/notion'
 import { GetStaticProps } from 'next'
+import { getPosts } from '../lib/notion'
 
-function IndexPage({ posts }: any): JSX.Element {
+type Props = {
+  posts: any
+}
+
+function IndexPage({ posts }: Props): JSX.Element {
   return (
     <>
       <Head>
@@ -67,14 +71,11 @@ function IndexPage({ posts }: any): JSX.Element {
 export default IndexPage
 
 export const getStaticProps: GetStaticProps = async () => {
-  const database = await getDatabase(databaseId)
-  /* Filter published posts */
-  const filteredDB = database.filter(
-    (post: any) => post.properties.published.checkbox
-  )
+  const posts = await getPosts()
+
   return {
     props: {
-      posts: filteredDB
+      posts
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.1.5",
-    "@notionhq/client": "^0.4.4",
+    "@notionhq/client": "2.1.0",
     "@segment/snippet": "^4.13.2",
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
