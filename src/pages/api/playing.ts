@@ -4,7 +4,7 @@ import { getNowPlaying } from '../../lib/spotify'
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {
+): Promise<void> {
   const response = await getNowPlaying()
 
   if (response.status === 204 || response.status > 400) {

@@ -19,7 +19,7 @@ export const AboutSection = (props: any): JSX.Element => {
           <div className="space-y-4 text-primary-dark">
             <p>
               <Typography variant="medium-body">
-                In the last 3 years, I've been developing myself as a{' '}
+                In the last years, I've been developing myself as a{' '}
                 <b>software engineer</b> with basic UX/UI knowledge. I
                 specialize in <b>front-end</b>. Currently working for Capgemini
                 Spain. Interested in the web's logical part and its visual side.

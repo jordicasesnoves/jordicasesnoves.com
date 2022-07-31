@@ -1,23 +1,21 @@
 import Link from 'next/link'
 import slugify from 'slugify'
 import { Typography } from '..'
-import { NotionPage } from '../../models/notion'
+import { Post } from '../../models/post'
 
-const PostCard = ({ properties, cover }: NotionPage): JSX.Element => {
-  const postTitle = properties.name.title[0].plain_text
-  const coverUrl =
-    cover.type === 'external' ? cover?.external?.url : cover?.file?.url
-  const categories = Object.values(properties.categories.multi_select)
-  const publicationDate = properties.publication_date?.date?.start
-  const readTime = properties?.read_time.number
-
+const PostCard = ({
+  title,
+  readTime,
+  categories,
+  coverUrl,
+  publicationDate
+}: Post): JSX.Element => {
   const formattedDate = new Date(publicationDate).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
   })
-
-  const slug = slugify(postTitle).toLowerCase()
+  const slug = slugify(title).toLowerCase()
 
   return (
     <li className="group">
@@ -52,7 +50,7 @@ const PostCard = ({ properties, cover }: NotionPage): JSX.Element => {
               serif
               className="group-hover:underline clamp-1"
             >
-              {postTitle}
+              {title}
             </Typography>
             <p>
               <Typography variant="small-body" className="text-primary-medium">

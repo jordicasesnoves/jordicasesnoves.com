@@ -6,32 +6,32 @@ import {
   Text,
   Typography
 } from '../../components'
-import { databaseId, getBlocks, getDatabase } from '../../lib/notion'
-import { NotionPage, NotionBlock } from '../../models/notion'
+import { getBlocks, getPosts } from '../../lib/notion'
+import { NotionBlock } from '../../models/notion'
 import slugify from 'slugify'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import SectionWrapper from '../../components/Sections/components/SectionWrapper'
+import { Post as PostType } from '../../models/post'
 
 type PostProps = {
-  page: NotionPage
+  post: PostType
   blocks: NotionBlock[]
 }
 
-const Post = ({ page, blocks }: PostProps): JSX.Element => {
-  if (!page || !blocks) {
+const Post = ({ post, blocks }: PostProps): JSX.Element => {
+  if (!post || !blocks) {
     return <Container>Post not found!</Container>
   }
-  const postTitle = page.properties.name.title[0].plain_text
-  const postDescription = page.properties.description?.rich_text[0]?.plain_text
+  const {
+    title: postTitle,
+    description: postDescription,
+    coverUrl: postCover,
+    publicationDate,
+    readTime,
+    categories
+  } = post
 
-  const postCover =
-    page.cover.type === 'external'
-      ? page.cover?.external.url
-      : page.cover?.file.url
-  const publicationDate = page.properties.publication_date?.date?.start
-  const readTime = page.properties?.read_time.number
-  const categories = Object.values(page.properties.categories.multi_select)
   const formattedDate = new Date(publicationDate).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
@@ -132,11 +132,11 @@ const Post = ({ page, blocks }: PostProps): JSX.Element => {
 export default Post
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const database = await getDatabase(databaseId)
+  const posts = await getPosts()
   return {
-    paths: database.map((page: NotionPage) => ({
+    paths: posts.map((post: PostType) => ({
       params: {
-        slug: slugify(page.properties.name.title[0].plain_text).toLowerCase()
+        slug: slugify(post.title).toLowerCase()
       }
     })),
     fallback: 'blocking'
@@ -145,12 +145,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params
-  const database = await getDatabase(databaseId)
-  const page: NotionPage = database.find(
-    (page) =>
-      slugify(page.properties.name.title[0].plain_text).toLowerCase() === slug
+  const posts = await getPosts()
+  const post: PostType = posts.find(
+    (post) => slugify(post.title).toLowerCase() === slug
   )
-  const blocks: NotionBlock[] = await getBlocks(page.id)
+  const blocks: NotionBlock[] = await getBlocks(post.pageId)
 
   // Retrieve block children for nested blocks (one level deep), for example toggle blocks
   // https://developers.notion.com/docs/working-with-page-content#reading-nested-blocks
@@ -176,7 +175,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      page,
+      post,
       blocks: blocksWithChildren
     },
     revalidate: 1
