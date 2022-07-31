@@ -3,6 +3,13 @@ import { PropertyItemListResponse } from '@notionhq/client/build/src/api-endpoin
 import { Post } from '../models/post'
 
 export const databaseId = process.env.NOTION_DATABASE_ID
+const isProd = process.env.NODE_ENV === 'production'
+const isProdFilterObject = {
+  property: 'published',
+  checkbox: {
+    equals: true
+  }
+}
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN
@@ -11,12 +18,7 @@ const notion = new Client({
 export const getDatabase = async (databaseId: string): Promise<any> => {
   const response = await notion.databases.query({
     database_id: databaseId,
-    filter: {
-      property: 'published',
-      checkbox: {
-        equals: true
-      }
-    }
+    ...(isProd && isProdFilterObject)
   })
   return response
 }
@@ -30,12 +32,7 @@ export const getPosts = async (): Promise<Post[]> => {
     const { results, next_cursor } = await notion.databases.query({
       database_id: databaseId,
       start_cursor: cursor,
-      filter: {
-        property: 'published',
-        checkbox: {
-          equals: true
-        }
-      }
+      ...(isProd && isProdFilterObject)
     })
     pages.push(...results)
     if (!next_cursor) {

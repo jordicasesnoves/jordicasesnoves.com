@@ -4,7 +4,7 @@ import { getOnRepeatPlaylist } from '../../lib/spotify'
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {
+): Promise<void> {
   const response = await getOnRepeatPlaylist()
   const { tracks } = await response.json()
 
