@@ -5,9 +5,11 @@ import { Post } from '../models/post'
 export const databaseId = process.env.NOTION_DATABASE_ID
 const isProd = process.env.NODE_ENV === 'production'
 const isProdFilterObject = {
-  property: 'published',
-  checkbox: {
-    equals: true
+  filter: {
+    property: 'published',
+    checkbox: {
+      equals: true
+    }
   }
 }
 
