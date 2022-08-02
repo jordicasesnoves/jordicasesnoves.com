@@ -63,12 +63,16 @@ const BlockRenderer = (block: NotionBlock): JSX.Element => {
     ),
     [BlocksEnum.bulleted_list_item]: (
       <li key={id}>
-        <Text text={value.rich_text} />
+        <Typography serif variant="post-body">
+          <Text text={value.rich_text} />
+        </Typography>
       </li>
     ),
     [BlocksEnum.numbered_list_item]: (
       <li key={id}>
-        <Text text={value.rich_text} />
+        <Typography serif variant="post-body">
+          <Text text={value.rich_text} />
+        </Typography>
       </li>
     ),
     [BlocksEnum.to_do]: (
