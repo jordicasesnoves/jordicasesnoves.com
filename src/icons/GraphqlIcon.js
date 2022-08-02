@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export const GraphqlIcon = (props) => {
   return (
@@ -137,5 +137,5 @@ export const GraphqlIcon = (props) => {
         </g>
       </svg>
     </div>
-  );
-};
+  )
+}

@@ -27,9 +27,10 @@ module.exports = {
       { usePrettierrc: true }
     ],
     'react/prop-types': 'off',
+    'react/no-unescaped-entities': 'warn',
     'react/react-in-jsx-scope': 'off',
     'react-hooks/exhaustive-deps': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'error',
+    '@typescript-eslint/explicit-function-return-type': 'warn',
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/typedef': [

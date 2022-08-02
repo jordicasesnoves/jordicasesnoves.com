@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export const TailwindIcon = (props) => {
   return (
@@ -10,5 +10,5 @@ export const TailwindIcon = (props) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
