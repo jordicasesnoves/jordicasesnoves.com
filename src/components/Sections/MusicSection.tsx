@@ -25,7 +25,14 @@ const MusicSection = (): JSX.Element => {
               <span className="w-3">
                 <Typography>{index + 1}</Typography>
               </span>
-              <img src={track.cover} alt={track.name} className="w-16 h-16" />
+              <div className="overflow-hidden">
+                <img
+                  src={track.cover}
+                  alt={track.name}
+                  className="w-16 h-16 object-cover object-center 
+                transition-transform duration-200 ease-in-out transform group-hover:scale-110"
+                />
+              </div>
               <div className="flex flex-col">
                 <Typography
                   variant="medium-body"
