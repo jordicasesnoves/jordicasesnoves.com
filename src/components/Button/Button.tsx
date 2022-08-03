@@ -7,23 +7,22 @@ interface ButtonComponentProps extends ButtonProps {
   target?: string
 }
 
-const Button = ({
-  children,
-  className,
-  variant = 'primary',
-  size = 'normal',
-  ...props
-}: ButtonComponentProps): JSX.Element => {
-  return (
-    <StyledButton
-      variant={variant}
-      size={size}
-      {...props}
-      className={'text-center w-full md:w-auto inline-block ' + className}
-    >
-      {children}
-    </StyledButton>
-  )
-}
+const Button = React.forwardRef<HTMLButtonElement, ButtonComponentProps>(
+  (props, ref): JSX.Element => {
+    const { children, className, variant = 'primary', size = 'normal' } = props
+    return (
+      <StyledButton
+        variant={variant}
+        size={size}
+        className={'text-center w-full md:w-auto inline-block ' + className}
+        ref={ref}
+        {...props}
+      >
+        {children}
+      </StyledButton>
+    )
+  }
+)
+Button.displayName = 'Button'
 
 export default Button

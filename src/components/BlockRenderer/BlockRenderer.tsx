@@ -10,14 +10,22 @@ const BlockRenderer = (block: NotionBlock): JSX.Element => {
 
   const CodeComponent = (): JSX.Element => {
     const codeString = value.rich_text[0].plain_text
+    const caption = value.caption ? value.caption[0]?.plain_text : ''
     return (
-      <SyntaxHighlighter
-        language={value.language}
-        style={atomOneDark}
-        customStyle={{ padding: '16px', borderRadius: '4px' }}
-      >
-        {codeString}
-      </SyntaxHighlighter>
+      <div>
+        <SyntaxHighlighter
+          language={value.language}
+          style={atomOneDark}
+          customStyle={{ padding: '16px', borderRadius: '4px' }}
+        >
+          {codeString}
+        </SyntaxHighlighter>
+        {caption && (
+          <figcaption className="text-primary-medium mt-1 italic font-normal">
+            {caption}
+          </figcaption>
+        )}
+      </div>
     )
   }
 
@@ -63,12 +71,16 @@ const BlockRenderer = (block: NotionBlock): JSX.Element => {
     ),
     [BlocksEnum.bulleted_list_item]: (
       <li key={id}>
-        <Text text={value.rich_text} />
+        <Typography serif variant="post-body">
+          <Text text={value.rich_text} />
+        </Typography>
       </li>
     ),
     [BlocksEnum.numbered_list_item]: (
       <li key={id}>
-        <Text text={value.rich_text} />
+        <Typography serif variant="post-body">
+          <Text text={value.rich_text} />
+        </Typography>
       </li>
     ),
     [BlocksEnum.to_do]: (

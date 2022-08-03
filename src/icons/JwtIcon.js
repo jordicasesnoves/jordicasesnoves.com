@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
 export const JwtIcon = (props) => {
   return (
     <svg {...props} viewBox="0 0 101 101">
-      <g stroke="none" stroke-width="1" fill="currentColor">
+      <g stroke="none" strokeWidth="1" fill="currentColor">
         <g transform="translate(-150.000000, -538.000000)">
           <g transform="translate(0.000000, 413.000000)">
             <g transform="translate(150.000000, 125.000000)" id="Shape">
@@ -54,5 +54,5 @@ export const JwtIcon = (props) => {
         </g>
       </g>
     </svg>
-  );
-};
+  )
+}

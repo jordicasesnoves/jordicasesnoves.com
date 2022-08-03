@@ -48,38 +48,48 @@ export const getPosts = async (): Promise<Post[]> => {
   for (const page of pages) {
     const pageId = page.id
     const titlePropertyId = page.properties['name'].id
-    const titlePropertyItems = await getPropertyValue({
-      pageId,
-      propertyId: titlePropertyId
-    })
+    const descriptionPropertyId = page.properties['description'].id
+    const readTimePropertyId = page.properties['read_time'].id
+    const categoriesPropertyId = page.properties['categories'].id
+    const publicationDatePropertyId = page.properties['publication_date'].id
+
+    const [
+      titlePropertyItems,
+      descriptionPropertyItems,
+      readTimePropertyItem,
+      publicationDatePropertyItem,
+      categoriesPropertyItem
+    ] = await Promise.all([
+      getPropertyValue({
+        pageId,
+        propertyId: titlePropertyId
+      }),
+      getPropertyValue({
+        pageId,
+        propertyId: descriptionPropertyId
+      }),
+      getPropertyValue({
+        pageId,
+        propertyId: readTimePropertyId
+      }),
+      getPropertyValue({
+        pageId,
+        propertyId: publicationDatePropertyId
+      }),
+      getPropertyValue({
+        pageId,
+        propertyId: categoriesPropertyId
+      })
+    ])
+
     const title = titlePropertyItems
       .map((propertyItem) => propertyItem.title.plain_text)
       .join('')
-    const descriptionPropertyId = page.properties['description'].id
-    const descriptionPropertyItems = await getPropertyValue({
-      pageId,
-      propertyId: descriptionPropertyId
-    })
     const description = descriptionPropertyItems
       .map((propertyItem) => propertyItem.rich_text.plain_text)
       .join('')
-    const readTimePropertyId = page.properties['read_time'].id
-    const readTimePropertyItem = await getPropertyValue({
-      pageId,
-      propertyId: readTimePropertyId
-    })
     const readTime = readTimePropertyItem.number
-    const publicationDatePropertyId = page.properties['publication_date'].id
-    const publicationDatePropertyItem = await getPropertyValue({
-      pageId,
-      propertyId: publicationDatePropertyId
-    })
     const publicationDate = publicationDatePropertyItem.date.start
-    const categoriesPropertyId = page.properties['categories'].id
-    const categoriesPropertyItem = await getPropertyValue({
-      pageId,
-      propertyId: categoriesPropertyId
-    })
     const categories = categoriesPropertyItem.multi_select
     const pageCover = page.cover
     const coverUrl =

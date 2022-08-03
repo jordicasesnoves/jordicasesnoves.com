@@ -1,9 +1,9 @@
 // next.config.js
 module.exports = {
   webpack: (config, { isServer }) => {
-    // Fixes packages that depend on fs/module module
+    // Fixes npm packages that depend on `fs` module
     if (!isServer) {
-      config.node = { fs: 'empty', module: 'empty' }
+      config.resolve.fallback = { fs: false }
     }
 
     return config
