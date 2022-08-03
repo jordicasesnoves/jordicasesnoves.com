@@ -9,7 +9,7 @@ type Props = {
   toggleExpansion: any
 }
 
-function Header({ isExpanded, toggleExpansion }: Props): JSX.Element {
+const Header = ({ isExpanded, toggleExpansion }: Props): JSX.Element => {
   const headerEl = useRef(null)
   const [isMobile, setIsMobile] = useState<boolean>(false)
   const [showShadow, setShowShadow] = useState<boolean>(false)

@@ -3,7 +3,6 @@ import {
   BlockRenderer,
   Container,
   PageContainer,
-  Text,
   Typography
 } from '../../components'
 import { getBlocks, getPosts } from '../../lib/notion'
@@ -31,19 +30,19 @@ const Post = ({ post, blocks }: PostProps): JSX.Element => {
     readTime,
     categories
   } = post
-
   const formattedDate = new Date(publicationDate).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
   })
 
+  const title = `${postTitle} - Jordi Casesnoves`
   const slug = slugify(postTitle).toLowerCase()
 
   return (
     <>
       <Head>
-        <title>{postTitle} - Jordi Casesnoves</title>
+        <title>{title}</title>
         <meta property="og:title" content={postTitle} />
         <meta
           property="og:description"
