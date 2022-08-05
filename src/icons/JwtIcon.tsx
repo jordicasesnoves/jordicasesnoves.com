@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const JwtIcon = (props) => {
+export const JwtIcon: React.FC<any> = (props) => {
   return (
     <svg {...props} viewBox="0 0 101 101">
       <g stroke="none" strokeWidth="1" fill="currentColor">

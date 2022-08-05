@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CrossIcon = (props) => {
+export const CrossIcon: React.FC<any> = (props) => {
   return (
     <svg width={24} {...props} viewBox="0 0 24 24">
       <path

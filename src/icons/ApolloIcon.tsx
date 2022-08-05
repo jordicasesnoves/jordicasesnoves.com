@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ApolloIcon = (props) => {
+export const ApolloIcon: React.FC<any> = (props) => {
   return (
     <svg {...props} viewBox="0 0 256 256">
       <path

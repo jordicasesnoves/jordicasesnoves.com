@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ReactIcon = (props) => {
+export const ReactIcon: React.FC<any> = (props) => {
   return (
     <svg {...props} viewBox="0 0 24 24">
       <path
