@@ -4,21 +4,22 @@ import {
   Container,
   PageContainer,
   Typography
-} from '../../components'
-import { getBlocks, getPosts } from '../../lib/notion'
-import { NotionBlock } from '../../models/notion'
-import slugify from 'slugify'
+} from '../../../components'
+import { getBlocks, getPost, getPosts } from '../../../lib/notion'
+import { NotionBlock } from '../../../models/notion'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import SectionWrapper from '../../components/Sections/components/SectionWrapper'
-import { Post as PostType } from '../../models/post'
+import SectionWrapper from '../../../components/Sections/components/SectionWrapper'
+import { Post as PostType } from '../../../models/post'
+import getSlug from '../../../utils/getSlug'
 
 type PostProps = {
   post: PostType
+  slug: string
   blocks: NotionBlock[]
 }
 
-const Post = ({ post, blocks }: PostProps): JSX.Element => {
+const Post = ({ post, blocks, slug }: PostProps): JSX.Element => {
   if (!post || !blocks) {
     return <Container>Post not found!</Container>
   }
@@ -37,7 +38,6 @@ const Post = ({ post, blocks }: PostProps): JSX.Element => {
   })
 
   const title = `${postTitle} - Jordi Casesnoves`
-  const slug = slugify(postTitle).toLowerCase()
 
   return (
     <>
@@ -135,7 +135,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: posts.map((post: PostType) => ({
       params: {
-        slug: slugify(post.title).toLowerCase()
+        slug: getSlug(post.title),
+        postId: post.pageId
       }
     })),
     fallback: 'blocking'
@@ -143,12 +144,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { slug } = context.params
-  const posts = await getPosts()
-  const post: PostType = posts.find(
-    (post) => slugify(post.title).toLowerCase() === slug
-  )
-  const blocks: NotionBlock[] = await getBlocks(post.pageId)
+  const { slug, postId } = context.params
+  const post: PostType = await getPost(postId as string)
+  /* Redirect to 404 */
+  if (!post) return { notFound: true }
+
+  const blocks: NotionBlock[] = await getBlocks(postId as string)
 
   // Retrieve block children for nested blocks (one level deep), for example toggle blocks
   // https://developers.notion.com/docs/working-with-page-content#reading-nested-blocks
@@ -175,6 +176,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       post,
+      slug,
       blocks: blocksWithChildren
     },
     revalidate: 1
