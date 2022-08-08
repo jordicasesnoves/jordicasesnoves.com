@@ -3,10 +3,18 @@ import { Callout, EmbeddedVideo, Text, Typography } from '..'
 import { BlocksEnum, NotionBlock } from '../../models/notion'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import slugify from 'slugify'
 
 const BlockRenderer = (block: NotionBlock): JSX.Element => {
   const { type, id } = block
   const value = block[type]
+  let headingId = null
+  if (type === 'heading_2' || type === 'heading_3') {
+    headingId = slugify(value.rich_text[0].plain_text, {
+      remove: /[*+~.()'"!:@/]/g,
+      lower: true
+    })
+  }
 
   const CodeComponent = (): JSX.Element => {
     const codeString = value.rich_text[0].plain_text
@@ -34,7 +42,7 @@ const BlockRenderer = (block: NotionBlock): JSX.Element => {
     const caption = value.caption ? value.caption[0]?.plain_text : ''
     return (
       <figure>
-        <img src={src} alt={caption && caption} />
+        <img loading="lazy" src={src} alt={caption && caption} />
         {caption && (
           <figcaption className="text-primary-medium mt-1 italic font-normal">
             {caption}
@@ -60,12 +68,12 @@ const BlockRenderer = (block: NotionBlock): JSX.Element => {
       </Typography>
     ),
     [BlocksEnum.heading_2]: (
-      <Typography serif variant="h2" key={id}>
+      <Typography id={headingId} serif variant="h2" key={id}>
         <Text text={value.rich_text} />
       </Typography>
     ),
     [BlocksEnum.heading_3]: (
-      <Typography serif variant="h3" key={id}>
+      <Typography id={headingId} serif variant="h3" key={id}>
         <Text text={value.rich_text} />
       </Typography>
     ),

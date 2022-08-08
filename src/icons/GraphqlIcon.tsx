@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const GraphqlIcon = (props) => {
+export const GraphqlIcon: React.FC<any> = (props) => {
   return (
     <div className="relative">
       <svg {...props} x="0px" y="0px" viewBox="0 0 400 400">

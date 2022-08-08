@@ -19,6 +19,7 @@ interface TypographyProps {
   underline?: boolean
   uppercase?: boolean
   serif?: boolean
+  id?: string
 }
 
 const Typography = ({
@@ -30,6 +31,7 @@ const Typography = ({
   underline,
   uppercase,
   serif,
+  id,
   ...props
 }: TypographyProps): JSX.Element => {
   const TypographyComponents: { [key in TypographyTypes]: JSX.Element } = {
@@ -47,6 +49,7 @@ const Typography = ({
         className={`font-medium text-4xl md:text-5xl ${
           serif && 'font-serif'
         } ${className}`}
+        id={id}
       >
         {children}
       </h2>
@@ -56,6 +59,7 @@ const Typography = ({
         className={`font-medium text-3xl md:text-4xl ${
           serif && 'font-serif'
         } ${className}`}
+        id={id}
       >
         {children}
       </h3>

@@ -1,4 +1,4 @@
-const Text = ({ text }): JSX.Element => {
+const Text: React.FC<any> = ({ text }) => {
   if (!text) {
     return null
   }
@@ -7,15 +7,24 @@ const Text = ({ text }): JSX.Element => {
       annotations: { bold, code, color, italic, strikethrough, underline },
       text
     } = value
+
+    const getClassName = (): string => {
+      const classArray = []
+      if (bold) classArray.push('font-bold')
+      if (italic) classArray.push('italic')
+      if (strikethrough) classArray.push('line-through')
+      if (underline) classArray.push('underline underline-offset-4')
+      if (code)
+        classArray.push(
+          'bg-gray-200 px-2 py-1 rounded font-sans text-sm md:text-lg'
+        )
+      return classArray.join(' ')
+    }
+
     return (
       <span
         key={index + text.content}
-        className={[
-          bold ? 'font-bold' : '',
-          italic ? 'italic' : '',
-          strikethrough ? 'line-through' : '',
-          underline ? 'underline underline-offset-4' : ''
-        ].join(' ')}
+        className={getClassName()}
         style={color !== 'default' ? { color } : {}}
       >
         {text.link ? (
@@ -27,6 +36,8 @@ const Text = ({ text }): JSX.Element => {
           >
             {text.content}
           </a>
+        ) : code ? (
+          <code>{text.content}</code>
         ) : (
           text.content
         )}

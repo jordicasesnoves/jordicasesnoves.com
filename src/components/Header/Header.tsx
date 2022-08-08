@@ -72,8 +72,10 @@ const Header = ({ isExpanded, toggleExpansion }: Props): JSX.Element => {
   return (
     <header className="sticky top-0 z-50" ref={headerEl}>
       <div
-        className={`${
-          showShadow ? 'bg-white' : 'bg-transparent'
+        className={`border-b ${
+          showShadow
+            ? 'bg-white border-b-gray-100'
+            : 'bg-transparent border-b-transparent'
         } transition-colors ease-in-out duration-500`}
       >
         <div className="relative max-w-7xl h-16 md:h-20 px-4 mx-auto md:px-8">
