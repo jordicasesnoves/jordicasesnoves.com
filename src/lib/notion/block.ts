@@ -8,8 +8,7 @@ export const getBlocks = async (blockId: string): Promise<any> => {
   while (true) {
     const { results, next_cursor } = await notion.blocks.children.list({
       block_id: blockId,
-      start_cursor: cursor,
-      page_size: 50
+      start_cursor: cursor
     })
     blocks.push(...results)
     if (!next_cursor) {
