@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import {
   BlockRenderer,
   Container,
@@ -12,6 +12,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import SectionWrapper from '../../../components/Sections/components/SectionWrapper'
 import { Post as PostType } from '../../../models/post'
 import getSlug from '../../../utils/getSlug'
+import slugify from 'slugify'
 
 type PostProps = {
   post: PostType
@@ -20,9 +21,22 @@ type PostProps = {
 }
 
 const Post = ({ post, blocks, slug }: PostProps): JSX.Element => {
-  if (!post || !blocks) {
-    return <Container>Post not found!</Container>
-  }
+  const [headings, setHeadings] = useState([])
+
+  useEffect(() => {
+    const elements = Array.from(
+      document.getElementById('main-section').querySelectorAll('h2, h3, h4')
+    ).map((elem: HTMLElement) => ({
+      id: slugify(elem.innerText, {
+        remove: /[*+~.()'"!:@/]/g,
+        lower: true
+      }),
+      text: elem.innerText,
+      level: Number(elem.nodeName.charAt(1))
+    }))
+    setHeadings(elements)
+  }, [])
+
   const {
     title: postTitle,
     description: postDescription,
@@ -37,8 +51,24 @@ const Post = ({ post, blocks, slug }: PostProps): JSX.Element => {
     day: 'numeric'
   })
 
+  const getClassName = (level: number): string => {
+    switch (level) {
+      case 2:
+        return 'ml-0'
+      case 3:
+        return 'ml-4'
+      case 4:
+        return 'ml-8'
+      default:
+        return null
+    }
+  }
+
   const title = `${postTitle} - Jordi Casesnoves`
 
+  if (!post || !blocks) {
+    return <Container>Post not found!</Container>
+  }
   return (
     <>
       <Head>
@@ -94,7 +124,44 @@ const Post = ({ post, blocks, slug }: PostProps): JSX.Element => {
               className=" max-h-[460px] w-full object-cover mb-24"
               src={postCover}
             />
-            <section className="space-y-8 lg:space-y-12 max-w-3xl mx-auto">
+            <div className="space-y-8 lg:space-y-12 max-w-3xl mx-auto mb-16">
+              <Typography serif variant="h2">
+                Table of Contents
+              </Typography>
+              <ul className="flex flex-col gap-y-2">
+                {headings.map((heading) => (
+                  <li key={heading.id} className={getClassName(heading.level)}>
+                    <a
+                      className="underline underline-offset-4 font-medium text-accent"
+                      href={`#${heading.id}`}
+                      onClick={(e): void => {
+                        e.preventDefault()
+                        const element = document
+                          .getElementById('main-section')
+                          .querySelector(`#${heading.id}`)
+                        const headerOffset = 86
+                        const elementPosition =
+                          element.getBoundingClientRect().top
+                        const offsetPosition =
+                          elementPosition + window.pageYOffset - headerOffset
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: 'smooth'
+                        })
+                      }}
+                    >
+                      <Typography variant="small-body">
+                        {heading.text}
+                      </Typography>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <section
+              id="main-section"
+              className="space-y-8 lg:space-y-12 max-w-3xl mx-auto"
+            >
               {blocks.map((block) => (
                 <Fragment key={block.id}>
                   <BlockRenderer {...block} />
@@ -103,7 +170,6 @@ const Post = ({ post, blocks, slug }: PostProps): JSX.Element => {
             </section>
           </Container>
         </PageContainer>
-        {/* End of article section */}
         <SectionWrapper className="bg-white">
           <div className="text-center">
             <Typography serif variant="h2" className="mb-3">
