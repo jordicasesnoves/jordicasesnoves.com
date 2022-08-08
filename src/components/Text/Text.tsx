@@ -1,4 +1,4 @@
-const Text = ({ text }): JSX.Element => {
+const Text: React.FC<any> = ({ text }) => {
   if (!text) {
     return null
   }
@@ -14,7 +14,10 @@ const Text = ({ text }): JSX.Element => {
           bold ? 'font-bold' : '',
           italic ? 'italic' : '',
           strikethrough ? 'line-through' : '',
-          underline ? 'underline underline-offset-4' : ''
+          underline ? 'underline underline-offset-4' : '',
+          code
+            ? 'bg-gray-200 px-2 py-1 rounded font-sans text-sm md:text-lg'
+            : ''
         ].join(' ')}
         style={color !== 'default' ? { color } : {}}
       >
@@ -27,6 +30,8 @@ const Text = ({ text }): JSX.Element => {
           >
             {text.content}
           </a>
+        ) : code ? (
+          <code>{text.content}</code>
         ) : (
           text.content
         )}

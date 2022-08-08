@@ -4,10 +4,22 @@ import {
 } from '@notionhq/client/build/src/api-endpoints'
 import { notion } from './config'
 
+/**
+ * If property is paginated, returns an array of property items.
+ *
+ * Otherwise, it will return a single property item.
+ *
+ */
+
+type getPagePropertyValueProps = {
+  pageId: string
+  propertyId: string
+}
+
 export const getPagePropertyValue = async ({
   pageId,
   propertyId
-}): Promise<any> => {
+}: getPagePropertyValueProps): Promise<any> => {
   const propertyItem = await notion.pages.properties.retrieve({
     page_id: pageId,
     property_id: propertyId
