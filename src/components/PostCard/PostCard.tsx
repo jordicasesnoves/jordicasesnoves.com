@@ -1,25 +1,25 @@
 import Link from 'next/link'
-import slugify from 'slugify'
 import { Typography } from '..'
 import { Post } from '../../models/post'
+import getSlug from '../../utils/getSlug'
 
 const PostCard = ({
   title,
   readTime,
   categories,
   coverUrl,
-  publicationDate
+  publicationDate,
+  pageId
 }: Post): JSX.Element => {
   const formattedDate = new Date(publicationDate).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
   })
-  const slug = slugify(title).toLowerCase()
-
+  const slug = getSlug(title)
   return (
     <li className="group">
-      <Link href={`/blog/${slug}`}>
+      <Link href={`/blog/${pageId}/${slug}`}>
         <a>
           <div className="h-64 sm:h-96 mb-6 overflow-hidden">
             <img

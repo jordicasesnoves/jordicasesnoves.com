@@ -1,27 +1,42 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import {
   BlockRenderer,
   Container,
   PageContainer,
   Typography
-} from '../../components'
-import { getBlocks, getPosts } from '../../lib/notion'
-import { NotionBlock } from '../../models/notion'
-import slugify from 'slugify'
+} from '../../../components'
+import { getBlocks, getPost, getPosts } from '../../../lib/notion'
+import { NotionBlock } from '../../../models/notion'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import SectionWrapper from '../../components/Sections/components/SectionWrapper'
-import { Post as PostType } from '../../models/post'
+import SectionWrapper from '../../../components/Sections/components/SectionWrapper'
+import { Post as PostType } from '../../../models/post'
+import getSlug from '../../../utils/getSlug'
+import slugify from 'slugify'
 
 type PostProps = {
   post: PostType
+  slug: string
   blocks: NotionBlock[]
 }
 
-const Post = ({ post, blocks }: PostProps): JSX.Element => {
-  if (!post || !blocks) {
-    return <Container>Post not found!</Container>
-  }
+const Post = ({ post, blocks, slug }: PostProps): JSX.Element => {
+  const [headings, setHeadings] = useState([])
+
+  useEffect(() => {
+    const elements = Array.from(
+      document.getElementById('main-section').querySelectorAll('h2, h3, h4')
+    ).map((elem: HTMLElement) => ({
+      id: slugify(elem.innerText, {
+        remove: /[*+~.()'"!:@/]/g,
+        lower: true
+      }),
+      text: elem.innerText,
+      level: Number(elem.nodeName.charAt(1))
+    }))
+    setHeadings(elements)
+  }, [])
+
   const {
     title: postTitle,
     description: postDescription,
@@ -36,9 +51,24 @@ const Post = ({ post, blocks }: PostProps): JSX.Element => {
     day: 'numeric'
   })
 
-  const title = `${postTitle} - Jordi Casesnoves`
-  const slug = slugify(postTitle).toLowerCase()
+  const getClassName = (level: number): string => {
+    switch (level) {
+      case 2:
+        return 'ml-0'
+      case 3:
+        return 'ml-4'
+      case 4:
+        return 'ml-8'
+      default:
+        return null
+    }
+  }
 
+  const title = `${postTitle} - Jordi Casesnoves`
+
+  if (!post || !blocks) {
+    return <Container>Post not found!</Container>
+  }
   return (
     <>
       <Head>
@@ -51,7 +81,7 @@ const Post = ({ post, blocks }: PostProps): JSX.Element => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content={`https://jordicasesnoves.com/blog/${slug}`}
+          content={`https://jordicasesnoves.com/blog/${post.pageId}/${slug}`}
         />
         <meta property="og:image" content={postCover} />
         <meta property="article:author" content="Jordi Casesnoves" />
@@ -94,7 +124,44 @@ const Post = ({ post, blocks }: PostProps): JSX.Element => {
               className=" max-h-[460px] w-full object-cover mb-24"
               src={postCover}
             />
-            <section className="space-y-8 lg:space-y-12 max-w-3xl mx-auto">
+            <div className="space-y-8 lg:space-y-12 max-w-3xl mx-auto mb-16">
+              <Typography serif variant="h2">
+                Table of Contents
+              </Typography>
+              <ul className="flex flex-col gap-y-2">
+                {headings.map((heading) => (
+                  <li key={heading.id} className={getClassName(heading.level)}>
+                    <a
+                      className="underline underline-offset-4 font-medium text-accent"
+                      href={`#${heading.id}`}
+                      onClick={(e): void => {
+                        e.preventDefault()
+                        const element = document
+                          .getElementById('main-section')
+                          .querySelector(`#${heading.id}`)
+                        const headerOffset = 86
+                        const elementPosition =
+                          element.getBoundingClientRect().top
+                        const offsetPosition =
+                          elementPosition + window.pageYOffset - headerOffset
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: 'smooth'
+                        })
+                      }}
+                    >
+                      <Typography variant="small-body">
+                        {heading.text}
+                      </Typography>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <section
+              id="main-section"
+              className="space-y-8 lg:space-y-12 max-w-3xl mx-auto"
+            >
               {blocks.map((block) => (
                 <Fragment key={block.id}>
                   <BlockRenderer {...block} />
@@ -103,7 +170,6 @@ const Post = ({ post, blocks }: PostProps): JSX.Element => {
             </section>
           </Container>
         </PageContainer>
-        {/* End of article section */}
         <SectionWrapper className="bg-white">
           <div className="text-center">
             <Typography serif variant="h2" className="mb-3">
@@ -135,7 +201,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: posts.map((post: PostType) => ({
       params: {
-        slug: slugify(post.title).toLowerCase()
+        slug: getSlug(post.title),
+        postId: post.pageId
       }
     })),
     fallback: 'blocking'
@@ -143,12 +210,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { slug } = context.params
-  const posts = await getPosts()
-  const post: PostType = posts.find(
-    (post) => slugify(post.title).toLowerCase() === slug
-  )
-  const blocks: NotionBlock[] = await getBlocks(post.pageId)
+  const { slug, postId } = context.params
+  const post: PostType = await getPost(postId as string)
+  /* Redirect to 404 */
+  if (!post) return { notFound: true }
+
+  const blocks: NotionBlock[] = await getBlocks(postId as string)
 
   // Retrieve block children for nested blocks (one level deep), for example toggle blocks
   // https://developers.notion.com/docs/working-with-page-content#reading-nested-blocks
@@ -175,6 +242,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       post,
+      slug,
       blocks: blocksWithChildren
     },
     revalidate: 1

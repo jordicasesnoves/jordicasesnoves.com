@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const TailwindIcon = (props) => {
+export const TailwindIcon: React.FC<any> = (props) => {
   return (
     <svg {...props} viewBox="0 0 64 64">
       <title>Tailwind CSS</title>
