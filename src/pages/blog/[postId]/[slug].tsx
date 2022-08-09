@@ -81,7 +81,7 @@ const Post = ({ post, blocks, slug }: PostProps): JSX.Element => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content={`https://jordicasesnoves.com/blog/${slug}`}
+          content={`https://jordicasesnoves.com/blog/${post.pageId}/${slug}`}
         />
         <meta property="og:image" content={postCover} />
         <meta property="article:author" content="Jordi Casesnoves" />
