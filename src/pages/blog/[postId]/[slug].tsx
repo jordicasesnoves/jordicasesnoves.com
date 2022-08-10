@@ -142,8 +142,7 @@ const Post = ({ post, blocks, slug }: PostProps): JSX.Element => {
                         const offsetPosition =
                           elementPosition + window.pageYOffset - headerOffset
                         window.scrollTo({
-                          top: offsetPosition,
-                          behavior: 'smooth'
+                          top: offsetPosition
                         })
                       }}
                     >
