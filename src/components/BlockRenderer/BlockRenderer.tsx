@@ -3,17 +3,14 @@ import { Callout, EmbeddedVideo, Text, Typography } from '..'
 import { BlocksEnum, NotionBlock } from '../../models/notion'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-import slugify from 'slugify'
+import getSlugId from '../../utils/getSlugId'
 
 const BlockRenderer = (block: NotionBlock): JSX.Element => {
   const { type, id } = block
   const value = block[type]
   let headingId = null
   if (type === 'heading_2' || type === 'heading_3') {
-    headingId = slugify(value.rich_text[0].plain_text, {
-      remove: /[*+~.()'"!:@/]/g,
-      lower: true
-    })
+    headingId = getSlugId(value.rich_text[0].plain_text)
   }
 
   const CodeComponent = (): JSX.Element => {

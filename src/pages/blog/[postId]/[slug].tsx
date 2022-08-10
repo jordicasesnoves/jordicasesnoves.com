@@ -12,7 +12,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import SectionWrapper from '../../../components/Sections/components/SectionWrapper'
 import { Post as PostType } from '../../../models/post'
 import getSlug from '../../../utils/getSlug'
-import slugify from 'slugify'
+import getSlugId from '../../../utils/getSlugId'
 
 type PostProps = {
   post: PostType
@@ -27,10 +27,7 @@ const Post = ({ post, blocks, slug }: PostProps): JSX.Element => {
     const elements = Array.from(
       document.getElementById('main-section').querySelectorAll('h2, h3, h4')
     ).map((elem: HTMLElement) => ({
-      id: slugify(elem.innerText, {
-        remove: /[*+~.()'"!:@/]/g,
-        lower: true
-      }),
+      id: getSlugId(elem.innerText),
       text: elem.innerText,
       level: Number(elem.nodeName.charAt(1))
     }))
@@ -145,8 +142,7 @@ const Post = ({ post, blocks, slug }: PostProps): JSX.Element => {
                         const offsetPosition =
                           elementPosition + window.pageYOffset - headerOffset
                         window.scrollTo({
-                          top: offsetPosition,
-                          behavior: 'smooth'
+                          top: offsetPosition
                         })
                       }}
                     >
