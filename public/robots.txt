@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://jordicasesnoves.com
+
+# Sitemaps
+Sitemap: https://jordicasesnoves.com/sitemap.xml
