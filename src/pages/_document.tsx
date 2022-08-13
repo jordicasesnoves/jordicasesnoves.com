@@ -72,6 +72,10 @@ export default class MyDocument extends Document {
             sizes="64x64"
           />
           <script dangerouslySetInnerHTML={{ __html: this.renderSnippet() }} />
+          <meta
+            name="google-site-verification"
+            content="gobkTrBXRIvtUlBPaZVUYaz7nL2J-bIcXksFLYhle1s"
+          />
         </Head>
 
         <body>
