@@ -21,14 +21,13 @@ export const AboutSection = (props: any): JSX.Element => {
               <Typography variant="medium-body">
                 In the last years, I've been developing myself as a{' '}
                 <b>software engineer</b> with basic UX/UI knowledge. I
-                specialize in <b>front-end</b>. Currently working for Capgemini
-                Spain. Interested in the web's logical part and its visual side.
-                Although I mainly do front-end, I love UX/UI, so I've studied
-                the basics. I love collaborating with the design teams:
-                Integrating Figma screens, coding UI components from scratch,
-                and discussing different solutions. Born and raised in Spain.
-                Aside from tech, some of my hobbies are traveling around the
-                world, dancing, reading, and meditating.
+                specialize in front-end. Interested in the web's logical part
+                and its visual side. Although I mainly do front-end, I love
+                UX/UI, so I've studied the basics. I love collaborating with the
+                design teams: Integrating Figma screens, coding UI components
+                from scratch, and discussing different solutions. Born and
+                raised in Spain. Aside from tech, some of my hobbies are
+                traveling, movies, reading, and meditating.
               </Typography>
             </p>
           </div>
