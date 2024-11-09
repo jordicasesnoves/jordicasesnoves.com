@@ -1,0 +1,22 @@
+[
+  {
+    "company": {
+      "name": "Hanzo",
+      "url": "https://hanzo.es/"
+    },
+    "role": "Frontend Developer",
+    "location": "Remote",
+    "time": "2022 — 2024",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a semper libero. Ut tristique dolor imperdiet tincidunt malesuada. Phasellus feugiat eros sed eleifend elementum. Sed eu dolor quis ante porttitor fermentum. Nam cursus nisl nisi, a scelerisque nulla laoreet non. Proin et efficitur leo, a laoreet arcu. Donec ut lectus."
+  },
+  {
+    "company": {
+      "name": "Capgemini",
+      "url": "https://www.capgemini.com/"
+    },
+    "role": "Frontend Developer",
+    "location": "Valencia, Spain",
+    "time": "2020 — 2022",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a semper libero. Ut tristique dolor imperdiet tincidunt malesuada. Phasellus feugiat eros sed eleifend elementum. Sed eu dolor quis ante porttitor fermentum. Nam cursus nisl nisi, a scelerisque nulla laoreet non. Proin et efficitur leo, a laoreet arcu. Donec ut lectus."
+  }
+]

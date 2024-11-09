@@ -1,11 +1,79 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import ArrowUpRightIcon from "../icons/arrow-up.svg?raw";
+import JOBS from "../data/experience.json";
+import myImage from "../../public/me.jpg";
+import Section from "../components/Section.astro";
 ---
 
 <Layout title="Jordi Casesnoves">
-  <main class="bg-gray-100 py-48 min-h-screen">
-    <div class="max-w-4xl mx-auto h-full">
-      <h1 class="text-4xl tracking-wide">Jordi Casesnoves</h1>
-    </div>
+  <main class="min-h-screen px-6">
+    <section class="relative h-screen">
+      <Container>
+        <Image
+          class="absolute top-8 w-12 border-collapse rounded-full border-2 border-body"
+          src={myImage}
+          alt=""
+        />
+      </Container>
+      <div class="flex h-full flex-col justify-center">
+        <Container>
+          <h1
+            class="mb-16 max-w-2xl font-serif text-5xl leading-normal tracking-wide text-body"
+          >
+            Jordi Casesnoves is a <br />
+            <i>frontend developer</i> and design enthusiast based in Spain.
+          </h1>
+          <div class="flex gap-9">
+            <button
+              class="h-16 rounded-full bg-body px-12 font-sans text-lg font-normal tracking-wide text-background"
+              >Copy Email</button
+            >
+            <button
+              class="h-16 rounded-full border-2 border-body bg-transparent px-12 font-sans text-lg font-normal tracking-wide text-body"
+              >Get my CV</button
+            >
+          </div>
+        </Container>
+      </div>
+    </section>
+    <Section title="About me">
+      <p class="text-primary font-sans text-lg tracking-wide">
+        +4 years experience as a frontend developer. Interested in both the
+        logical and visual aspects of the web. Experienced in modern web
+        technologies like React, Next.js, and SCSS to create seamless interfaces
+        and highly reusable components. Aside from tech, some of my hobbies
+        include traveling, watching movies, reading, and meditating.
+      </p>
+    </Section>
+    <Section title="Work experience">
+      <ul class="flex flex-col gap-16">
+        {
+          JOBS.map((job) => (
+            <li class="flex flex-col gap-2 text-lg tracking-wide lg:flex-row lg:items-start lg:gap-20">
+              <span class="text-primary text-nowrap">{job.time}</span>
+              <div class="border-secondary flex w-full flex-col">
+                <span class="mb-1 text-nowrap text-xl text-body">
+                  <span class="font-medium">{job.role}</span>
+                  <span class="font-normal">at</span>
+                  <a
+                    href={job.company.url}
+                    target="_blank"
+                    class="underline-offset-3 inline-flex items-center gap-0.5 font-medium underline-offset-2 hover:underline"
+                  >
+                    {job.company.name}
+                    <Fragment set:html={ArrowUpRightIcon} />
+                  </a>
+                </span>
+                <span class="text-primary mb-3">{job.location}</span>
+                {/*                   <span class="text-body">{job.description}</span> */}
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </Section>
   </main>
 </Layout>
